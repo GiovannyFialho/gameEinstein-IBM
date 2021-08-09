@@ -1,6 +1,4 @@
-# Boilerplate Classic
-
-> Created with Gulp 🥤
+# Game Einstein - IBM 👾
 
 ## Install dependencies
 
