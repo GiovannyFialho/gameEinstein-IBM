@@ -1,0 +1,12 @@
+/* Global */
+@import "global/variables";
+@import "global/reset";
+@import "global/global";
+
+/* Components */
+@import "components/header";
+@import "components/menuFullWidth";
+@import "components/menuSiderBar";
+
+/* Template */
+@import "template/main";

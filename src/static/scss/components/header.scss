@@ -1,0 +1,103 @@
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100px;
+    @media (max-width: $mobile) {
+        margin-bottom: 1rem;
+    }
+    .menu-container {
+        input {
+            display: none;
+            &:checked {
+                ~ label {
+                    .hamburguer {
+                        width: 100%;
+                        height: 2px;
+                        transform: rotate(45deg);
+                        &::before,
+                        &::after {
+                            width: 100%;
+                            transform: rotate(90deg);
+                        }
+                        &::before {
+                            top: 0;
+                        }
+                        &::after {
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .menu {
+            cursor: pointer;
+            width: 35px;
+            height: 23px;
+            &-items {
+                display: flex;
+                flex-direction: column;
+                margin: 2rem;
+                a {
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-size: 1.6rem;
+                    &:not(:last-child) {
+                        margin-bottom: 2rem;
+                    }
+                    &:hover {
+                        color: $secondary-dark;
+                    }
+                }
+            }
+            .hamburguer {
+                position: relative;
+                display: block;
+                background-color: $primary;
+                width: 35px;
+                height: 5px;
+                top: 10px;
+                border-radius: 50px;
+                transition: 0.2s ease-in-out;
+                &::after,
+                &::before {
+                    content: "";
+                    background-color: $primary;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    transition: 0.2s ease-in-out;
+                    border-radius: 50px;
+                }
+                &::before {
+                    width: 80%;
+                    top: -10px;
+                }
+                &::after {
+                    bottom: -10px;
+                    width: 110%;
+                }
+            }
+            &:hover {
+                .hamburguer {
+                    &::after,
+                    &::before {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .logo {
+        &.home {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            img {
+                width: 220px;
+            }
+        }
+    }
+}
