@@ -2,4 +2,4 @@
 
 ## Install dependencies
 
-`npm i`
+`yarn`
