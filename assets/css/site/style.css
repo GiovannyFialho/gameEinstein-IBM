@@ -1,0 +1,370 @@
+*{
+    font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+.canvas-container canvas{
+    width: 100%;
+    height: 600px;
+}
+
+.estilos{
+    margin-bottom: 20px;
+}
+
+.estilos span{
+    cursor: pointer;
+}
+
+.fundos img, .stickers img {
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.fundos .active, .stickers .active{
+    opacity: 0.3;
+}
+
+.fundos .bx--col-lg-6{
+    height: 240px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.sticker-branco img{
+    background-color: black;
+}
+
+#header{
+    background-color: #000;
+}
+
+#header img{
+    height: 25px;
+    width: auto;
+    margin-top: 1px;
+}
+
+#header .bx--header__name{
+    padding-left: 0;
+}
+
+#cta{
+    background-color: #0043CE;
+    color: #fff;
+}
+
+#cta h1{
+    font-size: 65px;
+    font-weight: 600;
+    line-height: 0.9em;
+    margin-bottom: 50px;
+}
+
+
+#cta h1 span{
+    font-weight: 400;
+}
+
+#cta p{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.13em;
+}
+
+#cta .cta-row{
+    background: url(../../img/bg-banner.png) no-repeat center top;
+    background-size: 100% 100%;
+    padding: 100px 0 200px;
+    position: relative;
+}
+
+#cta .cta-img img {
+    position: absolute;
+    width: 42%;
+    top: 0;
+    right: 0;
+}
+
+#form{
+    background-color: #E7E7E7;
+}
+
+#form .form-row{
+    padding: 80px 0;
+}
+
+#form .form-row legend{
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    height: 55px;
+}
+
+#form .form-row label{
+    margin-bottom: 15px;
+}
+
+#form .form-row label, #form .form-row button{
+    font-size: 18px;
+    font-weight: 200;
+}
+
+#form .form-row .bx--form-item{
+    margin-bottom: 30px;
+}
+
+#form .form-row .bx--form-item:last-of-type{
+    margin-bottom: 0;
+}
+
+#form .form-row .bx--checkbox-label{
+    font-size: 14px;
+    line-height: 18px;
+    padding-left: 30px;
+}
+
+#survey {
+    background-color: #BE95FF;
+    padding: 30px 0;
+}
+
+#survey h3{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#survey p{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2em;
+    margin-bottom: 10px;
+}
+
+#survey a{
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+#footer{
+    background-color: #000;
+    color: #fff;
+    padding: 40px 0;
+}
+
+#footer img{
+    width: 50%;
+}
+
+#footer ul li {
+    display: inline-block;
+    font-size: 20px;
+    margin: 15px 60px 50px 0;
+}
+
+#footer ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+#footer small{
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+}
+
+#footer p{
+    padding-top: 50px;
+}
+
+#badge{
+    background-color: #E7E7E7;
+    padding: 40px;
+}
+
+.bx--file-browse-btn{
+    width: 100%;
+}
+
+.bx--file__drop-container{
+    max-height: 65px;
+}
+
+.bx--file-container{
+    opacity: 0;
+}
+
+.fundos img{
+    max-width: 100%;
+}
+
+.stickers ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.stickers li{
+    width: 18%;
+}
+
+.stickers li img{
+    max-width: 100%;
+}
+
+.stickers .dark{
+    background-color: #000;
+}
+
+.grid-buttons{
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.buttons-container{
+    padding-top: 25px;
+}
+
+.buttons-container button{
+    width: 100%;
+}
+
+.como-usar li {
+    font-weight: 200;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+#badge .badge-grid img{
+    max-width: 70%;
+}
+
+#badge .grid-meus-badges button{
+    width: 70%;
+}
+
+#badge .badge-grid p{
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+#badge .badge-grid button{
+    margin-right: 20px;
+}
+
+.box-texto {
+    background-color: #fff;
+    margin-bottom: 30px;
+    padding: 10px 0 190px 20px;
+    font-size: 28px;
+}
+
+.grid-compartilhar button:not(.bx--btn--primary):not(.bx--btn--tertiary){
+    float: right;
+    margin-right: 0 !important;
+}
+
+.bx--loading-overlay{
+    display: none;
+}
+
+.remover-sticker{
+    position: absolute;
+    top: 40px;
+    right: -30px;
+    background-color: #da1e28;
+    border: none;
+    display: inline-block;
+    padding: 0 5px;
+    z-index: 999;
+    display: none;
+}
+
+.remover-sticker svg{
+    color: #fff;
+    width: 20px;
+}
+
+#canvas-container{
+    position: relative;
+}
+
+label.bx--text-input--invalid{
+    border: none;
+    outline: none;
+    color: #da1e28;
+    font-weight: 400 !important;
+    font-size: 12px !important;
+}
+
+@media screen and (max-width: 1024px) {
+    #footer img {
+        width: 25%;
+    }
+
+    #badge .grid-meus-badges button{
+        width: 100%;
+    }
+
+    #badge .badge-grid img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #footer ul li {
+        width: 80%;
+    }
+
+    #badge .badge-grid button {
+        margin-right: 0;
+    }
+
+    #cta .cta-img img {
+        display: none;
+    }
+
+    #cta .cta-row {
+        padding: 100px 0 100px;
+    }
+
+    #badge {
+        padding: 50px 0 0 0;
+        display: flex;
+    }
+
+    #badge button:last-of-type{
+        margin-bottom: 30px;
+    }
+
+    #input-cargo {
+        margin-bottom: 30px;
+    }
+
+    .grid-compartilhar button{
+        float: left;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .box-texto {
+        padding: 10px 0 80px 20px;
+    }
+
+    #cta p:last-of-type{
+        padding-bottom: 60px;
+    }
+
+    #login button{
+        margin-bottom: 40px
+    }
+
+    .remover-sticker {
+        top: 0;
+        right: 0;
+    }
+}
