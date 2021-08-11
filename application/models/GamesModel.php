@@ -1,25 +1,22 @@
 <? if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-Class PerguntasModel extends CI_Model {
+Class GamesModel extends CI_Model {
 
-    public $idPerguntas;
-    public $enunciado;
-    public $reposta1;
-    public $reposta2;
-    public $reposta3;
-    public $reposta4;
-    public $reposta5;
+    public $idGame;
+    public $idUser;
+    public $score;
+    public $gametime;
 
-    public function saveNewQuestion($data) 
+    public function saveNewGame($data) 
     {
-        if ($this->db->insert("Perguntas", $data)) {
+        if ($this->db->insert("games", $data)) {
             return $this->db->insert_id();
         }
 
         return false;
     }
 
-    public function getQuestions($pag = null)
+    public function getGames($pag = null)
     {
         if ($pag) {
             $limit = 10;
@@ -31,8 +28,29 @@ Class PerguntasModel extends CI_Model {
 
         $sql = "SELECT SQL_CALC_FOUND_ROWS
                     *
-                FROM Perguntas
+                FROM games
                 $query";
+
+        $result = $this->db->query($sql);
+        $foundRows = $this->db->query("SELECT FOUND_ROWS() as TotalRows");
+        
+        if ($result) {
+            return array(
+                'data'    => $result->result(),
+                'numRows' => $result->num_rows(),
+                'totalRows' => $foundRows->row()->TotalRows
+            );
+        }
+
+        return false;
+    }
+
+    public function getGamesForScore()
+    {
+        $sql = "SELECT SQL_CALC_FOUND_ROWS
+                    *
+                FROM games
+                ORDER BY score DESC, gametime ASC";
 
         $result = $this->db->query($sql);
         $foundRows = $this->db->query("SELECT FOUND_ROWS() as TotalRows");

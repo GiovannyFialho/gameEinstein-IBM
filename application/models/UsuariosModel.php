@@ -12,7 +12,7 @@ Class UsuariosModel extends CI_Model {
     {
         $passHash = $this->hashPassword();
 
-        if ($this->db->insert("Usuarios", $data)) {
+        if ($this->db->insert("users", $data)) {
             return $this->db->insert_id();
         }
 
@@ -51,13 +51,11 @@ Class UsuariosModel extends CI_Model {
     public function getUser()
     {
         $sql = "SELECT
-                    IdUsuario,
-                    Nome,
-                    Email,
-                    Documento,
-                    Status
-                FROM Usuarios
-                WHERE IdUsuario = ?";
+                    idUsuario,
+                    name,
+                    email
+                FROM users
+                WHERE idUsuario = ?";
 
         $query = $this->db->query($sql,array($this->idUsuario));
 
@@ -70,8 +68,8 @@ Class UsuariosModel extends CI_Model {
 
     public function updateUser($dataUpdate)
     {
-        $this->db->where('IdUsuario', $this->idUsuario);
-        if ($this->db->update('Usuarios', $dataUpdate)) {
+        $this->db->where('idUsuario', $this->idUsuario);
+        if ($this->db->update('idUsuario', $dataUpdate)) {
             return true;
         }
 
@@ -82,8 +80,8 @@ Class UsuariosModel extends CI_Model {
     {
         $sql = "SELECT 
                     *
-                FROM Usuarios
-                WHERE Email = ?";
+                FROM users
+                WHERE email = ?";
         
         $query = $this->db->query($sql, array($email));
 
@@ -98,15 +96,15 @@ Class UsuariosModel extends CI_Model {
     {
         $sql = "SELECT 
                     *
-                FROM Usuarios
-                WHERE Email = ?";
+                FROM users
+                WHERE email = ?";
         
         $query = $this->db->query($sql,array($this->email));
         
         if ($query->num_rows() != 0) {
             $result = $query->row();
 
-            if (password_verify($this->senha, $result->Senha)) {
+            if (password_verify($this->senha, $result->password)) {
                 return $result;
             } 
         }
