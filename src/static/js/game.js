@@ -1,17 +1,54 @@
 const formGame = document.getElementById("form-game");
 
 if (formGame) {
-    let response = [];
+    let pontos = 0;
+    let respostas = [];
+    let gabarito = [
+        {
+            cor: "Azul",
+            nacionalidade: "Norueguês",
+            bebida: "Água",
+            cigarro: "Dunhill",
+            animal: "Peixes",
+        },
+        {
+            cor: "Amarelo",
+            nacionalidade: "Sueco",
+            bebida: "Café",
+            cigarro: "Bluemaster",
+            animal: "Cavalos",
+        },
+        {
+            cor: "Branco",
+            nacionalidade: "Dinamarquês",
+            bebida: "Leite",
+            cigarro: "Blends",
+            animal: "Gatos",
+        },
+        {
+            cor: "Vermelho",
+            nacionalidade: "Alemão",
+            bebida: "Cerveja",
+            cigarro: "Prince",
+            animal: "Pássaros",
+        },
+        {
+            cor: "Verde",
+            nacionalidade: "Inglês",
+            bebida: "Chá",
+            cigarro: "Pall Mall",
+            animal: "Cachorros",
+        },
+    ];
+    let tabelaPontuacao = [];
 
     let casa1 = {};
     document.getElementById("cores1").addEventListener("change", (event) => {
         casa1.cor = event.target.value;
     });
-    document
-        .getElementById("nacionalidades1")
-        .addEventListener("change", (event) => {
-            casa1.nacionalidade = event.target.value;
-        });
+    document.getElementById("nacionalidades1").addEventListener("change", (event) => {
+        casa1.nacionalidade = event.target.value;
+    });
     document.getElementById("bebidas1").addEventListener("change", (event) => {
         casa1.bebida = event.target.value;
     });
@@ -26,11 +63,9 @@ if (formGame) {
     document.getElementById("cores2").addEventListener("change", (event) => {
         casa2.cor = event.target.value;
     });
-    document
-        .getElementById("nacionalidades2")
-        .addEventListener("change", (event) => {
-            casa2.nacionalidade = event.target.value;
-        });
+    document.getElementById("nacionalidades2").addEventListener("change", (event) => {
+        casa2.nacionalidade = event.target.value;
+    });
     document.getElementById("bebidas2").addEventListener("change", (event) => {
         casa2.bebida = event.target.value;
     });
@@ -45,11 +80,9 @@ if (formGame) {
     document.getElementById("cores3").addEventListener("change", (event) => {
         casa3.cor = event.target.value;
     });
-    document
-        .getElementById("nacionalidades3")
-        .addEventListener("change", (event) => {
-            casa3.nacionalidade = event.target.value;
-        });
+    document.getElementById("nacionalidades3").addEventListener("change", (event) => {
+        casa3.nacionalidade = event.target.value;
+    });
     document.getElementById("bebidas3").addEventListener("change", (event) => {
         casa3.bebida = event.target.value;
     });
@@ -64,11 +97,9 @@ if (formGame) {
     document.getElementById("cores4").addEventListener("change", (event) => {
         casa4.cor = event.target.value;
     });
-    document
-        .getElementById("nacionalidades4")
-        .addEventListener("change", (event) => {
-            casa4.nacionalidade = event.target.value;
-        });
+    document.getElementById("nacionalidades4").addEventListener("change", (event) => {
+        casa4.nacionalidade = event.target.value;
+    });
     document.getElementById("bebidas4").addEventListener("change", (event) => {
         casa4.bebida = event.target.value;
     });
@@ -83,11 +114,9 @@ if (formGame) {
     document.getElementById("cores5").addEventListener("change", (event) => {
         casa5.cor = event.target.value;
     });
-    document
-        .getElementById("nacionalidades5")
-        .addEventListener("change", (event) => {
-            casa5.nacionalidade = event.target.value;
-        });
+    document.getElementById("nacionalidades5").addEventListener("change", (event) => {
+        casa5.nacionalidade = event.target.value;
+    });
     document.getElementById("bebidas5").addEventListener("change", (event) => {
         casa5.bebida = event.target.value;
     });
@@ -101,8 +130,69 @@ if (formGame) {
     formGame.addEventListener("submit", (event) => {
         event.preventDefault();
 
-        response.push(casa1, casa2, casa3, casa4, casa5);
+        respostas.push(casa1, casa2, casa3, casa4, casa5);
 
-        console.log(response);
+        respostas.forEach((resposta, index) => {
+            if (resposta.cor == gabarito[index].cor) {
+                pontos += 1;
+            } else {
+                pontos += -1;
+            }
+
+            if (resposta.nacionalidade == gabarito[index].nacionalidade) {
+                pontos += 1;
+            } else {
+                pontos += -1;
+            }
+
+            if (resposta.bebida == gabarito[index].bebida) {
+                pontos += 1;
+            } else {
+                pontos += -1;
+            }
+
+            if (resposta.cigarro == gabarito[index].cigarro) {
+                pontos += 1;
+            } else {
+                pontos += -1;
+            }
+
+            if (resposta.animal == gabarito[index].animal) {
+                pontos += 1;
+            } else {
+                pontos += -1;
+            }
+
+            if (pontos < 0) {
+                pontos = 0;
+            }
+        });
+
+        tabelaPontuacao.push({
+            name: "Giovanny Fialho",
+            pontos,
+            tempo: new Date().getTime(),
+        });
+
+        createTr();
+
+        respostas = [];
+        casa1 = {};
+        casa2 = {};
+        casa3 = {};
+        casa4 = {};
+        casa5 = {};
     });
+
+    const createTr = () => {
+        tabelaPontuacao.forEach((linha) => {
+            document.getElementById("tbody").innerHTML += `
+                <tr>
+                    <td>${linha.name}</td>
+                    <td>${linha.pontos}</td>
+                    <td>${linha.tempo}</td>
+                </tr>
+            `;
+        });
+    };
 }
