@@ -2,8 +2,12 @@
 
 ## Install dependencies
 
-`yarn`
+```
+yarn
+```
 
 ## Rodar PHP
 
-`docker-compose up -d`
+```
+docker-compose up -d
+```
