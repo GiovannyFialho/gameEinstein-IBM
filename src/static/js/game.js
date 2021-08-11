@@ -40,6 +40,7 @@ if (formGame) {
             animal: "Cachorros",
         },
     ];
+    let tabelaPontuacao = [];
 
     let casa1 = {};
     document.getElementById("cores1").addEventListener("change", (event) => {
@@ -167,8 +168,31 @@ if (formGame) {
             }
         });
 
-        alert(`Parabéns! Você fez ${pontos} pontos.`);
+        tabelaPontuacao.push({
+            name: "Giovanny Fialho",
+            pontos,
+            tempo: new Date().getTime(),
+        });
 
-        location.reload();
+        createTr();
+
+        respostas = [];
+        casa1 = {};
+        casa2 = {};
+        casa3 = {};
+        casa4 = {};
+        casa5 = {};
     });
+
+    const createTr = () => {
+        tabelaPontuacao.forEach((linha) => {
+            document.getElementById("tbody").innerHTML += `
+                <tr>
+                    <td>${linha.name}</td>
+                    <td>${linha.pontos}</td>
+                    <td>${linha.tempo}</td>
+                </tr>
+            `;
+        });
+    };
 }

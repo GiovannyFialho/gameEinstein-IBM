@@ -19,7 +19,7 @@
     <body>
         <div class="container">
             <div class="container-game">
-                <h1>Teste de QI de Einstein</h1>
+                <h2 class="titulo-componente">Teste de QI de Einstein</h2>
                 <form id="form-game">
                     <ul class="container-game-items">
                         <li class="container-game-items-item">
@@ -302,6 +302,20 @@
                         <button>Enviar teste</button>
                     </div>
                 </form>
+            </div>
+
+            <div class="container-tabela-pontuacao">
+                <h2 class="titulo-componente">Tabela de pontuação</h2>
+                <table class="pontuacao">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Pontuação</th>
+                            <th>Tempo</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
             </div>
         </div>
         <script src="../build/js/script.min.js"></script>
