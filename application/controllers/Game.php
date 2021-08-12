@@ -20,6 +20,11 @@ class Game extends CI_Controller {
 		$this->rendererSite('site/game/index');
 	}
 
+	public function login()
+	{
+		$this->rendererSite('site/game/login');
+	}
+
 	public function ranking()
 	{
 		$this->rendererSite('site/game/ranking');
