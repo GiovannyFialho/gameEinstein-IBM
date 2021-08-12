@@ -173,7 +173,7 @@ if (formGame) {
         formData.append("score", pontos);
         formData.append("gametime", new Date().getTime());
 
-        fetch(`http://localhost/game/salvar`, {
+        fetch(`${location.origin}/game/salvar`, {
             method: "POST",
             body: formData,
         })
@@ -183,24 +183,24 @@ if (formGame) {
             .then((response) => {
                 popupInfo.parentElement.classList.add("show");
                 popupInfo.innerHTML = `
-                    <h3>${response.title}</h3>
+                    <h3 class="success">${response.title}</h3>
                     <p>${response.text}</p>
                 `;
 
                 setTimeout(() => {
                     location.href = "/game/ranking";
-                }, 3000);
+                }, 5000);
             })
-            .catch((error) => {
+            .catch(() => {
                 popupInfo.parentElement.classList.add("show");
                 popupInfo.innerHTML = `
-                    <h3>Erros de serviço</h3>
+                    <h3 class="error">Erros de serviço</h3>
                     <p>Estamos com problemas internos, por favor, tente mais tarde.</p>
                 `;
 
                 setTimeout(() => {
                     location.href = "/";
-                }, 3000);
+                }, 5000);
             });
 
         respostas = [];

@@ -2,7 +2,7 @@ let tabelaPontuacao = document.querySelector(".container-tabela-pontuacao");
 
 if (tabelaPontuacao) {
     const createTr = async () => {
-        const response = await fetch(`http://localhost/game/getRanking`);
+        const response = await fetch(`${location.origin}/game/getRanking`);
         const items = await response.json();
 
         items.data.forEach((linha) => {
