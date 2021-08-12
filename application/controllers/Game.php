@@ -74,4 +74,13 @@ class Game extends CI_Controller {
 
 	}
 
+	public function ranking()
+	{
+		$score = $this->games->getGames();
+
+		$this->data['ranking'] = $score['data'];
+
+		$this->rendererSite('site/game/ranking', $this->data);
+	}
+
 }
