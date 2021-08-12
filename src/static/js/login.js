@@ -4,6 +4,8 @@ if (formLogin) {
     formLogin.addEventListener("submit", (event) => {
         event.preventDefault();
 
+        let popupInfo = document.querySelector(".popup-info");
+
         let formData = new FormData();
         formData.append("email", document.getElementById("email").value);
         formData.append("password", document.getElementById("password").value);
@@ -16,7 +18,12 @@ if (formLogin) {
                 return response.json();
             })
             .then((response) => {
-                console.log(response);
+                if (response.success == true) {
+                    location.href`/game`;
+                } else {
+                    console.log(response);
+                    document.querySelector(".msg-erro").innerHTML = `<p>${response.message}</p>`;
+                }
             })
             .catch(() => {
                 popupInfo.parentElement.classList.add("show");

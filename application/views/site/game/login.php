@@ -5,6 +5,8 @@
         <input type="email" id="email" placeholder="E-mail" require>
         <input type="password" id="password" placeholder="Senha" require>
 
+        <div class="msg-erro"></div>
+
         <div class="button-container">
             <button>Cadastrar</button>
         </div>

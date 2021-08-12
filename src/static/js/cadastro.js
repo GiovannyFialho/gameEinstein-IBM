@@ -22,7 +22,7 @@ if (formCadastro) {
                 popupInfo.parentElement.classList.add("show");
                 popupInfo.innerHTML = `
                     <h3 class="${response.success == true ? `success` : `error`}">${response.title}</h3>
-                    <p>${response.text}</p>
+                    <p>${response.message}</p>
                     <div class="button-container center">
                         <a href="${response.success == true ? `/game/login` : `/`}" class="${response.success == true ? `success` : `error`}">
                             Ok

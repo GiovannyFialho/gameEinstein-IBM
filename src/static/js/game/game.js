@@ -184,7 +184,7 @@ if (formGame) {
                 popupInfo.parentElement.classList.add("show");
                 popupInfo.innerHTML = `
                     <h3 class="success">${response.title}</h3>
-                    <p>${response.text}</p>
+                    <p>${response.message}</p>
                 `;
 
                 setTimeout(() => {
@@ -210,8 +210,4 @@ if (formGame) {
         casa4 = {};
         casa5 = {};
     });
-
-    const createTr = () => {
-        console.log("teste");
-    };
 }
