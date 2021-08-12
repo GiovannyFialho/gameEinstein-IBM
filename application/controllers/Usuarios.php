@@ -79,12 +79,12 @@ class Usuarios extends CI_Controller {
 			$_POST,
 			array(
 				'email',
-				'senha',
+				'password',
 			)
 		);
 
 		$email = $this->input->post('email');
-		$senha = $this->input->post('senha');
+		$senha = $this->input->post('password');
 
 		$this->usuarios->email = $email;
 		$this->usuarios->senha = $senha;
