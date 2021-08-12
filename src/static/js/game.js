@@ -40,7 +40,6 @@ if (formGame) {
             animal: "Cachorros",
         },
     ];
-    let tabelaPontuacao = [];
 
     let casa1 = {};
     document.getElementById("cores1").addEventListener("change", (event) => {
@@ -127,7 +126,7 @@ if (formGame) {
         casa5.animal = event.target.value;
     });
 
-    formGame.addEventListener("submit", (event) => {
+    formGame.addEventListener("submit", function (event) {
         event.preventDefault();
 
         respostas.push(casa1, casa2, casa3, casa4, casa5);
@@ -168,13 +167,24 @@ if (formGame) {
             }
         });
 
-        tabelaPontuacao.push({
-            name: "Giovanny Fialho",
-            pontos,
-            tempo: new Date().getTime(),
-        });
+        const formData = new FormData();
+        formData.append("idUser", 1);
+        formData.append("score", pontos);
+        formData.append("gametime", new Date().getTime());
 
-        createTr();
+        fetch(`http://localhost/game/salvar`, {
+            method: "POST",
+            body: formData,
+        })
+            .then((response) => {
+                return response.json();
+            })
+            .then((response) => {
+                return console.log(response);
+            })
+            .catch((error) => {
+                return console.error(error);
+            });
 
         respostas = [];
         casa1 = {};
@@ -185,14 +195,6 @@ if (formGame) {
     });
 
     const createTr = () => {
-        tabelaPontuacao.forEach((linha) => {
-            document.getElementById("tbody").innerHTML += `
-                <tr>
-                    <td>${linha.name}</td>
-                    <td>${linha.pontos}</td>
-                    <td>${linha.tempo}</td>
-                </tr>
-            `;
-        });
+        console.log("teste");
     };
 }

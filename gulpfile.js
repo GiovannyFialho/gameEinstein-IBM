@@ -14,14 +14,14 @@ const style = () => {
         .on("error", sass.logError)
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(rename("style.min.css"))
-        .pipe(gulp.dest("src/build/css"));
+        .pipe(gulp.dest("assets/build/css"));
 };
 
 const js = () => {
     gulp.src("src/static/js/**/*.js", { allowEmpty: true })
         .pipe(concat("script.min.js"))
         .pipe(uglify())
-        .pipe(gulp.dest("src/build/js"));
+        .pipe(gulp.dest("assets/build/js"));
 };
 
 const watch = () => {
