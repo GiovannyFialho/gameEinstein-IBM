@@ -278,7 +278,7 @@
                 </ul>
             </li>
         </ul>
-        <div class="button-container">
+        <div class="button-container center">
             <button>Enviar teste</button>
         </div>
     </form>
