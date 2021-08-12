@@ -11,7 +11,7 @@ if (formCadastro) {
         formData.append("email", document.getElementById("email").value);
         formData.append("password", document.getElementById("password").value);
 
-        fetch(`http://localhost/usuarios/cadastrar`, {
+        fetch(`${location.origin}/usuarios/cadastrar`, {
             method: "POST",
             body: formData,
         })
@@ -24,7 +24,7 @@ if (formCadastro) {
                     <h3 class="${response.success == true ? `success` : `error`}">${response.title}</h3>
                     <p>${response.text}</p>
                     <div class="button-container center">
-                        <a href="${response.success == true ? `/usuarios/logar` : `/`}" class="${response.success == true ? `success` : `error`}">
+                        <a href="${response.success == true ? `/game/login` : `/`}" class="${response.success == true ? `success` : `error`}">
                             Ok
                         </a>
                     </div>
@@ -32,7 +32,7 @@ if (formCadastro) {
 
                 setTimeout(() => {
                     if (response.success == true) {
-                        location.href = "/usuarios/logar";
+                        location.href = "/game/login";
                     } else {
                         location.reload();
                     }

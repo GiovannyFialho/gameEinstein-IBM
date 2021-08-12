@@ -173,7 +173,7 @@ if (formGame) {
         formData.append("score", pontos);
         formData.append("gametime", new Date().getTime());
 
-        fetch(`http://localhost/game/salvar`, {
+        fetch(`${location.origin}/game/salvar`, {
             method: "POST",
             body: formData,
         })

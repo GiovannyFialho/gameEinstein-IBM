@@ -1,7 +1,7 @@
 <div class="form-container">
     <h2 class="titulo-componente">Cadastrar</h2>
 
-    <form id="form-cadastro">
+    <form class="form-default" id="form-cadastro">
         <input type="text" id="name" placeholder="Nome" require>
         <input type="email" id="email" placeholder="E-mail" require>
         <input type="password" id="password" placeholder="Senha" require>
