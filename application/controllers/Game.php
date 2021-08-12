@@ -66,7 +66,7 @@ class Game extends CI_Controller {
 				array(
 					'success' => true,
 					'title' => 'Tudo certo!',
-					'text' => 'Novo jogo cadastrado com sucesso',
+					'message' => 'Novo jogo cadastrado com sucesso',
 					'data' => $score['data']
 				),
 				200
@@ -76,7 +76,7 @@ class Game extends CI_Controller {
 				array(
 					'success' => false,
 					'title' => 'Ops',
-					'text' => $message
+					'message' => $message
 				),
 				400
 			);
@@ -103,7 +103,7 @@ class Game extends CI_Controller {
 				array(
 					'success' => false,
 					'title' => 'Ops',
-					'text' => 'Rankeamento não disponível'
+					'message' => 'Rankeamento não disponível'
 				),
 				400
 			);

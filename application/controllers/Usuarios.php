@@ -56,7 +56,7 @@ class Usuarios extends CI_Controller {
 				array(
 					'success' => true,
 					'title' => 'Tudo certo!',
-					'text' => 'Novo usuário cadastrado com sucesso'
+					'message' => 'Novo usuário cadastrado com sucesso'
 				),
 				200
 			);
@@ -65,7 +65,7 @@ class Usuarios extends CI_Controller {
 				array(
 					'success' => false,
 					'title' => 'Ops',
-					'text' => $message
+					'message' => $message
 				),
 				400
 			);
@@ -115,7 +115,7 @@ class Usuarios extends CI_Controller {
 			array(
 				'success' => false,
 				'title' => 'Ops',
-				'text' => $message
+				'message' => $message
 			),
 			200
 		);
