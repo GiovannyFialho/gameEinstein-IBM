@@ -29,6 +29,7 @@ Class GamesModel extends CI_Model {
         $sql = "SELECT SQL_CALC_FOUND_ROWS
                     *
                 FROM games
+                ORDER BY score DESC, gametime ASC
                 $query";
 
         $result = $this->db->query($sql);

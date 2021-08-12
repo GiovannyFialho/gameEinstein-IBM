@@ -20,6 +20,11 @@ class Game extends CI_Controller {
 		$this->rendererSite('site/game/index');
 	}
 
+	public function ranking()
+	{
+		$this->rendererSite('site/game/ranking');
+	}
+
 	public function salvar() 
 	{
 		$this->validateRequiredParameters(
@@ -56,7 +61,7 @@ class Game extends CI_Controller {
 				array(
 					'success' => true,
 					'title' => 'Tudo certo!',
-					'text' => 'Nova pergunta cadastrado com sucesso',
+					'text' => 'Novo jogo cadastrado com sucesso',
 					'data' => $score['data']
 				),
 				200
@@ -72,6 +77,32 @@ class Game extends CI_Controller {
 			);
 		}
 
+	}
+
+	public function getRanking()
+	{
+		$score = $this->games->getGames();
+
+		$this->data['ranking'] = $score['data'];
+
+		if ($score['numRows'] > 0) {
+			$this->sendJSON(
+				array(
+					'success' => true,
+					'data' => $score['data']
+				),
+				200
+			);
+		} else {
+			$this->sendJSON(
+				array(
+					'success' => false,
+					'title' => 'Ops',
+					'text' => 'Rankeamento não disponível'
+				),
+				400
+			);
+		}
 	}
 
 }
