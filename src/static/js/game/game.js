@@ -3,6 +3,7 @@ const formGame = document.getElementById("form-game");
 if (formGame) {
     let pontos = 0;
     let respostas = [];
+    let popupInfo = document.querySelector(".popup-info");
     let gabarito = [
         {
             cor: "Azul",
@@ -180,10 +181,26 @@ if (formGame) {
                 return response.json();
             })
             .then((response) => {
-                return console.log(response);
+                popupInfo.parentElement.classList.add("show");
+                popupInfo.innerHTML = `
+                    <h3>${response.title}</h3>
+                    <p>${response.text}</p>
+                `;
+
+                setTimeout(() => {
+                    location.href = "/game/ranking";
+                }, 3000);
             })
             .catch((error) => {
-                return console.error(error);
+                popupInfo.parentElement.classList.add("show");
+                popupInfo.innerHTML = `
+                    <h3>Erros de serviço</h3>
+                    <p>Estamos com problemas internos, por favor, tente mais tarde.</p>
+                `;
+
+                setTimeout(() => {
+                    location.href = "/";
+                }, 3000);
             });
 
         respostas = [];
