@@ -19,23 +19,22 @@ if (formLogin) {
             })
             .then((response) => {
                 if (response.success == true) {
-                    location.href`/game`;
+                    location.href = `/game`;
                 } else {
-                    console.log(response);
                     document.querySelector(".msg-erro").innerHTML = `<p>${response.message}</p>`;
                 }
             })
             .catch(() => {
                 popupInfo.parentElement.classList.add("show");
                 popupInfo.innerHTML = `
-                    <h3 class="error">Erros de serviço</h3>
-                    <p>Estamos com problemas internos, por favor, tente mais tarde.</p>
-                    <div class="button-container center">
-                        <a href="/" class="error">
-                            Ok
-                        </a>
-                    </div>
-                `;
+                <h3 class="error">Erros de serviço</h3>
+                <p>Estamos com problemas internos, por favor, tente mais tarde.</p>
+                <div class="button-container center">
+                    <a href="/" class="error">
+                        Ok
+                    </a>
+                </div>
+            `;
 
                 setTimeout(() => {
                     location.reload();
