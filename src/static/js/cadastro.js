@@ -41,7 +41,7 @@ if (formCadastro) {
             .catch(() => {
                 popupInfo.parentElement.classList.add("show");
                 popupInfo.innerHTML = `
-                    <h3 class="error">Erros de serviço</h3>
+                    <h3 class="error">Erro de serviço</h3>
                     <p>Estamos com problemas internos, por favor, tente mais tarde.</p>
                     <div class="button-container center">
                         <a href="/" class="error">

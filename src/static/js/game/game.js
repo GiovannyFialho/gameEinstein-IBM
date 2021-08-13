@@ -1,6 +1,24 @@
 const formGame = document.getElementById("form-game");
 
 if (formGame) {
+    /**
+     * Screen time
+     */
+
+    let timer = {
+        initialValue: 0,
+        start: () => {
+            setInterval(() => {
+                timer.initialValue++;
+            }, 1000);
+        },
+        stop: () => {
+            return console.log(timer.initialValue);
+        },
+    };
+
+    timer.start();
+
     let pontos = 0;
     let respostas = [];
     let popupInfo = document.querySelector(".popup-info");
@@ -170,7 +188,7 @@ if (formGame) {
 
         const formData = new FormData();
         formData.append("score", pontos);
-        formData.append("gametime", new Date().getTime());
+        formData.append("gametime", timer.stop());
 
         fetch(`${location.origin}/game/salvar`, {
             method: "POST",
@@ -184,6 +202,11 @@ if (formGame) {
                 popupInfo.innerHTML = `
                     <h3 class="success">${response.title}</h3>
                     <p>${response.message}</p>
+                    <div class="button-container center">
+                        <a href="/game/ranking" class="success">
+                            Ok
+                        </a>
+                    </div>
                 `;
 
                 setTimeout(() => {
@@ -193,8 +216,13 @@ if (formGame) {
             .catch(() => {
                 popupInfo.parentElement.classList.add("show");
                 popupInfo.innerHTML = `
-                    <h3 class="error">Erros de serviço</h3>
+                    <h3 class="error">Erro de serviço</h3>
                     <p>Estamos com problemas internos, por favor, tente mais tarde.</p>
+                    <div class="button-container center">
+                        <a href="/" class="error">
+                            Ok
+                        </a>
+                    </div>
                 `;
 
                 setTimeout(() => {
