@@ -32,7 +32,7 @@ if (formCadastro) {
 
                 setTimeout(() => {
                     if (response.success == true) {
-                        location.href = "/game/login";
+                        location.href = `/game/login`;
                     } else {
                         location.reload();
                     }

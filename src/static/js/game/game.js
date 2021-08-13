@@ -169,7 +169,6 @@ if (formGame) {
         });
 
         const formData = new FormData();
-        formData.append("idUser", 1);
         formData.append("score", pontos);
         formData.append("gametime", new Date().getTime());
 
@@ -188,7 +187,7 @@ if (formGame) {
                 `;
 
                 setTimeout(() => {
-                    location.href = "/game/ranking";
+                    location.href = `/game/ranking`;
                 }, 5000);
             })
             .catch(() => {
