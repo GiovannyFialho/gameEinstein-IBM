@@ -2,22 +2,62 @@ const formGame = document.getElementById("form-game");
 
 if (formGame) {
     /**
-     * Screen time
+     * Cronometro jogo
      */
 
-    let timer = {
-        initialValue: 0,
-        start: () => {
-            setInterval(() => {
-                timer.initialValue++;
-            }, 1000);
-        },
-        stop: () => {
-            return console.log(timer.initialValue);
-        },
+    let minutes = document.getElementById("minutes");
+    let seconds = document.getElementById("seconds");
+
+    let min = 1;
+    let se = 0;
+    let initialCondition = true;
+    let myVar;
+    let segundos = 0;
+
+    let startTimer = function () {
+        if (initialCondition === true) {
+            myVar = setInterval(myTimer, 1000);
+        }
+
+        initialCondition = false;
     };
 
-    timer.start();
+    startTimer();
+
+    function myTimer() {
+        se = se + 1;
+        segundos++;
+        seconds.innerHTML = `0${se}`;
+
+        if (se > 9) {
+            seconds.innerHTML = se;
+            if (se === 60) {
+                seconds.innerHTML = `00`;
+                se = 00;
+
+                addMinute();
+            }
+        }
+    }
+
+    function addMinute() {
+        minutes.innerHTML = `0${min}`;
+        if (min > 9) {
+            minutes.innerHTML = min;
+
+            if (min === 60) {
+                minutes.innerHTML = `00`;
+                se = 00;
+            }
+        }
+        min = min + 1;
+    }
+
+    function stopTimer() {
+        clearInterval(myVar);
+
+        initialCondition = true;
+    }
 
     let pontos = 0;
     let respostas = [];
@@ -186,9 +226,11 @@ if (formGame) {
             }
         });
 
+        stopTimer();
+
         const formData = new FormData();
         formData.append("score", pontos);
-        formData.append("gametime", timer.stop());
+        formData.append("gametime", segundos);
 
         fetch(`${location.origin}/game/salvar`, {
             method: "POST",

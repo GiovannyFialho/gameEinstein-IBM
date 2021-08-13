@@ -1,3 +1,11 @@
+<div class="cronometro">
+    <div class="wind">
+        <p>
+            <span id="minutes">00</span>: <span id="seconds">00</span>
+        </p>
+    </div>
+</div>
+
 <div class="container-game">
     <h2 class="titulo-componente">Teste de QI de Einstein</h2>
     <form id="form-game">
