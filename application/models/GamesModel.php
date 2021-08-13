@@ -66,39 +66,5 @@ Class GamesModel extends CI_Model {
 
         return false;
     }
-
-    public function getQuestion()
-    {
-        $sql = "SELECT
-                    IdPergunta,
-                    Enunciado,
-                    Resposta1,
-                    Resposta2,
-                    Resposta3,
-                    Resposta4,
-                    Resposta5,
-                    RespostaCorreta,
-                    Status
-                FROM Perguntas
-                WHERE IdPergunta = ?";
-
-        $query = $this->db->query($sql,array($this->idPergunta));
-
-        if ($query) {
-            return $query->row();
-        }
-
-        return false;
-    }
-
-    public function updateQuestion($dataUpdate)
-    {
-        $this->db->where('IdPergunta', $this->idPergunta);
-        if ($this->db->update('Perguntas', $dataUpdate)) {
-            return true;
-        }
-
-        return false;
-    }
     
 } 
