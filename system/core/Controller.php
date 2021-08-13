@@ -123,7 +123,7 @@ class CI_Controller {
         if($this->session->userSession){
             return true;
         }else{
-            redirect('admin/login/');
+            redirect('game/login/');
         }
 
 	}

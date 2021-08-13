@@ -7,7 +7,6 @@ class Game extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		// $this->hasActiveSession();
 
 		$this->load->model("GamesModel", "games");
 		
@@ -17,6 +16,7 @@ class Game extends CI_Controller {
 
 	public function index()
 	{
+		$this->hasActiveSession();
 		$this->rendererSite('site/game/index');
 	}
 
@@ -27,21 +27,22 @@ class Game extends CI_Controller {
 
 	public function ranking()
 	{
+		$this->hasActiveSession();
 		$this->rendererSite('site/game/ranking');
 	}
 
 	public function salvar() 
 	{
+		$this->hasActiveSession();
 		$this->validateRequiredParameters(
 			$_POST,
 			array(
-				'idUser',
 				'score',
 				'gametime'
 			)
 		);
 
-		$idUser = $this->input->post('idUser');
+		$idUser = $this->session->userSession->idUsuario;
 		$score = $this->input->post('score');
 		$gametime = $this->input->post('gametime');
 
@@ -86,6 +87,7 @@ class Game extends CI_Controller {
 
 	public function getRanking()
 	{
+		$this->hasActiveSession();
 		$score = $this->games->getGames();
 
 		$this->data['ranking'] = $score['data'];
