@@ -16,7 +16,7 @@ class Usuarios extends CI_Controller {
 
 	public function index()
 	{
-		exit('Users');
+		$this->rendererSite('site/usuarios/index');
 	}
 
 	public function cadastrar() 
