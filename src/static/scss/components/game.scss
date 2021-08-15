@@ -1,5 +1,5 @@
 .content-game {
-    margin: 3rem 0;
+    margin: 5rem 0;
     @media (max-width: $mobile) {
         width: 100%;
     }
@@ -18,6 +18,9 @@
         &-item {
             @media (max-width: $mobile) {
                 width: 100%;
+                &:not(:last-child) {
+                    margin-bottom: 3rem;
+                }
             }
             &.hasIndex {
                 @media (min-width: $mobile) {
@@ -69,6 +72,37 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: space-around;
+                    position: relative;
+                    &#coluna1 {
+                        &::before {
+                            content: "1ª Coluna";
+                            @include titleColuna;
+                        }
+                    }
+                    &#coluna2 {
+                        &::before {
+                            content: "2ª Coluna";
+                            @include titleColuna;
+                        }
+                    }
+                    &#coluna3 {
+                        &::before {
+                            content: "3ª Coluna";
+                            @include titleColuna;
+                        }
+                    }
+                    &#coluna4 {
+                        &::before {
+                            content: "4ª Coluna";
+                            @include titleColuna;
+                        }
+                    }
+                    &#coluna5 {
+                        &::before {
+                            content: "5ª Coluna";
+                            @include titleColuna;
+                        }
+                    }
                     @media (max-width: $mobile) {
                         padding: 20px;
                     }

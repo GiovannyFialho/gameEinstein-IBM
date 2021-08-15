@@ -1,0 +1,8 @@
+@mixin titleColuna {
+    font-size: 1.4rem;
+    color: $white;
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
