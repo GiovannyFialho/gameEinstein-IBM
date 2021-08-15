@@ -4,6 +4,10 @@
 @import "global/global";
 @import "global/container";
 
+/* Template */
+@import "template/header";
+@import "template/footer";
+
 /* Components */
 @import "components/titulo";
 @import "components/game";

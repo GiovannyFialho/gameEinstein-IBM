@@ -8,4 +8,12 @@
     &::after {
         box-sizing: inherit;
     }
+    body {
+        min-height: 100vh;
+        height: 100%;
+        > .container {
+            min-height: calc(100vh - 184px);
+            height: 100%;
+        }
+    }
 }

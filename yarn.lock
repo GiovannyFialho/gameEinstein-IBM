@@ -2121,9 +2121,9 @@ path-type@^1.0.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
-"php-parser@git+https://github.com/glayzzle/php-parser.git#e61e26102144f267ecf5e09020865a9baa6ca2f1":
+"php-parser@https://github.com/glayzzle/php-parser#e61e26102144f267ecf5e09020865a9baa6ca2f1":
   version "3.0.2"
-  resolved "git+https://github.com/glayzzle/php-parser.git#e61e26102144f267ecf5e09020865a9baa6ca2f1"
+  resolved "https://github.com/glayzzle/php-parser#e61e26102144f267ecf5e09020865a9baa6ca2f1"
 
 picomatch@^2.0.4, picomatch@^2.2.1:
   version "2.3.0"
