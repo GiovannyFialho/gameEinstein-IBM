@@ -1,22 +1,33 @@
 .content-game {
     margin: 3rem 0;
+    @media (max-width: $mobile) {
+        width: 100%;
+    }
     &-items {
         display: grid;
         justify-items: center;
         grid-gap: 15px;
-        @media (min-width: $mobile) {
-            max-width: 85rem;
-            width: 100%;
-            justify-items: end;
-            grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+        @media (max-width: $mobile) {
+            grid-template-columns: repeat(1, 1fr);
         }
         &-item {
+            @media (max-width: $mobile) {
+                width: 100%;
+            }
             &.hasIndex {
                 @media (min-width: $mobile) {
                     display: flex;
                 }
                 ul {
                     &:not(.coluna) {
+                        @media (max-width: $mobile) {
+                            display: none;
+                        }
                         width: 100%;
                         min-width: 11rem;
                         height: 100%;
@@ -58,9 +69,12 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: space-around;
+                    @media (max-width: $mobile) {
+                        padding: 20px;
+                    }
                     li {
                         &:not(:last-child) {
-                            margin-bottom: 1.5rem;
+                            margin-bottom: 1.2rem;
                         }
                         select {
                             width: 100%;
@@ -69,6 +83,10 @@
                             font-size: 1.2rem;
                             color: $white;
                             outline: none;
+                            padding: 2px;
+                            @media (max-width: $mobile) {
+                                padding: 10px 15px;
+                            }
                         }
                     }
                 }
@@ -80,12 +98,19 @@
     margin: 3rem 0;
     ul {
         display: grid;
-        grid-template-columns: 1fr 1fr;
         gap: 1rem;
+        @media (min-width: $mobile) {
+            grid-template-columns: 1fr 1fr;
+        }
         li {
             label {
                 font-size: 1rem;
+                line-height: 1.3;
                 color: $white;
+                margin: 0 0 0.4rem 0.4rem;
+                @media (max-width: $mobile) {
+                    font-size: 1.3rem;
+                }
                 .important {
                     color: $primary;
                 }

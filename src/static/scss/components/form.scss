@@ -16,12 +16,22 @@
             justify-content: space-between;
             margin-top: 1rem;
             width: 100%;
+            @media (max-width: $mobile) {
+                flex-direction: column-reverse;
+            }
             .link-padrao {
                 width: inherit;
+                @media (max-width: $mobile) {
+                    text-align: center;
+                    font-size: 1.2rem;
+                }
             }
             .button-container {
                 width: inherit;
                 margin-top: initial;
+                @media (max-width: $mobile) {
+                    margin-bottom: 1rem;
+                }
             }
         }
     }
