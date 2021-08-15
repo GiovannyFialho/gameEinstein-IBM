@@ -24,7 +24,7 @@
             <div class="container">
                 <div class="logo">
                     <a href="/">
-                        <img src="<?= base_url("assets") ?>/img/site/logo.svg" alt="IBM Logo">
+                        <img src="<?= base_url("assets") ?>/img/site/logo.svg" width="82" height="33" loading="lazy" alt="IBM Logo">
                     </a>
                 </div>
                 <div class="menu-container">
