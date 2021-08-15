@@ -18,7 +18,7 @@
                     <a href="#" class="link-padrao">
                         Confira regulamento
                     </a>
-                    <div class="button-container">
+                    <div class="button-container end">
                         <button>
                             Cadastrar
                             <span class="icon">

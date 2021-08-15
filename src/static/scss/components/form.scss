@@ -15,8 +15,12 @@
             align-items: center;
             justify-content: space-between;
             margin-top: 1rem;
+            width: 100%;
+            .link-padrao {
+                width: inherit;
+            }
             .button-container {
-                width: initial;
+                width: inherit;
                 margin-top: initial;
             }
         }
