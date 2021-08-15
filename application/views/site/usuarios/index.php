@@ -1,5 +1,5 @@
-<div class="container-cadastrar">
-    <div class="container">
+<div class="container-padrao fullpage">
+    <div class="container center">
         <div class="form-container">
             <form class="form" id="form-cadastro">
                 <div class="form-main">

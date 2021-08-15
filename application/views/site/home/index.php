@@ -1,4 +1,4 @@
-<div class="container-home">
+<div class="container-padrao fullpage">
     <div class="container">
         <div class="highlight">
             <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
