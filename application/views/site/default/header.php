@@ -27,12 +27,34 @@
                         <img src="<?= base_url("assets") ?>/img/site/logo.svg" alt="IBM Logo">
                     </a>
                 </div>
-                <nav class="menu">
-                    <a class="menu_link" href="/usuarios">Cadastro</a>
-                    <a class="menu_link" href="/game">Desafio</a>
-                    <a class="menu_link" href="/game/ranking">Ranking</a>
-                    <a class="menu_link" href="/game/login">Login</a>
-                </nav>
+                <div class="menu-container">
+                    <input id="menu-hamburguer" type="checkbox" />
+                    <label for="menu-hamburguer">
+                        <div class="menu">
+                            <span class="hamburguer"></span>
+                        </div>
+                    </label>
+                    <div class="menu-container-items" id="contain-sider-bar">
+                        <div class="sider-bar">
+                            <input
+                                id="close-menu-hamburguer"
+                                type="checkbox"
+                                checked
+                            />
+                            <label for="close-menu-hamburguer">
+                                <div class="menu">
+                                    <span class="hamburguer"></span>
+                                </div>
+                            </label>
+                            <nav class="menu-items">
+                                <a class="menu_link" href="/usuarios">Cadastro</a>
+                                <a class="menu_link" href="/game">Desafio</a>
+                                <a class="menu_link" href="/game/ranking">Ranking</a>
+                                <a class="menu_link" href="/game/login">Login</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
 
