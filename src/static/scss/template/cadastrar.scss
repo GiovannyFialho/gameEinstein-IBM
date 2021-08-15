@@ -1,6 +1,7 @@
-.container-home {
+.container-cadastrar {
     @include bgDefault;
     .container {
         @include containerSecao;
+        align-items: center;
     }
 }

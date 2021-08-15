@@ -1,0 +1,8 @@
+.link-padrao {
+    color: $white;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    &:hover {
+        text-decoration: none;
+    }
+}

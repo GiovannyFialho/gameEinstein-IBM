@@ -1,23 +1,23 @@
 .form-container {
-    margin: 2rem 0;
-    .form-default {
+    max-width: 23rem;
+    width: 100%;
+    .form {
         max-width: 50rem;
         width: 100%;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        .msg-erro {
-            p {
-                color: $error;
-                text-align: center;
-                font-size: 1rem;
-            }
+        &-main {
+            background-color: $primary;
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
         }
-        input {
-            padding: 0.8rem 1.3rem;
-            font-size: 1.2rem;
-            &:not(:last-child) {
-                margin-bottom: 1rem;
+        &-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1rem;
+            .button-container {
+                width: initial;
+                margin-top: initial;
             }
         }
     }

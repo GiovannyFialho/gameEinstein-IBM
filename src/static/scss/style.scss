@@ -4,9 +4,14 @@
 @import "global/global";
 @import "global/container";
 
+/* Mixins */
+@import "mixins/bgDefault";
+@import "mixins/containerSecao";
+
 /* Template */
 @import "template/header";
 @import "template/home";
+@import "template/cadastrar";
 @import "template/footer";
 
 /* Components */
@@ -14,7 +19,9 @@
 @import "components/game";
 @import "components/tabela-pontuacao";
 @import "components/popup";
-@import "components/button";
 @import "components/form";
+@import "components/input";
+@import "components/button";
 @import "components/cronometro";
 @import "components/highlight";
+@import "components/link";
