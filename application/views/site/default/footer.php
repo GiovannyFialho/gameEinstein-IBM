@@ -1,4 +1,4 @@
-        </div>
+        </main>
         <footer></footer>
         <script src="<?= base_url("assets") ?>/build/js/script.min.js"></script>
     </body>

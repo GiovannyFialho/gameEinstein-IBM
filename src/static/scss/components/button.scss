@@ -10,11 +10,13 @@
     }
     button,
     a {
-        width: 100%;
+        width: 165px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         background-color: $primary;
         border: none;
-        padding: 10px 15px;
-        border-radius: 3px;
+        padding: 7px 15px;
         font-size: 1.1rem;
         color: $white;
         font-weight: 700;
@@ -29,7 +31,10 @@
         }
         @media (min-width: $mobile) {
             font-size: 1rem;
-            width: max-content;
+        }
+        .icon {
+            display: flex;
+            margin-left: 5px;
         }
         &:hover {
             background-color: $primary-dark;
