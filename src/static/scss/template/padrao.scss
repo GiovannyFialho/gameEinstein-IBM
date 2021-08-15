@@ -1,0 +1,12 @@
+.container-padrao {
+    @include bgDefault;
+    &.fullpage {
+        @include fullPage;
+    }
+    .container {
+        @include containerSecao;
+        &.center {
+            align-items: center;
+        }
+    }
+}

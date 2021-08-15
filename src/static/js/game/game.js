@@ -3,7 +3,6 @@ const formGame = document.getElementById("form-game");
 if (formGame) {
     /**
      * Cronometro jogo
-     */
 
     let minutes = document.getElementById("minutes");
     let seconds = document.getElementById("seconds");
@@ -58,164 +57,165 @@ if (formGame) {
 
         initialCondition = true;
     }
+    */
 
     let pontos = 0;
     let respostas = [];
     let popupInfo = document.querySelector(".popup-info");
     let gabarito = [
         {
-            cor: "Azul",
-            nacionalidade: "Norueguês",
-            bebida: "Água",
-            cigarro: "Dunhill",
-            animal: "Peixes",
+            quem: "Mineira",
+            veioAprender: "GRC",
+            perfil: "Diretora",
+            trabalhaCom: "Automação",
+            empresa: "Empresa C",
         },
         {
-            cor: "Amarelo",
-            nacionalidade: "Sueco",
-            bebida: "Café",
-            cigarro: "Bluemaster",
-            animal: "Cavalos",
+            quem: "Paraense",
+            veioAprender: "LGPD",
+            perfil: "Analísta",
+            trabalhaCom: "Inteligência artificial",
+            empresa: "Empresa B",
         },
         {
-            cor: "Branco",
-            nacionalidade: "Dinamarquês",
-            bebida: "Leite",
-            cigarro: "Blends",
-            animal: "Gatos",
+            quem: "Catarinense",
+            veioAprender: "Open Source",
+            perfil: "Estagiária",
+            trabalhaCom: "Segurança",
+            empresa: "Empresa D",
         },
         {
-            cor: "Vermelho",
-            nacionalidade: "Alemão",
-            bebida: "Cerveja",
-            cigarro: "Prince",
-            animal: "Pássaros",
+            quem: "Baiano",
+            veioAprender: "Machine Learing",
+            perfil: "Gerente",
+            trabalhaCom: "Infraestrutura",
+            empresa: "Empresa E",
         },
         {
-            cor: "Verde",
-            nacionalidade: "Inglês",
-            bebida: "Chá",
-            cigarro: "Pall Mall",
-            animal: "Cachorros",
+            quem: "Goiana",
+            veioAprender: "Solução Híbrida",
+            perfil: "Coordenador",
+            trabalhaCom: "Data",
+            empresa: "Empresa A",
         },
     ];
 
-    let casa1 = {};
-    document.getElementById("cores1").addEventListener("change", (event) => {
-        casa1.cor = event.target.value;
+    let coluna1 = {};
+    document.getElementById("quem1").addEventListener("change", (event) => {
+        coluna1.quem = event.target.value;
     });
-    document.getElementById("nacionalidades1").addEventListener("change", (event) => {
-        casa1.nacionalidade = event.target.value;
+    document.getElementById("veioAprender1").addEventListener("change", (event) => {
+        coluna1.veioAprender = event.target.value;
     });
-    document.getElementById("bebidas1").addEventListener("change", (event) => {
-        casa1.bebida = event.target.value;
+    document.getElementById("perfil1").addEventListener("change", (event) => {
+        coluna1.perfil = event.target.value;
     });
-    document.getElementById("cigarros1").addEventListener("change", (event) => {
-        casa1.cigarro = event.target.value;
+    document.getElementById("trabalhaCom1").addEventListener("change", (event) => {
+        coluna1.trabalhaCom = event.target.value;
     });
-    document.getElementById("animais1").addEventListener("change", (event) => {
-        casa1.animal = event.target.value;
-    });
-
-    let casa2 = {};
-    document.getElementById("cores2").addEventListener("change", (event) => {
-        casa2.cor = event.target.value;
-    });
-    document.getElementById("nacionalidades2").addEventListener("change", (event) => {
-        casa2.nacionalidade = event.target.value;
-    });
-    document.getElementById("bebidas2").addEventListener("change", (event) => {
-        casa2.bebida = event.target.value;
-    });
-    document.getElementById("cigarros2").addEventListener("change", (event) => {
-        casa2.cigarro = event.target.value;
-    });
-    document.getElementById("animais2").addEventListener("change", (event) => {
-        casa2.animal = event.target.value;
+    document.getElementById("empresa1").addEventListener("change", (event) => {
+        coluna1.empresa = event.target.value;
     });
 
-    let casa3 = {};
-    document.getElementById("cores3").addEventListener("change", (event) => {
-        casa3.cor = event.target.value;
+    let coluna2 = {};
+    document.getElementById("quem2").addEventListener("change", (event) => {
+        coluna2.quem = event.target.value;
     });
-    document.getElementById("nacionalidades3").addEventListener("change", (event) => {
-        casa3.nacionalidade = event.target.value;
+    document.getElementById("veioAprender2").addEventListener("change", (event) => {
+        coluna2.veioAprender = event.target.value;
     });
-    document.getElementById("bebidas3").addEventListener("change", (event) => {
-        casa3.bebida = event.target.value;
+    document.getElementById("perfil2").addEventListener("change", (event) => {
+        coluna2.perfil = event.target.value;
     });
-    document.getElementById("cigarros3").addEventListener("change", (event) => {
-        casa3.cigarro = event.target.value;
+    document.getElementById("trabalhaCom2").addEventListener("change", (event) => {
+        coluna2.trabalhaCom = event.target.value;
     });
-    document.getElementById("animais3").addEventListener("change", (event) => {
-        casa3.animal = event.target.value;
-    });
-
-    let casa4 = {};
-    document.getElementById("cores4").addEventListener("change", (event) => {
-        casa4.cor = event.target.value;
-    });
-    document.getElementById("nacionalidades4").addEventListener("change", (event) => {
-        casa4.nacionalidade = event.target.value;
-    });
-    document.getElementById("bebidas4").addEventListener("change", (event) => {
-        casa4.bebida = event.target.value;
-    });
-    document.getElementById("cigarros4").addEventListener("change", (event) => {
-        casa4.cigarro = event.target.value;
-    });
-    document.getElementById("animais4").addEventListener("change", (event) => {
-        casa4.animal = event.target.value;
+    document.getElementById("empresa2").addEventListener("change", (event) => {
+        coluna2.empresa = event.target.value;
     });
 
-    let casa5 = {};
-    document.getElementById("cores5").addEventListener("change", (event) => {
-        casa5.cor = event.target.value;
+    let coluna3 = {};
+    document.getElementById("quem3").addEventListener("change", (event) => {
+        coluna3.quem = event.target.value;
     });
-    document.getElementById("nacionalidades5").addEventListener("change", (event) => {
-        casa5.nacionalidade = event.target.value;
+    document.getElementById("veioAprender3").addEventListener("change", (event) => {
+        coluna3.veioAprender = event.target.value;
     });
-    document.getElementById("bebidas5").addEventListener("change", (event) => {
-        casa5.bebida = event.target.value;
+    document.getElementById("perfil3").addEventListener("change", (event) => {
+        coluna3.perfil = event.target.value;
     });
-    document.getElementById("cigarros5").addEventListener("change", (event) => {
-        casa5.cigarro = event.target.value;
+    document.getElementById("trabalhaCom3").addEventListener("change", (event) => {
+        coluna3.trabalhaCom = event.target.value;
     });
-    document.getElementById("animais5").addEventListener("change", (event) => {
-        casa5.animal = event.target.value;
+    document.getElementById("empresa3").addEventListener("change", (event) => {
+        coluna3.empresa = event.target.value;
+    });
+
+    let coluna4 = {};
+    document.getElementById("quem4").addEventListener("change", (event) => {
+        coluna4.quem = event.target.value;
+    });
+    document.getElementById("veioAprender4").addEventListener("change", (event) => {
+        coluna4.veioAprender = event.target.value;
+    });
+    document.getElementById("perfil4").addEventListener("change", (event) => {
+        coluna4.perfil = event.target.value;
+    });
+    document.getElementById("trabalhaCom4").addEventListener("change", (event) => {
+        coluna4.trabalhaCom = event.target.value;
+    });
+    document.getElementById("empresa4").addEventListener("change", (event) => {
+        coluna4.empresa = event.target.value;
+    });
+
+    let coluna5 = {};
+    document.getElementById("quem5").addEventListener("change", (event) => {
+        coluna5.quem = event.target.value;
+    });
+    document.getElementById("veioAprender5").addEventListener("change", (event) => {
+        coluna5.veioAprender = event.target.value;
+    });
+    document.getElementById("perfil5").addEventListener("change", (event) => {
+        coluna5.perfil = event.target.value;
+    });
+    document.getElementById("trabalhaCom5").addEventListener("change", (event) => {
+        coluna5.trabalhaCom = event.target.value;
+    });
+    document.getElementById("empresa5").addEventListener("change", (event) => {
+        coluna5.empresa = event.target.value;
     });
 
     formGame.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        respostas.push(casa1, casa2, casa3, casa4, casa5);
+        respostas.push(coluna1, coluna2, coluna3, coluna4, coluna5);
 
         respostas.forEach((resposta, index) => {
-            if (resposta.cor == gabarito[index].cor) {
+            if (resposta.quem == gabarito[index].quem) {
                 pontos += 1;
             } else {
                 pontos += -1;
             }
 
-            if (resposta.nacionalidade == gabarito[index].nacionalidade) {
+            if (resposta.veioAprender == gabarito[index].veioAprender) {
                 pontos += 1;
             } else {
                 pontos += -1;
             }
 
-            if (resposta.bebida == gabarito[index].bebida) {
+            if (resposta.perfil == gabarito[index].perfil) {
                 pontos += 1;
             } else {
                 pontos += -1;
             }
 
-            if (resposta.cigarro == gabarito[index].cigarro) {
+            if (resposta.trabalhaCom == gabarito[index].trabalhaCom) {
                 pontos += 1;
             } else {
                 pontos += -1;
             }
 
-            if (resposta.animal == gabarito[index].animal) {
+            if (resposta.empresa == gabarito[index].empresa) {
                 pontos += 1;
             } else {
                 pontos += -1;
@@ -273,10 +273,10 @@ if (formGame) {
             });
 
         respostas = [];
-        casa1 = {};
-        casa2 = {};
-        casa3 = {};
-        casa4 = {};
-        casa5 = {};
+        coluna1 = {};
+        coluna2 = {};
+        coluna3 = {};
+        coluna4 = {};
+        coluna5 = {};
     });
 }

@@ -6,13 +6,16 @@
 
 /* Mixins */
 @import "mixins/bgDefault";
+@import "mixins/bgTips";
+@import "mixins/fullPage";
 @import "mixins/containerSecao";
 @import "mixins/hoverMenu";
 
 /* Template */
 @import "template/header";
 @import "template/home";
-@import "template/fullPage";
+@import "template/padrao";
+@import "template/game";
 @import "template/footer";
 
 /* Components */

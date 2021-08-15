@@ -1,0 +1,18 @@
+.container-gamePage {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 120px);
+    height: 100%;
+    .container-game {
+        @include bgDefault;
+    }
+    .container-gameTips {
+        @include bgTips;
+    }
+    .container {
+        @include containerSecao;
+        &.center {
+            align-items: center;
+        }
+    }
+}

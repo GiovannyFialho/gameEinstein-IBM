@@ -94,10 +94,10 @@ header {
                         .sider-bar {
                             left: 0;
                             .hamburguer {
-                                background-color: $secondary;
+                                background-color: $white;
                                 &::after,
                                 &::before {
-                                    background-color: $secondary;
+                                    background-color: $white;
                                 }
                             }
                         }

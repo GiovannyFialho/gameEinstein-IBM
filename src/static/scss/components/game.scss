@@ -1,36 +1,91 @@
-.container-game {
-    max-width: 1000px;
-    width: 100%;
-    margin: 2rem auto;
+.content-game {
     &-items {
         display: grid;
-        grid-gap: 15px;
         justify-items: center;
+        grid-gap: 15px;
         @media (min-width: $mobile) {
+            max-width: 85rem;
+            width: 100%;
+            justify-items: end;
             grid-template-columns: repeat(5, 1fr);
         }
         &-item {
-            max-width: 280px;
-            width: 100%;
-            text-align: center;
-            ul {
-                padding: 10px;
-                margin-top: 5px;
-                li {
-                    height: 20px;
-                    margin: 0.8rem 0;
-                    padding: 3px 0;
+            &.hasIndex {
+                @media (min-width: $mobile) {
+                    display: flex;
+                }
+                ul {
+                    &:not(.coluna) {
+                        width: 100%;
+                        min-width: 11rem;
+                        height: 100%;
+                        background-image: linear-gradient(90deg, $primary, $secondary);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                    }
                 }
             }
-            span {
-                font-weight: 700;
-            }
-            .casa {
-                border: 1px solid #bbb;
-                background-color: #eee;
-                select {
+            ul {
+                padding-left: 1rem;
+                background-color: $primary;
+                &:not(.coluna) {
+                    li {
+                        position: relative;
+                        padding: 1rem 0;
+                        text-align: left;
+                        color: $white;
+                        font-weight: 700;
+                        &:not(:last-child) {
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                                width: 100%;
+                                height: 2px;
+                                background-color: $white;
+                            }
+                        }
+                    }
+                }
+                &.coluna {
                     width: 100%;
-                    font-size: 1.2rem;
+                    min-width: 13rem;
+                    height: 100%;
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    li {
+                        &:not(:last-child) {
+                            margin-bottom: 1.5rem;
+                        }
+                        select {
+                            width: 100%;
+                            border: 0.2rem solid $white;
+                            background-color: transparent;
+                            font-size: 1.2rem;
+                            color: $white;
+                            outline: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.content-tips {
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        li {
+            label {
+                font-size: 1rem;
+                color: $white;
+                .important {
+                    color: $primary;
                 }
             }
         }
