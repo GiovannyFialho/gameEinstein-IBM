@@ -1,0 +1,22 @@
+.ranking-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    @media (max-width: $mobile) {
+        grid-template-columns: 1fr;
+    }
+    &-item {
+        background-color: $primary;
+        padding: 20px 30px;
+        display: flex;
+        min-width: 20rem;
+        width: 100%;
+        > p {
+            margin-right: 1rem;
+            font-weight: 700;
+        }
+        p {
+            color: $white;
+        }
+    }
+}

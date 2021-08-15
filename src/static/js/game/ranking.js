@@ -1,24 +1,19 @@
-let tabelaPontuacao = document.querySelector(".container-tabela-pontuacao");
+let ranking = document.querySelector(".ranking-container");
 
-if (tabelaPontuacao) {
-    const createTr = async () => {
+if (ranking) {
+    const createTable = async () => {
         const response = await fetch(`${location.origin}/game/getRanking`);
         const items = await response.json();
 
-        items.data.forEach((linha) => {
-            var min = Math.floor(linha.gametime/60);
-            var sec = linha.gametime%60;
-            min = min.toString().padStart(2, 0);
-            sec = sec.toString().padStart(2, 0);
-            document.getElementById("tbody").innerHTML += `
-                <tr>
-                    <td>${linha.idUser}</td>
-                    <td>${linha.score}</td>
-                    <td>${min}:${sec}</td>
-                </tr>
+        items.data.forEach((item, index) => {
+            document.getElementById(`ranking`).innerHTML += `
+                <div class="ranking-container-item">
+                    <p>${index}</p>
+                    <p>${item.idUser}</p>
+                </div>
             `;
         });
     };
 
-    createTr();
+    createTable();
 }
