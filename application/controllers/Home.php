@@ -6,9 +6,7 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		// echo 'ok';
-		$this->data['scripts'] = [
-			'home'
-		];
+		$this->data['title'] = "Home";
 		$this->rendererSite('site/home/index');
 	}
 }

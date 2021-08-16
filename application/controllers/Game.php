@@ -10,7 +10,7 @@ class Game extends CI_Controller {
 
 		$this->load->model("GamesModel", "games");
 		
-		$this->data['scripts'][] = 'games';
+		$this->data['title'] = 'Desafio';
 		
 	}
 
@@ -22,12 +22,14 @@ class Game extends CI_Controller {
 
 	public function login()
 	{
+		$this->data['title'] = 'Login';
 		$this->rendererSite('site/game/login');
 	}
 
 	public function ranking()
 	{
 		$this->hasActiveSession();
+		$this->data['title'] = 'Ranking';
 		$this->rendererSite('site/game/ranking');
 	}
 

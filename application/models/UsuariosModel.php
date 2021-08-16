@@ -92,7 +92,7 @@ Class UsuariosModel extends CI_Model {
         }
     }
 
-    public function loginUser()
+    public function loginUser($usePassword = true)
     {
         $sql = "SELECT 
                     *
@@ -103,7 +103,9 @@ Class UsuariosModel extends CI_Model {
         
         if ($query->num_rows() != 0) {
             $result = $query->row();
-
+            if(!$usePassword){
+                return $result;
+            }
             if (password_verify($this->senha, $result->password)) {
                 return $result;
             } 
