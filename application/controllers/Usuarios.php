@@ -10,7 +10,7 @@ class Usuarios extends CI_Controller {
 		// $this->hasActiveSession();
 		$this->load->model("UsuariosModel", "usuarios");
 		
-		$this->data['scripts'][] = 'usuarios';
+		$this->data['title'] = 'Cadastro';
 		
 	}
 
@@ -26,18 +26,21 @@ class Usuarios extends CI_Controller {
 			array(
 				'name',
 				'email',
-				'password'
+				'nickname',
+				'cargo'
 			)
 		);
 
 		$nome = $this->input->post('name');
 		$email = $this->input->post('email');
-		$senha = password_hash($this->input->post('password'), PASSWORD_DEFAULT);
+		$nickname = $this->input->post('nickname');
+		$cargo = $this->input->post('cargo');
 
 		$arrayInsert = [
 			"name" => $nome,
 			"email" => $email,
-			"password" => $senha
+			"nickname" => $nickname,
+			"cargo" => $cargo,
 		];
 		
 		$resultEmail = $this->usuarios->getUserByEmail($email);
@@ -79,17 +82,14 @@ class Usuarios extends CI_Controller {
 			$_POST,
 			array(
 				'email',
-				'password',
 			)
 		);
 
 		$email = $this->input->post('email');
-		$senha = $this->input->post('password');
 
 		$this->usuarios->email = $email;
-		$this->usuarios->senha = $senha;
 
-		$userLogin = $this->usuarios->loginUser();
+		$userLogin = $this->usuarios->loginUser(false);
 		
 		$message = "";
 		
