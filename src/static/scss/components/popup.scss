@@ -28,12 +28,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: $white;
-        border-radius: 10px;
-        box-shadow: 0 4px 7px #666;
+        background-color: $secondary;
+        box-shadow: 0 4px 7px $secondary-dark;
         width: max-content;
         margin: 0 auto;
-        padding: 10px 25px;
+        padding: 15px 35px;
         min-height: 150px;
         opacity: 0;
         transition: all 0.4s ease-in-out;
@@ -42,14 +41,15 @@
             font-weight: 700;
             margin: 0 0 1rem 0;
             &.success {
-                color: #22bb33;
+                color: $white;
             }
             &.error {
-                color: #bb2124;
+                color: $white;
             }
         }
         p {
             font-size: 1.2rem;
+            color: $white;
         }
     }
 }

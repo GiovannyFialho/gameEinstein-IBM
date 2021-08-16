@@ -28,10 +28,12 @@
             font-size: 1.3rem;
         }
         &.success {
+            width: max-content;
             background-color: $success;
             color: $white;
         }
         &.error {
+            width: max-content;
             background-color: $error;
             color: $white;
         }
