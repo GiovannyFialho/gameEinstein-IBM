@@ -29,6 +29,8 @@ Class GamesModel extends CI_Model {
         $sql = "SELECT SQL_CALC_FOUND_ROWS
                     *
                 FROM games
+                JOIN users
+                ON games.idUser = users.idUsuario
                 ORDER BY score DESC, gametime ASC
                 $query";
 

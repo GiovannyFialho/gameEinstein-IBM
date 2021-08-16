@@ -124,13 +124,15 @@ class Usuarios extends CI_Controller {
 	public function logout()
 	{
 		session_destroy();
+		
+		redirect();
 
-		$this->sendJSON(
-			array(
-				'success' => true
-			),
-			200
-		);
+		// $this->sendJSON(
+		// 	array(
+		// 		'success' => true
+		// 	),
+		// 	200
+		// );
 	}
 
 }

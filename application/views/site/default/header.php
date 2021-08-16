@@ -47,10 +47,16 @@
                                 </div>
                             </label>
                             <nav class="menu-items">
-                                <a class="menu_link" href="/usuarios">Cadastro</a>
+                                <?if(!$this->session->userSession){?>
+                                    <a class="menu_link" href="/usuarios">Cadastro</a>
+                                <?}?>
                                 <a class="menu_link" href="/game">Desafio</a>
                                 <a class="menu_link" href="/game/ranking">Ranking</a>
-                                <a class="menu_link" href="/game/login">Login</a>
+                                <?if($this->session->userSession){?>
+                                    <a class="menu_link" href="/usuarios/logout">Logout</a>
+                                <?}else{?>
+                                    <a class="menu_link" href="/game/login">Login</a>
+                                <?}?>
                             </nav>
                         </div>
                     </div>
