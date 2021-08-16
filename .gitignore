@@ -3,5 +3,4 @@
 *.log
 
 # Directories
-build/
 node_modules/

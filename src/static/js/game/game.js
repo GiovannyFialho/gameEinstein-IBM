@@ -148,6 +148,9 @@ if (formGame) {
     formGame.addEventListener("submit", function (event) {
         event.preventDefault();
 
+        window.scrollTo(0, 0);
+        window.document.body.classList.add("noScroll");
+
         respostas.push(coluna1, coluna2, coluna3, coluna4, coluna5);
 
         respostas.forEach((resposta, index) => {

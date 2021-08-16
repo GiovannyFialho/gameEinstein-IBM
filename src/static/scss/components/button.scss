@@ -19,13 +19,15 @@
         padding: 7px 15px;
         font-size: 1.1rem;
         color: $white;
-        font-weight: 700;
         transition: background-color 0.2s ease-in-out;
         @media (max-width: $mobile) {
             width: 100%;
             padding: 15px 20px;
             justify-content: center;
             font-size: 1.3rem;
+        }
+        &.bold {
+            font-weight: 700;
         }
         &.success {
             width: max-content;

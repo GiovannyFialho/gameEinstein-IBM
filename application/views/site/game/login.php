@@ -11,6 +11,8 @@
                     </div>
                 </div>
 
+                <div class="msg-erro"></div>
+
                 <div class="form-footer">
                     <div class="button-container end">
                         <button>

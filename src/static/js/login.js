@@ -4,6 +4,9 @@ if (formLogin) {
     formLogin.addEventListener("submit", (event) => {
         event.preventDefault();
 
+        window.scrollTo(0, 0);
+        window.document.body.classList.add("noScroll");
+
         let popupInfo = document.querySelector(".popup-info");
 
         let formData = new FormData();
@@ -18,6 +21,8 @@ if (formLogin) {
                 return response.json();
             })
             .then((response) => {
+                console.log(response);
+
                 if (response.success == true) {
                     location.href = `/game`;
                 } else {
@@ -36,9 +41,9 @@ if (formLogin) {
                 </div>
             `;
 
-                setTimeout(() => {
-                    location.reload();
-                }, 5000);
+                // setTimeout(() => {
+                //     location.reload();
+                // }, 5000);
             });
     });
 }

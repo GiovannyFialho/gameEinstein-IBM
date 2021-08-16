@@ -7,8 +7,6 @@ if (ranking) {
         });
         const items = await response.json();
 
-        console.log(items);
-
         items.data.forEach((item, index) => {
             document.getElementById(`ranking`).innerHTML += `
                 <div class="ranking-container-item">

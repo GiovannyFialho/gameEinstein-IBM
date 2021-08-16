@@ -10,6 +10,13 @@
             display: flex;
             flex-direction: column;
         }
+        .msg-erro {
+            margin-top: 1rem;
+            p {
+                color: $error;
+                text-align: center;
+            }
+        }
         &-footer {
             display: flex;
             align-items: center;
@@ -31,6 +38,26 @@
                 margin-top: initial;
                 @media (max-width: $mobile) {
                     margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+#form-game {
+    .form-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .container-buttons {
+            display: flex;
+            .button-container {
+                &:first-child {
+                    margin-right: 1rem;
+                }
+                button,
+                a {
+                    width: 200px;
                 }
             }
         }

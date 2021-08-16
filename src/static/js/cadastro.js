@@ -4,12 +4,16 @@ if (formCadastro) {
     formCadastro.addEventListener("submit", (event) => {
         event.preventDefault();
 
+        window.scrollTo(0, 0);
+        window.document.body.classList.add("noScroll");
+
         let popupInfo = document.querySelector(".popup-info");
 
         let formData = new FormData();
         formData.append("name", document.getElementById("name").value);
         formData.append("email", document.getElementById("email").value);
-        formData.append("password", document.getElementById("password").value);
+        formData.append("nickname", document.getElementById("nickname").value);
+        formData.append("cargo", document.getElementById("cargo").value);
 
         fetch(`${location.origin}/usuarios/cadastrar`, {
             method: "POST",

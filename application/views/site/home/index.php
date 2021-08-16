@@ -1,8 +1,9 @@
 <div class="container-padrao fullpage">
     <div class="container">
         <div class="highlight">
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-            <p>Minus sint iusto quasi debitis natus, placeat ipsum voluptatum quam perferendis atque commodi esse, repellat rerum. Veritatis laborum inventore maxime tempora ullam!</p>
+            <h2>Oferecer soluções para um mundo híbrido é conectar inteligência e tecnologia, informação e transformação, digital e real.</h2>
+            <p>Por isso, desafiamos você a viver uma experiência virtual baseada na lógica, no raciocínio rápido e em alguns assuntos abordados do evento.</p>
+            <p>Os três primeiros colocados serão contemplados com experiências reais no mundo off-line, vivenciando uma conquista inovadora, transformadora e híbrida.</p>
             <div class="button-container">
                 <a href="/usuarios">
                     Cadastrar
