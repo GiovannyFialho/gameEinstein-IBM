@@ -131,10 +131,6 @@ if (formGame) {
     });
     document.getElementById("perfil1").addEventListener("change", (event) => {
         coluna1.perfil = event.target.value;
-
-        if (event.target.value == "Estagiária") {
-            document.getElementById("isEstagiaria").checked = true;
-        }
     });
     document.getElementById("trabalhaCom1").addEventListener("change", (event) => {
         coluna1.trabalhaCom = event.target.value;
@@ -166,6 +162,7 @@ if (formGame) {
 
         if (event.target.value == "Inteligência Artificial") {
             document.getElementById("isInteligenciaArtificial").checked = true;
+            document.getElementById("isEstagiaria").checked = true;
         }
     });
     document.getElementById("empresa2").addEventListener("change", (event) => {
