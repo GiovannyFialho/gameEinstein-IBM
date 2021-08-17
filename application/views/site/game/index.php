@@ -319,55 +319,55 @@
             <div class="content-tips">
                 <ul>
                     <li>
-                        <input type="checkbox" id="isGRC" name="isGRC">
+                        <input type="checkbox" id="isGRC" name="isGRC" disabled>
                         <label for="isGRC">Quem veio aprender sobre <span class="important">GRC (Governance Risk and Compliance)</span> está na primeira coluna</label>
                     </li>
                     <li>
-                        <input type="checkbox" id="isOpenSource" name="isOpenSource">
+                        <input type="checkbox" id="isOpenSource" name="isOpenSource" disabled>
                         <label for="isOpenSource">Quem veio aprender <span class="important">Open Source</span> está na terceira coluna</label>
                     </li>
                     <li>
-                        <input type="checkbox" id="isSolucaoHibrida" name="isSolucaoHibrida">
+                        <input type="checkbox" id="isSolucaoHibrida" name="isSolucaoHibrida" disabled>
                         <label for="isSolucaoHibrida">Quem veio aprender sobre <span class="important">Solução Híbrida</span> trabalha na <span class="important">Empresa A</span></label>
                     </li>
                     <li>
-                        <input type="checkbox" id="isLGPD" name="isLGPD">
+                        <input type="checkbox" id="isLGPD" name="isLGPD" disabled>
                         <label for="isLGPD">Quem veio aprender <span class="important">LGPD</span> é <span class="important">Analista</span></label>
                     </li>
                     <li>
-                        <input type="checkbox" id="isBaiana" name="isBaiana">
+                        <input type="checkbox" id="isBaiana" name="isBaiana" disabled>
                         <label for="isBaiana">A <span class="important">Baiana</span> está do lado esquerdo da <span class="important">Goiana</span></label>
                     </li>
                     <li>
-                        <input type="checkbox" id="isBaianaCargo" name="isBaianaCargo">
+                        <input type="checkbox" id="isBaianaCargo" name="isBaianaCargo" disabled>
                         <label for="isBaianaCargo">A <span class="important">Baiana</span> é <span class="important">Gerente</span></label>
                     </li>
                     <li>
-                        <input type="checkbox" id="isAutomacao" name="isAutomacao">
+                        <input type="checkbox" id="isAutomacao" name="isAutomacao" disabled>
                         <label for="isAutomacao">Quem trabalha com <span class="important">Automação</span></label>
                     </li>
                     <li>
-                        <input type="checkbox" id="isEstagiaria" name="isEstagiaria">
+                        <input type="checkbox" id="isEstagiaria" name="isEstagiaria" disabled>
                         <label for="isEstagiaria">Quem está na terceira coluna é <span class="important">Estagiária</span></label>
                     </li>
                     <li>
-                        <input type="checkbox" id="isInteligenciaArtificial" name="isInteligenciaArtificial">
+                        <input type="checkbox" id="isInteligenciaArtificial" name="isInteligenciaArtificial" disabled>
                         <label for="isInteligenciaArtificial">Quem trabalha com <span class="important">Inteligência artificial</span>, está do lado de quem trabalha na <span class="important">Empresa C</span> </label>
                     </li>
                     <li>
-                        <input type="checkbox" id="isEmpresaB" name="isEmpresaB">
+                        <input type="checkbox" id="isEmpresaB" name="isEmpresaB" disabled>
                         <label for="isEmpresaB">Quem trabalha na <span class="important">Empresa B</span>, está do lado de quem trabalha com <span class="important">Automação</span> </label>
                     </li>
                     <li>
-                        <input type="checkbox" id="isData" name="isData">
+                        <input type="checkbox" id="isData" name="isData" disabled>
                         <label for="isData">Quem trabalha com <span class="important">Data</span>, é <span class="important">Coordenador</span> </label>
                     </li>
                     <li>
-                        <input type="checkbox" id="isMachineLearning" name="isMachineLearning">
+                        <input type="checkbox" id="isMachineLearning" name="isMachineLearning" disabled>
                         <label for="isMachineLearning">Quem veio aprender sobre <span class="important">Machine Learning</span>, trabalha com <span class="important">Infraestrutura</span> </label>
                     </li>
                     <li>
-                        <input type="checkbox" id="isParaense" name="isParaense">
+                        <input type="checkbox" id="isParaense" name="isParaense" disabled>
                         <label for="isParaense">Quem veio aprender sobre <span class="important">GRC (Governance Risk and Compliance)</span>, está ao lado da <span class="important">Paraense</span> </label>
                     </li>
                 </ul>

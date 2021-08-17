@@ -256,7 +256,7 @@ if (formGame) {
             .then((response) => {
                 return response.json();
             })
-            .then((response) => {
+            .then(() => {
                 popupInfo.parentElement.classList.add("show");
                 popupInfo.innerHTML = `
                     <h3 class="success">Parabéns! Você conseguiu.</h3>
