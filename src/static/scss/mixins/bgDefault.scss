@@ -1,3 +1,6 @@
 @mixin bgDefault {
-    background-color: #000;
+    background-image: url("http://localhost/assets/img/site/background-ibm.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }

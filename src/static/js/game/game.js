@@ -117,15 +117,31 @@ if (formGame) {
     let coluna1 = {};
     document.getElementById("quem1").addEventListener("change", (event) => {
         coluna1.quem = event.target.value;
+
+        if (event.target.value == "Mineira") {
+            document.getElementById("isParaense").checked = true;
+        }
     });
     document.getElementById("veioAprender1").addEventListener("change", (event) => {
         coluna1.veioAprender = event.target.value;
+
+        if (event.target.value == "GRC") {
+            document.getElementById("isGRC").checked = true;
+        }
     });
     document.getElementById("perfil1").addEventListener("change", (event) => {
         coluna1.perfil = event.target.value;
+
+        if (event.target.value == "Estagiária") {
+            document.getElementById("isEstagiaria").checked = true;
+        }
     });
     document.getElementById("trabalhaCom1").addEventListener("change", (event) => {
         coluna1.trabalhaCom = event.target.value;
+
+        if (event.target.value == "Automação") {
+            document.getElementById("isMineiraCargo").checked = true;
+        }
     });
     document.getElementById("empresa1").addEventListener("change", (event) => {
         coluna1.empresa = event.target.value;
@@ -134,6 +150,10 @@ if (formGame) {
     let coluna2 = {};
     document.getElementById("quem2").addEventListener("change", (event) => {
         coluna2.quem = event.target.value;
+
+        if (event.target.value == "Paraense") {
+            document.getElementById("isLGPD").checked = true;
+        }
     });
     document.getElementById("veioAprender2").addEventListener("change", (event) => {
         coluna2.veioAprender = event.target.value;
@@ -143,23 +163,43 @@ if (formGame) {
     });
     document.getElementById("trabalhaCom2").addEventListener("change", (event) => {
         coluna2.trabalhaCom = event.target.value;
+
+        if (event.target.value == "Inteligência Artificial") {
+            document.getElementById("isInteligenciaArtificial").checked = true;
+        }
     });
     document.getElementById("empresa2").addEventListener("change", (event) => {
         coluna2.empresa = event.target.value;
+
+        if (event.target.value == "Empresa B") {
+            document.getElementById("isEmpresaB").checked = true;
+        }
     });
 
     let coluna3 = {};
     document.getElementById("quem3").addEventListener("change", (event) => {
         coluna3.quem = event.target.value;
+
+        if (event.target.value == "Catarinense") {
+            document.getElementById("isOpenSource").checked = true;
+        }
     });
     document.getElementById("veioAprender3").addEventListener("change", (event) => {
         coluna3.veioAprender = event.target.value;
     });
     document.getElementById("perfil3").addEventListener("change", (event) => {
         coluna3.perfil = event.target.value;
+
+        if (event.target.value == "Diretora") {
+            document.getElementById("isDiretora").checked = true;
+        }
     });
     document.getElementById("trabalhaCom3").addEventListener("change", (event) => {
         coluna3.trabalhaCom = event.target.value;
+
+        if (event.target.value == "Segurança") {
+            document.getElementById("isSeguranca").checked = true;
+        }
     });
     document.getElementById("empresa3").addEventListener("change", (event) => {
         coluna3.empresa = event.target.value;
@@ -168,12 +208,24 @@ if (formGame) {
     let coluna4 = {};
     document.getElementById("quem4").addEventListener("change", (event) => {
         coluna4.quem = event.target.value;
+
+        if (event.target.value == "Baiana") {
+            document.getElementById("isBaiana").checked = true;
+        }
     });
     document.getElementById("veioAprender4").addEventListener("change", (event) => {
         coluna4.veioAprender = event.target.value;
+
+        if (event.target.value == "Machine Learning") {
+            document.getElementById("isMachineLearging").checked = true;
+        }
     });
     document.getElementById("perfil4").addEventListener("change", (event) => {
         coluna4.perfil = event.target.value;
+
+        if (event.target.value == "Gerente") {
+            document.getElementById("isBaianaCargo").checked = true;
+        }
     });
     document.getElementById("trabalhaCom4").addEventListener("change", (event) => {
         coluna4.trabalhaCom = event.target.value;
@@ -185,6 +237,10 @@ if (formGame) {
     let coluna5 = {};
     document.getElementById("quem5").addEventListener("change", (event) => {
         coluna5.quem = event.target.value;
+
+        if (event.target.value == "Goiana") {
+            document.getElementById("isSolucaoHibrida").checked = true;
+        }
     });
     document.getElementById("veioAprender5").addEventListener("change", (event) => {
         coluna5.veioAprender = event.target.value;
@@ -194,6 +250,10 @@ if (formGame) {
     });
     document.getElementById("trabalhaCom5").addEventListener("change", (event) => {
         coluna5.trabalhaCom = event.target.value;
+
+        if (event.target.value == "Data") {
+            document.getElementById("isData").checked = true;
+        }
     });
     document.getElementById("empresa5").addEventListener("change", (event) => {
         coluna5.empresa = event.target.value;

@@ -16,7 +16,7 @@
                                 <li>
                                     <select id="quem1" name="quem1">
                                         <option selected hidden>Quem?</option>
-                                        <option value="Baiano">Baiano</option>
+                                        <option value="Baiana">Baiana</option>
                                         <option value="Catarinense">Catarinense</option>
                                         <option value="Goiana">Goiana</option>
                                         <option value="Mineira">Mineira</option>
@@ -36,8 +36,8 @@
                                 <li>
                                     <select id="perfil1" name="perfil1">
                                         <option selected hidden>Perfil</option>
-                                        <option value="Analísta">Analísta</option>
-                                        <option value="Coordenador">Coordenador</option>
+                                        <option value="Analista">Analista</option>
+                                        <option value="Coordenadora">Coordenadora</option>
                                         <option value="Diretora">Diretora</option>
                                         <option value="Estagiária">Estagiária</option>
                                         <option value="Gerente">Gerente</option>
@@ -49,7 +49,7 @@
                                         <option value="Automação">Automação</option>
                                         <option value="Data">Data</option>
                                         <option value="Infraestrutura">Infraestrutura</option>
-                                        <option value="Inteligência artificial">Inteligência artificial</option>
+                                        <option value="Inteligência Artificial">Inteligência Artificial</option>
                                         <option value="Segurança">Segurança</option>
                                     </select>
                                 </li>
@@ -70,7 +70,7 @@
                                 <li>
                                     <select id="quem2" name="quem2">
                                         <option selected hidden>Quem?</option>
-                                        <option value="Baiano">Baiano</option>
+                                        <option value="Baiana">Baiana</option>
                                         <option value="Catarinense">Catarinense</option>
                                         <option value="Goiana">Goiana</option>
                                         <option value="Mineira">Mineira</option>
@@ -90,8 +90,8 @@
                                 <li>
                                     <select id="perfil2" name="perfil2">
                                         <option selected hidden>Perfil</option>
-                                        <option value="Analísta">Analísta</option>
-                                        <option value="Coordenador">Coordenador</option>
+                                        <option value="Analista">Analista</option>
+                                        <option value="Coordenadora">Coordenadora</option>
                                         <option value="Diretora">Diretora</option>
                                         <option value="Estagiária">Estagiária</option>
                                         <option value="Gerente">Gerente</option>
@@ -103,7 +103,7 @@
                                         <option value="Automação">Automação</option>
                                         <option value="Data">Data</option>
                                         <option value="Infraestrutura">Infraestrutura</option>
-                                        <option value="Inteligência artificial">Inteligência artificial</option>
+                                        <option value="Inteligência Artificial">Inteligência Artificial</option>
                                         <option value="Segurança">Segurança</option>
                                     </select>
                                 </li>
@@ -124,7 +124,7 @@
                                 <li>
                                     <select id="quem3" name="quem3">
                                         <option selected hidden>Quem?</option>
-                                        <option value="Baiano">Baiano</option>
+                                        <option value="Baiana">Baiana</option>
                                         <option value="Catarinense">Catarinense</option>
                                         <option value="Goiana">Goiana</option>
                                         <option value="Mineira">Mineira</option>
@@ -144,8 +144,8 @@
                                 <li>
                                     <select id="perfil3" name="perfil3">
                                         <option selected hidden>Perfil</option>
-                                        <option value="Analísta">Analísta</option>
-                                        <option value="Coordenador">Coordenador</option>
+                                        <option value="Analista">Analista</option>
+                                        <option value="Coordenadora">Coordenadora</option>
                                         <option value="Diretora">Diretora</option>
                                         <option value="Estagiária">Estagiária</option>
                                         <option value="Gerente">Gerente</option>
@@ -157,7 +157,7 @@
                                         <option value="Automação">Automação</option>
                                         <option value="Data">Data</option>
                                         <option value="Infraestrutura">Infraestrutura</option>
-                                        <option value="Inteligência artificial">Inteligência artificial</option>
+                                        <option value="Inteligência Artificial">Inteligência Artificial</option>
                                         <option value="Segurança">Segurança</option>
                                     </select>
                                 </li>
@@ -178,7 +178,7 @@
                                 <li>
                                     <select id="quem4" name="quem4">
                                         <option selected hidden>Quem?</option>
-                                        <option value="Baiano">Baiano</option>
+                                        <option value="Baiana">Baiana</option>
                                         <option value="Catarinense">Catarinense</option>
                                         <option value="Goiana">Goiana</option>
                                         <option value="Mineira">Mineira</option>
@@ -198,8 +198,8 @@
                                 <li>
                                     <select id="perfil4" name="perfil4">
                                         <option selected hidden>Perfil</option>
-                                        <option value="Analísta">Analísta</option>
-                                        <option value="Coordenador">Coordenador</option>
+                                        <option value="Analista">Analista</option>
+                                        <option value="Coordenadora">Coordenadora</option>
                                         <option value="Diretora">Diretora</option>
                                         <option value="Estagiária">Estagiária</option>
                                         <option value="Gerente">Gerente</option>
@@ -211,7 +211,7 @@
                                         <option value="Automação">Automação</option>
                                         <option value="Data">Data</option>
                                         <option value="Infraestrutura">Infraestrutura</option>
-                                        <option value="Inteligência artificial">Inteligência artificial</option>
+                                        <option value="Inteligência Artificial">Inteligência Artificial</option>
                                         <option value="Segurança">Segurança</option>
                                     </select>
                                 </li>
@@ -232,7 +232,7 @@
                                 <li>
                                     <select id="quem5" name="quem5">
                                         <option selected hidden>Quem?</option>
-                                        <option value="Baiano">Baiano</option>
+                                        <option value="Baiana">Baiana</option>
                                         <option value="Catarinense">Catarinense</option>
                                         <option value="Goiana">Goiana</option>
                                         <option value="Mineira">Mineira</option>
@@ -252,8 +252,8 @@
                                 <li>
                                     <select id="perfil5" name="perfil5">
                                         <option selected hidden>Perfil</option>
-                                        <option value="Analísta">Analísta</option>
-                                        <option value="Coordenador">Coordenador</option>
+                                        <option value="Analista">Analista</option>
+                                        <option value="Coordenadora">Coordenadora</option>
                                         <option value="Diretora">Diretora</option>
                                         <option value="Estagiária">Estagiária</option>
                                         <option value="Gerente">Gerente</option>
@@ -265,7 +265,7 @@
                                         <option value="Automação">Automação</option>
                                         <option value="Data">Data</option>
                                         <option value="Infraestrutura">Infraestrutura</option>
-                                        <option value="Inteligência artificial">Inteligência artificial</option>
+                                        <option value="Inteligência Artificial">Inteligência Artificial</option>
                                         <option value="Segurança">Segurança</option>
                                     </select>
                                 </li>
@@ -328,47 +328,55 @@
                     </li>
                     <li>
                         <input type="checkbox" id="isSolucaoHibrida" name="isSolucaoHibrida" disabled>
-                        <label for="isSolucaoHibrida">Quem veio aprender sobre <span class="important">Solução Híbrida</span> trabalha na <span class="important">Empresa A</span></label>
+                        <label for="isSolucaoHibrida">Quem veio aprender sobre <span class="important">Solução Híbrida</span> trabalha na <span class="important">empresa A</span></label>
                     </li>
                     <li>
                         <input type="checkbox" id="isLGPD" name="isLGPD" disabled>
-                        <label for="isLGPD">Quem veio aprender <span class="important">LGPD</span> é <span class="important">Analista</span></label>
+                        <label for="isLGPD">Quem veio aprender sobre <span class="important">LGPD</span> é <span class="important">analista</span></label>
                     </li>
                     <li>
                         <input type="checkbox" id="isBaiana" name="isBaiana" disabled>
-                        <label for="isBaiana">A <span class="important">Baiana</span> está do lado esquerdo da <span class="important">Goiana</span></label>
+                        <label for="isBaiana">A <span class="important">baiana</span> está do lado esquerdo da <span class="important">goiana</span></label>
                     </li>
                     <li>
                         <input type="checkbox" id="isBaianaCargo" name="isBaianaCargo" disabled>
-                        <label for="isBaianaCargo">A <span class="important">Baiana</span> é <span class="important">Gerente</span></label>
+                        <label for="isBaianaCargo">A <span class="important">baiana</span> é <span class="important">gerente</span></label>
                     </li>
                     <li>
-                        <input type="checkbox" id="isAutomacao" name="isAutomacao" disabled>
-                        <label for="isAutomacao">Quem trabalha com <span class="important">Automação</span></label>
+                        <input type="checkbox" id="isSeguranca" name="isSeguranca" disabled>
+                        <label for="isSeguranca">Quem trabalha com <span class="important">segurança</span>, trabalha na <span class="important">empresa D</span></label>
                     </li>
                     <li>
-                        <input type="checkbox" id="isEstagiaria" name="isEstagiaria" disabled>
-                        <label for="isEstagiaria">Quem está na terceira coluna é <span class="important">Estagiária</span></label>
+                        <input type="checkbox" id="isMineiraCargo" name="isMineiraCargo" disabled>
+                        <label for="isMineiraCargo">A <span class="important">mineira</span> trabalha com <span class="important">automação</span></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="isDiretora" name="isDiretora" disabled>
+                        <label for="isDiretora">Quem está na terceira coluna é <span class="important">diretora</span></label>
                     </li>
                     <li>
                         <input type="checkbox" id="isInteligenciaArtificial" name="isInteligenciaArtificial" disabled>
-                        <label for="isInteligenciaArtificial">Quem trabalha com <span class="important">Inteligência artificial</span>, está do lado de quem trabalha na <span class="important">Empresa C</span> </label>
+                        <label for="isInteligenciaArtificial">Quem trabalha com <span class="important">inteligência artificial</span>, está do lado de quem trabalha na <span class="important">empresa C</span></label>
                     </li>
                     <li>
                         <input type="checkbox" id="isEmpresaB" name="isEmpresaB" disabled>
-                        <label for="isEmpresaB">Quem trabalha na <span class="important">Empresa B</span>, está do lado de quem trabalha com <span class="important">Automação</span> </label>
+                        <label for="isEmpresaB">Quem trabalha na <span class="important">empresa B</span>, está do lado de quem trabalha com <span class="important">automação</span></label>
                     </li>
                     <li>
                         <input type="checkbox" id="isData" name="isData" disabled>
-                        <label for="isData">Quem trabalha com <span class="important">Data</span>, é <span class="important">Coordenador</span> </label>
+                        <label for="isData">Quem trabalha com <span class="important">Data</span>, é <span class="important">coordenadora</span></label>
                     </li>
                     <li>
-                        <input type="checkbox" id="isMachineLearning" name="isMachineLearning" disabled>
-                        <label for="isMachineLearning">Quem veio aprender sobre <span class="important">Machine Learning</span>, trabalha com <span class="important">Infraestrutura</span> </label>
+                        <input type="checkbox" id="isMachineLearging" name="isMachineLearging" disabled>
+                        <label for="isMachineLearging">Quem veio aprender sobre <span class="important">machine learning</span>, trabalha com <span class="important">infraestrutura</span></label>
                     </li>
                     <li>
                         <input type="checkbox" id="isParaense" name="isParaense" disabled>
-                        <label for="isParaense">Quem veio aprender sobre <span class="important">GRC (Governance Risk and Compliance)</span>, está ao lado da <span class="important">Paraense</span> </label>
+                        <label for="isParaense">Quem veio aprender sobre <span class="important">GRC (Governance Risk and Compliance)</span> esta ao lado da <span class="important">paraense.</span></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="isEstagiaria" name="isEstagiaria" disabled>
+                        <label for="isEstagiaria">Quem trabalha com <span class="important">inteligência artificial</span> está do lado da <span class="important">estagiária</span></label>
                     </li>
                 </ul>
             </div>
