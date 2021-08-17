@@ -27,13 +27,13 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        background-color: $secondary;
-        box-shadow: 0 4px 7px $secondary-dark;
+        background-color: $primary;
+        box-shadow: 0 4px 7px $primary-dark;
         width: max-content;
+        min-width: 450px;
         margin: 0 auto;
         padding: 15px 35px;
-        min-height: 150px;
+        min-height: 200px;
         opacity: 0;
         transition: all 0.4s ease-in-out;
         h3 {
@@ -50,6 +50,9 @@
         p {
             font-size: 1.2rem;
             color: $white;
+        }
+        .link-padrao {
+            font-size: 1.1rem;
         }
     }
 }

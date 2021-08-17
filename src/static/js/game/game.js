@@ -2,22 +2,76 @@ const formGame = document.getElementById("form-game");
 
 if (formGame) {
     /**
-     * Screen time
+     * Cronometro jogo
      */
 
-    let timer = {
-        initialValue: 0,
-        start: () => {
-            setInterval(() => {
-                timer.initialValue++;
-            }, 1000);
-        },
-        stop: () => {
-            return timer.initialValue;
-        },
+    let minutes = document.getElementById("minutes");
+    let seconds = document.getElementById("seconds");
+
+    let min = 1;
+    let se = 0;
+    let initialCondition = true;
+    let myVar;
+    let segundos = 0;
+
+    let startTimer = function () {
+        if (initialCondition === true) {
+            myVar = setInterval(myTimer, 1000);
+        }
+
+        initialCondition = false;
     };
 
-    timer.start();
+    startTimer();
+
+    function myTimer() {
+        se = se + 1;
+        segundos++;
+        seconds.innerHTML = `0${se}`;
+
+        if (se > 9) {
+            seconds.innerHTML = se;
+            if (se === 60) {
+                seconds.innerHTML = `00`;
+                se = 00;
+
+                addMinute();
+            }
+        }
+    }
+
+    function addMinute() {
+        minutes.innerHTML = `0${min}`;
+        if (min > 9) {
+            minutes.innerHTML = min;
+
+            if (min === 60) {
+                minutes.innerHTML = `00`;
+                se = 00;
+            }
+        }
+        min = min + 1;
+    }
+
+    function stopTimer() {
+        clearInterval(myVar);
+
+        initialCondition = true;
+    }
+
+    function euDesisto() {
+        stopTimer();
+
+        popupInfo.parentElement.classList.add("show");
+        popupInfo.innerHTML = `
+            <h3 class="success">Que pena! Você desistiu.</h3>
+            <p>Mas obrigado pela participação e <a href="/" class="link-padrao">Volte para o evento.</a></p>
+        `;
+
+        setTimeout(() => {
+            location.href = "/";
+        }, 5000);
+    }
 
     let pontos = 0;
     let respostas = [];
@@ -189,9 +243,11 @@ if (formGame) {
             }
         });
 
+        stopTimer();
+
         const formData = new FormData();
         formData.append("score", pontos);
-        formData.append("gametime", timer.stop());
+        formData.append("gametime", segundos);
 
         fetch(`${location.origin}/game/salvar`, {
             method: "POST",
@@ -203,13 +259,9 @@ if (formGame) {
             .then((response) => {
                 popupInfo.parentElement.classList.add("show");
                 popupInfo.innerHTML = `
-                    <h3 class="success">${response.title}</h3>
-                    <p>${response.message}</p>
-                    <div class="button-container center">
-                        <a href="/game/ranking" class="success">
-                            Ok
-                        </a>
-                    </div>
+                    <h3 class="success">Parabéns! Você conseguiu.</h3>
+                    <a href="/game/ranking" class="link-padrao mb">Confira o ranking</a>
+                    <a href="/" class="link-padrao mb">Volte para o evento</a>
                 `;
 
                 setTimeout(() => {

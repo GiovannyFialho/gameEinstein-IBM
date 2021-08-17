@@ -28,7 +28,7 @@ if (formCadastro) {
                     <h3 class="${response.success == true ? `success` : `error`}">${response.title}</h3>
                     <p>${response.message}</p>
                     <div class="button-container center">
-                        <a href="${response.success == true ? `/game/login` : `/`}" class="${response.success == true ? `success` : `error`}">
+                        <a href="${response.success == true ? `/game/login` : `/usuarios`}" class="${response.success == true ? `success` : `error`}">
                             Ok
                         </a>
                     </div>

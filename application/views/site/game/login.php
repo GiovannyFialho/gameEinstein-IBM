@@ -4,10 +4,13 @@
             <form class="form" id="form-login">
                 <div class="form-main">
                     <div class="input-item">
+                        <input type="text" id="name" placeholder="Nome" require>
+                    </div>
+                    <div class="input-item">
                         <input type="email" id="email" placeholder="E-mail" require>
                     </div>
                     <div class="input-item">
-                        <input type="password" id="password" placeholder="Senha" require>
+                        <input type="text" id="nickname" placeholder="Nickname" require>
                     </div>
                 </div>
 

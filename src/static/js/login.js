@@ -10,8 +10,9 @@ if (formLogin) {
         let popupInfo = document.querySelector(".popup-info");
 
         let formData = new FormData();
+        formData.append("name", document.getElementById("name").value);
         formData.append("email", document.getElementById("email").value);
-        formData.append("password", document.getElementById("password").value);
+        formData.append("nickname", document.getElementById("nickname").value);
 
         fetch(`${location.origin}/usuarios/logar`, {
             method: "POST",
@@ -21,8 +22,6 @@ if (formLogin) {
                 return response.json();
             })
             .then((response) => {
-                console.log(response);
-
                 if (response.success == true) {
                     location.href = `/game`;
                 } else {
@@ -32,18 +31,18 @@ if (formLogin) {
             .catch(() => {
                 popupInfo.parentElement.classList.add("show");
                 popupInfo.innerHTML = `
-                <h3 class="error">Erro de serviço</h3>
-                <p>Estamos com problemas internos, por favor, tente mais tarde.</p>
-                <div class="button-container center">
-                    <a href="/" class="error">
-                        Ok
-                    </a>
-                </div>
-            `;
+                    <h3 class="error">Erro de serviço</h3>
+                    <p>Estamos com problemas internos, por favor, tente mais tarde.</p>
+                    <div class="button-container center">
+                        <a href="/" class="error">
+                            Ok
+                        </a>
+                    </div>
+                `;
 
-                // setTimeout(() => {
-                //     location.reload();
-                // }, 5000);
+                setTimeout(() => {
+                    location.reload();
+                }, 5000);
             });
     });
 }
