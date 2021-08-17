@@ -2,6 +2,7 @@
     margin: 8rem 0;
     @media (max-width: $mobile) {
         width: 100%;
+        margin: 5rem 0;
     }
     &-items {
         display: grid;
@@ -16,20 +17,20 @@
         }
         &-item {
             width: 200px;
-            @media (max-width: $mobile) {
+            @media (max-width: $tablet) {
                 width: 100%;
                 &:not(:last-child) {
                     margin-bottom: 3rem;
                 }
             }
             &.hasIndex {
-                @media (min-width: $mobile) {
+                @media (min-width: $tablet) {
                     display: flex;
                     width: 360px;
                 }
                 ul {
                     &:not(.coluna) {
-                        @media (max-width: $mobile) {
+                        @media (max-width: $tablet) {
                             display: none;
                         }
                         width: 75%;
