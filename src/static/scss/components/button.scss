@@ -15,7 +15,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: $primary;
+        background-color: $secondary;
         border: none;
         padding: 7px 15px;
         font-size: 1.1rem;
@@ -30,28 +30,12 @@
         &.bold {
             font-weight: 700;
         }
-        &.success {
-            width: max-content;
-            background-color: $success;
-            color: $white;
-        }
-        &.error {
-            width: max-content;
-            background-color: $error;
-            color: $white;
-        }
         .icon {
             display: flex;
             margin-left: 5px;
         }
         &:hover {
-            background-color: $primary-dark;
-            &.success {
-                background-color: $success-dark;
-            }
-            &.error {
-                background-color: $error-dark;
-            }
+            background-color: $secondary-dark;
         }
     }
 }

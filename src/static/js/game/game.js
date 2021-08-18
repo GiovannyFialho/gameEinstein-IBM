@@ -322,7 +322,7 @@ if (formGame) {
             .then(() => {
                 popupInfo.parentElement.classList.add("show");
                 popupInfo.innerHTML = `
-                    <h3 class="success">Parabéns! Você conseguiu.</h3>
+                    <h3>Parabéns! Você conseguiu.</h3>
                     <a href="/game/ranking" class="link-padrao mb">Confira o ranking</a>
                     <a href="/" class="link-padrao mb">Volte para o evento</a>
                 `;
@@ -334,10 +334,10 @@ if (formGame) {
             .catch(() => {
                 popupInfo.parentElement.classList.add("show");
                 popupInfo.innerHTML = `
-                    <h3 class="error">Erro de serviço</h3>
+                    <h3>Erro de serviço</h3>
                     <p>Estamos com problemas internos, por favor, tente mais tarde.</p>
                     <div class="button-container center">
-                        <a href="/" class="error">
+                        <a href="/">
                             Ok
                         </a>
                     </div>

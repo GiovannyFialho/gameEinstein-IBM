@@ -25,10 +25,10 @@ if (formCadastro) {
             .then((response) => {
                 popupInfo.parentElement.classList.add("show");
                 popupInfo.innerHTML = `
-                    <h3 class="${response.success == true ? `success` : `error`}">${response.title}</h3>
+                    <h3>${response.title}</h3>
                     <p>${response.message}</p>
                     <div class="button-container center">
-                        <a href="${response.success == true ? `/game/login` : `/usuarios`}" class="${response.success == true ? `success` : `error`}">
+                        <a href="${response.success == true ? `/game/login` : `/usuarios`}">
                             Ok
                         </a>
                     </div>
@@ -48,14 +48,14 @@ if (formCadastro) {
                     <h3 class="error">Erro de serviço</h3>
                     <p>Estamos com problemas internos, por favor, tente mais tarde.</p>
                     <div class="button-container center">
-                        <a href="/" class="error">
+                        <a href="/">
                             Ok
                         </a>
                     </div>
                 `;
 
                 setTimeout(() => {
-                    location.reload();
+                    location.href = `/`;
                 }, 5000);
             });
     });
