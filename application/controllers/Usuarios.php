@@ -94,21 +94,25 @@ class Usuarios extends CI_Controller {
 		$message = "";
 		
 		if ($userLogin) {
-			$this->usuarios->idUsuario = $userLogin->idUsuario;
-			$user = $this->usuarios->getUser();
-			$user->ip = $_SERVER['REMOTE_ADDR'];
-			$user->userAgent = $_SERVER['HTTP_USER_AGENT'];
-			
-			$this->session->set_userdata('userSession', $user);
+			if($userLogin->finishGame == 0){
+				$this->usuarios->idUsuario = $userLogin->idUsuario;
+				$user = $this->usuarios->getUser();
+				$user->ip = $_SERVER['REMOTE_ADDR'];
+				$user->userAgent = $_SERVER['HTTP_USER_AGENT'];
+				
+				$this->session->set_userdata('userSession', $user);
 
-			$this->sendJSON(
-				array(
-					'success' => true
-				),
-				200
-			);
+				$this->sendJSON(
+					array(
+						'success' => true
+					),
+					200
+				);
+			}else{
+				$message = "Seu usuário já participou do desafio. Você só pode participar do desafio 1 vez!"
+			}
 		} else {
-			$message = "Email ou senha incorreto. Por favor tente novamente";
+			$message = "Email ou nickname incorreto. Por favor tente novamente";
 		}
 
 		$this->sendJSON(

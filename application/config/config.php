@@ -23,8 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-if ($_SERVER['SERVER_NAME'] == 'homolog.arenasuvinil.com.br') {
-    $config['base_url'] = 'http://homolog.arenasuvinil.com.br/';
+if ($_SERVER['SERVER_NAME'] == 'desafiomundohibrido.com') {
+    $config['base_url'] = 'http://desafiomundohibrido.com/';
 } else {
     $config['base_url'] = 'http://localhost/';
 }
