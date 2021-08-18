@@ -109,7 +109,7 @@ class Usuarios extends CI_Controller {
 					200
 				);
 			}else{
-				$message = "Seu usuário já participou do desafio. Você só pode participar do desafio 1 vez!"
+				$message = "Seu usuário já participou do desafio. Você só pode participar do desafio 1 vez!";
 			}
 		} else {
 			$message = "Email ou nickname incorreto. Por favor tente novamente";
