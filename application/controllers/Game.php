@@ -28,7 +28,6 @@ class Game extends CI_Controller {
 
 	public function ranking()
 	{
-		$this->hasActiveSession();
 		$this->data['title'] = 'Ranking';
 		$this->rendererSite('site/game/ranking');
 	}
@@ -89,7 +88,6 @@ class Game extends CI_Controller {
 
 	public function getRanking()
 	{
-		$this->hasActiveSession();
 		$score = $this->games->getGames();
 
 		$this->data['ranking'] = $score['data'];

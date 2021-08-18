@@ -50,7 +50,9 @@
                                 <?if(!$this->session->userSession){?>
                                     <a class="menu_link <?= $title == "Cadastro" ? "active" : "" ?>" href="/usuarios">Cadastro</a>
                                 <?}?>
-                                <a class="menu_link <?= $title == "Desafio" ? "active" : "" ?>" href="/game">Desafio</a>
+                                <?if($this->session->userSession){?>
+                                    <a class="menu_link <?= $title == "Desafio" ? "active" : "" ?>" href="/game">Desafio</a>
+                                <?}?>
                                 <a class="menu_link <?= $title == "Ranking" ? "active" : "" ?>" href="/game/ranking">Ranking</a>
                                 <?if($this->session->userSession){?>
                                     <a class="menu_link" href="/usuarios/logout">Logout</a>
