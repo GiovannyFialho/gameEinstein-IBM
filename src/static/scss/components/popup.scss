@@ -49,7 +49,17 @@
             font-size: 1.2rem;
             color: $white;
         }
+        button,
+        a,
+        .button {
+            width: max-content;
+            background-color: $secondary;
+            &:hover {
+                background-color: $secondary-dark;
+            }
+        }
         .link-padrao {
+            background-color: initial;
             font-size: 1.1rem;
         }
     }

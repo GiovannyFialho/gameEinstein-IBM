@@ -5,6 +5,11 @@
     }
     .container {
         @include containerSecao;
+        &.no-center-mobile {
+            @media (max-width: $mobile) {
+                justify-content: flex-start;
+            }
+        }
         &.center {
             align-items: center;
         }

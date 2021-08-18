@@ -15,7 +15,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: $secondary;
+        background-color: $primary;
         border: none;
         padding: 7px 15px;
         font-size: 1.1rem;
@@ -35,7 +35,7 @@
             margin-left: 5px;
         }
         &:hover {
-            background-color: $secondary-dark;
+            background-color: $primary-dark;
         }
     }
 }
