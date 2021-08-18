@@ -12,7 +12,6 @@ if (formGame) {
     let se = 0;
     let initialCondition = true;
     let myVar;
-    let segundos = 0;
 
     let startTimer = function () {
         if (initialCondition === true) {
@@ -26,7 +25,6 @@ if (formGame) {
 
     function myTimer() {
         se = se + 1;
-        segundos++;
         seconds.innerHTML = `0${se}`;
 
         if (se > 9) {
@@ -72,6 +70,24 @@ if (formGame) {
             location.href = "/";
         }, 5000);
     }
+
+    /**
+     * Timer
+     */
+
+    let timer = {
+        initialValue: 0,
+        start: () => {
+            setInterval(() => {
+                timer.initialValue++;
+            }, 1);
+        },
+        stop: () => {
+            return timer.initialValue;
+        },
+    };
+
+    timer.start();
 
     let pontos = 0;
     let respostas = [];
@@ -267,35 +283,25 @@ if (formGame) {
         respostas.forEach((resposta, index) => {
             if (resposta.quem == gabarito[index].quem) {
                 pontos += 1;
-            } else {
-                pontos += -1;
             }
 
             if (resposta.veioAprender == gabarito[index].veioAprender) {
                 pontos += 1;
-            } else {
-                pontos += -1;
             }
 
             if (resposta.perfil == gabarito[index].perfil) {
                 pontos += 1;
-            } else {
-                pontos += -1;
             }
 
             if (resposta.trabalhaCom == gabarito[index].trabalhaCom) {
                 pontos += 1;
-            } else {
-                pontos += -1;
             }
 
             if (resposta.empresa == gabarito[index].empresa) {
                 pontos += 1;
-            } else {
-                pontos += -1;
             }
 
-            if (pontos < 0) {
+            if (pontos <= 0) {
                 pontos = 0;
             }
         });
@@ -304,7 +310,7 @@ if (formGame) {
 
         const formData = new FormData();
         formData.append("score", pontos);
-        formData.append("gametime", segundos);
+        formData.append("gametime", timer.stop());
 
         fetch(`${location.origin}/game/salvar`, {
             method: "POST",

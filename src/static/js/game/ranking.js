@@ -7,14 +7,24 @@ if (ranking) {
         });
         const items = await response.json();
 
-        items.data.forEach((item, index) => {
+        if (items && items.data) {
+            items.data.forEach((item, index) => {
+                document.getElementById(`ranking`).innerHTML += `
+                    <div class="ranking-container-item">
+                        <p>${index + 1}</p>
+                        <p>${item.name}</p>
+                    </div>
+                `;
+            });
+        } else {
+            ranking.classList.add("no-points");
+
             document.getElementById(`ranking`).innerHTML += `
-                <div class="ranking-container-item">
-                    <p>${index + 1}</p>
-                    <p>${item.name}</p>
+                <div class="ranking-msg">
+                    <p>Pontuação indisponível no momento :(</p>
                 </div>
             `;
-        });
+        }
     };
 
     createTable();

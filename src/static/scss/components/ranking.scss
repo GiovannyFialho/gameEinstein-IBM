@@ -1,10 +1,12 @@
 .ranking-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.8rem;
-    margin: 2rem 0;
-    @media (max-width: $mobile) {
-        grid-template-columns: 1fr;
+    &:not(.no-points) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+        margin: 2rem 0;
+        @media (max-width: $mobile) {
+            grid-template-columns: 1fr;
+        }
     }
     &-item {
         background-color: $primary;
@@ -19,6 +21,21 @@
             }
             color: $white;
             font-weight: 400;
+        }
+    }
+    .ranking-msg {
+        width: 100%;
+        min-width: 300px;
+        height: 100px;
+        padding: 20px 35px;
+        background-color: $primary;
+        color: $white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+            font-size: 1.2rem;
         }
     }
 }
