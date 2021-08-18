@@ -48,14 +48,14 @@
                             </label>
                             <nav class="menu-items">
                                 <?if(!$this->session->userSession){?>
-                                    <a class="menu_link <?=$title == 'Cadastro' ? 'active' : ''?>" href="/usuarios">Cadastro</a>
+                                    <a class="menu_link <?= $title == "Cadastro" ? "active" : "" ?>" href="/usuarios">Cadastro</a>
                                 <?}?>
-                                <a class="menu_link <?=$title == 'Desafio' ? 'active' : ''?>" href="/game">Desafio</a>
-                                <a class="menu_link <?=$title == 'Ranking' ? 'active' : ''?>" href="/game/ranking">Ranking</a>
+                                <a class="menu_link <?= $title == "Desafio" ? "active" : "" ?>" href="/game">Desafio</a>
+                                <a class="menu_link <?= $title == "Ranking" ? "active" : "" ?>" href="/game/ranking">Ranking</a>
                                 <?if($this->session->userSession){?>
                                     <a class="menu_link" href="/usuarios/logout">Logout</a>
                                 <?}else{?>
-                                    <a class="menu_link <?=$title == 'Login' ? 'active' : ''?>" href="/game/login">Login</a>
+                                    <a class="menu_link <?= $title == "Login" ? "active" : "" ?>" href="/game/login">Login</a>
                                 <?}?>
                             </nav>
                         </div>
