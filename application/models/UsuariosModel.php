@@ -69,7 +69,7 @@ Class UsuariosModel extends CI_Model {
     public function updateUser($dataUpdate)
     {
         $this->db->where('idUsuario', $this->idUsuario);
-        if ($this->db->update('idUsuario', $dataUpdate)) {
+        if ($this->db->update('users', $dataUpdate)) {
             return true;
         }
 

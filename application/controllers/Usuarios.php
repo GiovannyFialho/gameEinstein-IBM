@@ -129,7 +129,7 @@ class Usuarios extends CI_Controller {
 	{
 		session_destroy();
 		
-		redirect();
+		redirect('game/ranking');
 
 		// $this->sendJSON(
 		// 	array(
@@ -139,4 +139,27 @@ class Usuarios extends CI_Controller {
 		// );
 	}
 
+	public function registrarParticipacao()
+	{
+		if($this->session->userSession){
+			$this->usuarios->idUsuario = $this->session->userSession->idUsuario;
+			$user = $this->usuarios->updateUser(array('finishGame' => 1));
+
+			$this->sendJSON(
+				array(
+					'success' => true
+				),
+				200
+			);
+		}else{
+			$this->sendJSON(
+				array(
+					'success' => false,
+					'title' => 'Ops',
+					'message' => 'Nenhum usuário logado'
+				),
+				200
+			);
+		}
+	}
 }
