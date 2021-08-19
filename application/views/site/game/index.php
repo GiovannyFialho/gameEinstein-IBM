@@ -15,7 +15,7 @@
                             <ul id="coluna1" class="coluna">
                                 <li>
                                     <select id="quem1" name="quem1">
-                                        <option selected hidden>Quem?</option>
+                                        <option value=""></option>
                                         <option value="Baiana">Baiana</option>
                                         <option value="Catarinense">Catarinense</option>
                                         <option value="Goiana">Goiana</option>
@@ -25,7 +25,7 @@
                                 </li>
                                 <li>
                                     <select id="veioAprender1" name="veioAprender1">
-                                        <option selected hidden>Veio aprender</option>
+                                        <option value=""></option>
                                         <option value="GRC">GRC</option>
                                         <option value="LGPD">LGPD</option>
                                         <option value="Machine Learning">Machine Learning</option>
@@ -35,7 +35,7 @@
                                 </li>
                                 <li>
                                     <select id="perfil1" name="perfil1">
-                                        <option selected hidden>Perfil</option>
+                                        <option value=""></option>
                                         <option value="Analista">Analista</option>
                                         <option value="Coordenadora">Coordenadora</option>
                                         <option value="Diretora">Diretora</option>
@@ -45,7 +45,7 @@
                                 </li>
                                 <li>
                                     <select id="trabalhaCom1" name="trabalhaCom1">
-                                        <option selected hidden>Trabalha com</option>
+                                        <option value=""></option>
                                         <option value="Automação">Automação</option>
                                         <option value="Data">Data</option>
                                         <option value="Infraestrutura">Infraestrutura</option>
@@ -55,7 +55,7 @@
                                 </li>
                                 <li>
                                     <select id="empresa1" name="empresa1">
-                                        <option selected hidden>Empresa</option>
+                                        <option value=""></option>
                                         <option value="Empresa A">Empresa A</option>
                                         <option value="Empresa B">Empresa B</option>
                                         <option value="Empresa C">Empresa C</option>
@@ -69,7 +69,7 @@
                             <ul id="coluna2" class="coluna">
                                 <li>
                                     <select id="quem2" name="quem2">
-                                        <option selected hidden>Quem?</option>
+                                        <option value=""></option>
                                         <option value="Baiana">Baiana</option>
                                         <option value="Catarinense">Catarinense</option>
                                         <option value="Goiana">Goiana</option>
@@ -79,7 +79,7 @@
                                 </li>
                                 <li>
                                     <select id="veioAprender2" name="veioAprender2">
-                                        <option selected hidden>Veio aprender</option>
+                                        <option value=""></option>
                                         <option value="GRC">GRC</option>
                                         <option value="LGPD">LGPD</option>
                                         <option value="Machine Learning">Machine Learning</option>
@@ -89,7 +89,7 @@
                                 </li>
                                 <li>
                                     <select id="perfil2" name="perfil2">
-                                        <option selected hidden>Perfil</option>
+                                        <option value=""></option>
                                         <option value="Analista">Analista</option>
                                         <option value="Coordenadora">Coordenadora</option>
                                         <option value="Diretora">Diretora</option>
@@ -99,7 +99,7 @@
                                 </li>
                                 <li>
                                     <select id="trabalhaCom2" name="trabalhaCom2">
-                                        <option selected hidden>Trabalha com</option>
+                                        <option value=""></option>
                                         <option value="Automação">Automação</option>
                                         <option value="Data">Data</option>
                                         <option value="Infraestrutura">Infraestrutura</option>
@@ -109,7 +109,7 @@
                                 </li>
                                 <li>
                                     <select id="empresa2" name="empresa2">
-                                        <option selected hidden>Empresa</option>
+                                        <option value=""></option>
                                         <option value="Empresa A">Empresa A</option>
                                         <option value="Empresa B">Empresa B</option>
                                         <option value="Empresa C">Empresa C</option>
@@ -123,7 +123,7 @@
                             <ul id="coluna3" class="coluna">
                                 <li>
                                     <select id="quem3" name="quem3">
-                                        <option selected hidden>Quem?</option>
+                                        <option value=""></option>
                                         <option value="Baiana">Baiana</option>
                                         <option value="Catarinense">Catarinense</option>
                                         <option value="Goiana">Goiana</option>
@@ -133,7 +133,7 @@
                                 </li>
                                 <li>
                                     <select id="veioAprender3" name="veioAprender3">
-                                        <option selected hidden>Veio aprender</option>
+                                        <option value=""></option>
                                         <option value="GRC">GRC</option>
                                         <option value="LGPD">LGPD</option>
                                         <option value="Machine Learning">Machine Learning</option>
@@ -143,7 +143,7 @@
                                 </li>
                                 <li>
                                     <select id="perfil3" name="perfil3">
-                                        <option selected hidden>Perfil</option>
+                                        <option value=""></option>
                                         <option value="Analista">Analista</option>
                                         <option value="Coordenadora">Coordenadora</option>
                                         <option value="Diretora">Diretora</option>
@@ -153,7 +153,7 @@
                                 </li>
                                 <li>
                                     <select id="trabalhaCom3" name="trabalhaCom3">
-                                        <option selected hidden>Trabalha com</option>
+                                        <option value=""></option>
                                         <option value="Automação">Automação</option>
                                         <option value="Data">Data</option>
                                         <option value="Infraestrutura">Infraestrutura</option>
@@ -163,7 +163,7 @@
                                 </li>
                                 <li>
                                     <select id="empresa3" name="empresa3">
-                                        <option selected hidden>Empresa</option>
+                                        <option value=""></option>
                                         <option value="Empresa A">Empresa A</option>
                                         <option value="Empresa B">Empresa B</option>
                                         <option value="Empresa C">Empresa C</option>
@@ -177,7 +177,7 @@
                             <ul id="coluna4" class="coluna">
                                 <li>
                                     <select id="quem4" name="quem4">
-                                        <option selected hidden>Quem?</option>
+                                        <option value=""></option>
                                         <option value="Baiana">Baiana</option>
                                         <option value="Catarinense">Catarinense</option>
                                         <option value="Goiana">Goiana</option>
@@ -187,7 +187,7 @@
                                 </li>
                                 <li>
                                     <select id="veioAprender4" name="veioAprender4">
-                                        <option selected hidden>Veio aprender</option>
+                                        <option value=""></option>
                                         <option value="GRC">GRC</option>
                                         <option value="LGPD">LGPD</option>
                                         <option value="Machine Learning">Machine Learning</option>
@@ -197,7 +197,7 @@
                                 </li>
                                 <li>
                                     <select id="perfil4" name="perfil4">
-                                        <option selected hidden>Perfil</option>
+                                        <option value=""></option>
                                         <option value="Analista">Analista</option>
                                         <option value="Coordenadora">Coordenadora</option>
                                         <option value="Diretora">Diretora</option>
@@ -207,7 +207,7 @@
                                 </li>
                                 <li>
                                     <select id="trabalhaCom4" name="trabalhaCom4">
-                                        <option selected hidden>Trabalha com</option>
+                                        <option value=""></option>
                                         <option value="Automação">Automação</option>
                                         <option value="Data">Data</option>
                                         <option value="Infraestrutura">Infraestrutura</option>
@@ -217,7 +217,7 @@
                                 </li>
                                 <li>
                                     <select id="empresa4" name="empresa4">
-                                        <option selected hidden>Empresa</option>
+                                        <option value=""></option>
                                         <option value="Empresa A">Empresa A</option>
                                         <option value="Empresa B">Empresa B</option>
                                         <option value="Empresa C">Empresa C</option>
@@ -231,7 +231,7 @@
                             <ul id="coluna5" class="coluna">
                                 <li>
                                     <select id="quem5" name="quem5">
-                                        <option selected hidden>Quem?</option>
+                                        <option value=""></option>
                                         <option value="Baiana">Baiana</option>
                                         <option value="Catarinense">Catarinense</option>
                                         <option value="Goiana">Goiana</option>
@@ -241,7 +241,7 @@
                                 </li>
                                 <li>
                                     <select id="veioAprender5" name="veioAprender5">
-                                        <option selected hidden>Veio aprender</option>
+                                        <option value=""></option>
                                         <option value="GRC">GRC</option>
                                         <option value="LGPD">LGPD</option>
                                         <option value="Machine Learning">Machine Learning</option>
@@ -251,7 +251,7 @@
                                 </li>
                                 <li>
                                     <select id="perfil5" name="perfil5">
-                                        <option selected hidden>Perfil</option>
+                                        <option value=""></option>
                                         <option value="Analista">Analista</option>
                                         <option value="Coordenadora">Coordenadora</option>
                                         <option value="Diretora">Diretora</option>
@@ -261,7 +261,7 @@
                                 </li>
                                 <li>
                                     <select id="trabalhaCom5" name="trabalhaCom5">
-                                        <option selected hidden>Trabalha com</option>
+                                        <option value=""></option>
                                         <option value="Automação">Automação</option>
                                         <option value="Data">Data</option>
                                         <option value="Infraestrutura">Infraestrutura</option>
@@ -271,7 +271,7 @@
                                 </li>
                                 <li>
                                     <select id="empresa5" name="empresa5">
-                                        <option selected hidden>Empresa</option>
+                                        <option value=""></option>
                                         <option value="Empresa A">Empresa A</option>
                                         <option value="Empresa B">Empresa B</option>
                                         <option value="Empresa C">Empresa C</option>

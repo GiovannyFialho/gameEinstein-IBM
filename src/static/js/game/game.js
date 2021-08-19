@@ -60,6 +60,19 @@ if (formGame) {
     function euDesisto() {
         stopTimer();
 
+        fetch(`${location.origin}/usuarios/registrarParticipacao`, {
+            method: "GET",
+        })
+            .then((response) => {
+                return response.json();
+            })
+            .then((response) => {
+                return response;
+            })
+            .catch((error) => {
+                console.log(`error -> ${error}`);
+            });
+
         popupInfo.parentElement.classList.add("show");
         popupInfo.innerHTML = `
             <h3 class="success">Que pena! Você desistiu.</h3>
@@ -67,7 +80,7 @@ if (formGame) {
         `;
 
         setTimeout(() => {
-            location.href = "/";
+            location.href = "/usuarios/logout";
         }, 5000);
     }
 
@@ -363,16 +376,19 @@ if (formGame) {
             .then((response) => {
                 return response.json();
             })
-            .then(() => {
+            .then(async () => {
+                const data = await fetch(`${location.origin}/usuarios/registrarParticipacao`);
+                await data.json();
+
                 popupInfo.parentElement.classList.add("show");
                 popupInfo.innerHTML = `
                     <h3>Parabéns! Você conseguiu.</h3>
-                    <a href="/game/ranking" class="link-padrao mb">Confira o ranking</a>
+                    <a href="/usuarios/logout" class="link-padrao mb">Confira o ranking</a>
                     <a href="/" class="link-padrao mb">Volte para o evento</a>
                 `;
 
                 setTimeout(() => {
-                    location.href = `/game/ranking`;
+                    location.href = `/usuarios/logout`;
                 }, 5000);
             })
             .catch(() => {

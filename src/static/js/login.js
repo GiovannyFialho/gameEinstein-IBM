@@ -25,7 +25,24 @@ if (formLogin) {
                 if (response.success == true) {
                     location.href = `/game`;
                 } else {
-                    document.querySelector(".msg-erro").innerHTML = `<p>${response.message}</p>`;
+                    popupInfo.parentElement.classList.add("show");
+                    popupInfo.innerHTML = `
+                        <h3 class="error">${response.title}</h3>
+                        <p>${response.message}</p>
+                        <div class="button-container center">
+                            <a href="${response.message == "Seu usuário já participou do desafio. Você só pode participar do desafio 1 vez!" ? "/" : "/game/login"}">
+                                Ok
+                            </a>
+                        </div>
+                    `;
+
+                    setTimeout(() => {
+                        if (response.message == "Seu usuário já participou do desafio. Você só pode participar do desafio 1 vez!") {
+                            location.href = "/";
+                        } else {
+                            location.reload();
+                        }
+                    }, 7000);
                 }
             })
             .catch(() => {
