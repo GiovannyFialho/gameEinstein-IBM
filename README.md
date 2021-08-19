@@ -7,9 +7,9 @@ yarn
 ```
 
 ## Inicialização do Gulp
-``
+```
 gulp
-``
+```
 
 ## Rodar PHP
 
