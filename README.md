@@ -1,10 +1,15 @@
 # Game Einstein - IBM 👾
 
-## Install dependencies
+## Instalação das dependências
 
 ```
 yarn
 ```
+
+## Inicialização do Gulp
+``
+gulp
+``
 
 ## Rodar PHP
 
