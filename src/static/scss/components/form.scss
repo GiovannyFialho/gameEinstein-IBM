@@ -22,7 +22,9 @@
             align-items: center;
             justify-content: space-between;
             margin-top: 1rem;
-            width: 100%;
+            &.fullSize {
+                width: 100%;
+            }
             @media (max-width: $mobile) {
                 flex-direction: column-reverse;
             }

@@ -1,11 +1,24 @@
 .link-padrao {
+    position: relative;
     color: $white;
-    font-size: 0.9rem;
-    text-decoration: underline;
+    font-size: 1.1rem;
+    padding-bottom: 0.4rem;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: $white;
+        bottom: 0;
+        left: 0;
+        transition: width 0.3s ease-in-out;
+    }
     &.mb {
         margin-bottom: 0.8rem;
     }
     &:hover {
-        text-decoration: none;
+        &::after {
+            width: 0;
+        }
     }
 }

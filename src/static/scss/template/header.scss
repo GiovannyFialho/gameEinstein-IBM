@@ -1,12 +1,12 @@
 header {
     height: 100%;
-    min-height: 60px;
+    min-height: 73px;
     background-image: linear-gradient(90deg, $primary, $secondary);
     .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 60px;
+        height: 73px;
         .logo {
             height: inherit;
             display: flex;
@@ -33,6 +33,7 @@ header {
                                 position: relative;
                                 padding-left: 5px;
                                 color: $white;
+                                font-size: 1.3rem;
                                 &.active {
                                     &::after {
                                         @include hoverMenu;

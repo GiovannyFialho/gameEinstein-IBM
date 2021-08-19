@@ -16,7 +16,7 @@
 
                 <div class="msg-erro"></div>
 
-                <div class="form-footer">
+                <div class="form-footer fullSize">
                     <div class="button-container end">
                         <button>
                             Entrar

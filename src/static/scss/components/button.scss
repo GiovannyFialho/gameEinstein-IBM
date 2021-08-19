@@ -2,6 +2,9 @@
     margin-top: 1.5rem;
     width: 100%;
     display: flex;
+    @media (max-width: $mobile) {
+        margin-top: 2rem;
+    }
     &.center {
         justify-content: center;
     }
@@ -22,10 +25,10 @@
         color: $white;
         transition: background-color 0.2s ease-in-out;
         @media (max-width: $mobile) {
-            width: 100%;
-            padding: 15px 20px;
-            justify-content: center;
             font-size: 1.3rem;
+            width: 100%;
+            padding: 10px 20px;
+            justify-content: center;
         }
         &.bold {
             font-weight: 700;

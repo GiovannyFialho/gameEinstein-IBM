@@ -38,6 +38,8 @@
         transition: all 0.4s ease-in-out;
         @media (max-width: $mobile) {
             width: 90%;
+            height: auto;
+            padding: 20px 15px;
         }
         h3 {
             font-size: 1.6rem;
@@ -62,6 +64,9 @@
         .link-padrao {
             background-color: initial;
             font-size: 1.1rem;
+            &:hover {
+                background-color: initial;
+            }
         }
     }
 }

@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="form-footer">
-                    <a href="#" class="link-padrao">
+                    <a href="/" class="link-padrao">
                         Confira regulamento
                     </a>
                     <div class="button-container end">

@@ -305,7 +305,7 @@
                             <div class="wind">
                                 <p>
                                     Tempo
-                                    <span id="minutes">00</span>: <span id="seconds">00</span>
+                                    <span id="minutes">00</span>:<span id="seconds">00</span>
                                 </p>
                             </div>
                         </div>
