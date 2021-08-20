@@ -130,6 +130,26 @@ Class UsuariosModel extends CI_Model {
         }
     }
 
+    public function activeUserByHash($hash)
+    {
+        $sql = "SELECT 
+                    *
+                FROM users
+                WHERE hash = ?";
+        
+        $query = $this->db->query($sql, array($hash));
+
+        if ($query) {
+            $result = $query->row();
+            $this->db->where('idUsuario', $result->idUsuario);
+            if ($this->db->update('users', array('active' => 1))) {
+                return true;
+            }
+        } else {
+            return false;
+        }
+    }
+
     public function changePassword()
     {
         $passHash = $this->hashPassword();

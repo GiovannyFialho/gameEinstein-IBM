@@ -28,7 +28,7 @@
     </div>
 </div>
 
-<div class="container-cadastro-aprovado">
+<div class="container-cadastro-aprovado <?=isset($usuarioAprovado) ? 'show' : ''?>">
     <div class="cadastro-aprovado">
         <h3>Parabéns!</h3>
         <p>Seu cadastro foi aprovado com sucesso!</p>

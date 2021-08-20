@@ -45,11 +45,13 @@ class Usuarios extends CI_Controller {
 		$nome = $this->input->post('name');
 		$email = $this->input->post('email');
 		$password = password_hash($this->input->post('password'), PASSWORD_DEFAULT);
+		$hash = password_hash($email, PASSWORD_DEFAULT);
 
 		$arrayInsert = [
 			"name" => $nome,
 			"email" => $email,
 			"password" => $password,
+			"hash" => $hash,
 		];
 		
 		$resultEmail = $this->usuarios->getUserByEmail($email);
@@ -59,13 +61,14 @@ class Usuarios extends CI_Controller {
 			$message = "Email já cadastrado no sistema.";
 		} else {
 			$erro = false;
-			$usuarioId = $this->usuarios->saveNewUser($arrayInsert);
+			// $usuarioId = $this->usuarios->saveNewUser($arrayInsert);
+			$this->data['linkBtn'] = base_url('game/login/?hash='.$hash);
 			
 			$this->email->from('no_reply@desafiomundohibrido.com', 'IBM');
 			$this->email->to($email);
 			
 			$this->email->subject('Vamos iniciar o Desafio de Conhecimento!');
-			$this->email->message('Testing the email class.');
+			$this->email->message($this->load->view('site/email/index', $this->data, true));
 			
 			$this->email->send();
 		}
@@ -114,19 +117,23 @@ class Usuarios extends CI_Controller {
 		
 		if ($userLogin) {
 			if($userLogin->finishGame == 0){
-				$this->usuarios->idUsuario = $userLogin->idUsuario;
-				$user = $this->usuarios->getUser();
-				$user->ip = $_SERVER['REMOTE_ADDR'];
-				$user->userAgent = $_SERVER['HTTP_USER_AGENT'];
-				
-				$this->session->set_userdata('userSession', $user);
+				if($userLogin->active == 1){
+					$this->usuarios->idUsuario = $userLogin->idUsuario;
+					$user = $this->usuarios->getUser();
+					$user->ip = $_SERVER['REMOTE_ADDR'];
+					$user->userAgent = $_SERVER['HTTP_USER_AGENT'];
+					
+					$this->session->set_userdata('userSession', $user);
 
-				$this->sendJSON(
-					array(
-						'success' => true
-					),
-					200
-				);
+					$this->sendJSON(
+						array(
+							'success' => true
+						),
+						200
+					);
+				}else{
+					$message = "Seu usuário ainda não confirmou o cadastro. Verifique sua caixa de e-mail para fazer a verificação da sua conta.";
+				}
 			}else{
 				$message = "Seu usuário já participou do desafio. Você só pode participar do desafio 1 vez!";
 			}

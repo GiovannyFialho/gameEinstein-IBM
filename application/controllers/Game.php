@@ -9,6 +9,7 @@ class Game extends CI_Controller {
 		parent::__construct();
 
 		$this->load->model("GamesModel", "games");
+		$this->load->model("UsuariosModel", "usuarios");
 		
 		$this->data['title'] = 'Desafio';
 		
@@ -23,6 +24,11 @@ class Game extends CI_Controller {
 	public function login()
 	{
 		$this->data['title'] = 'Login';
+		if(isset($_GET['hash'])){
+			if($this->usuarios->activeUserByHash($_GET['hash']));{
+				$this->data['usuarioAprovado'] = true;
+			}
+		}
 		$this->rendererSite('site/game/login');
 	}
 
