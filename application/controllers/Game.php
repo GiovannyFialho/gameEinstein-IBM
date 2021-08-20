@@ -96,6 +96,10 @@ class Game extends CI_Controller {
 	{
 		$score = $this->games->getGames();
 
+		foreach ($score['data'] as $key => $value) {
+			$value->name = substr_replace($value->name, '***', 3);
+		}
+
 		$this->data['ranking'] = $score['data'];
 
 		if ($score['numRows'] > 0) {
