@@ -10,6 +10,7 @@ if (formGame) {
 
     let min = 1;
     let se = 0;
+    let mili = 0;
     let initialCondition = true;
     let myVar;
 
@@ -88,9 +89,10 @@ if (formGame) {
 
     let timer = {
         initialValue: 0,
+        startTime: Date.now(),
         start: () => {
-            setInterval(() => {
-                timer.initialValue++;
+            setInterval(function () {
+                timer.initialValue = Date.now() - timer.startTime;
             }, 1);
         },
         stop: () => {
