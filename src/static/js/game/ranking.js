@@ -13,6 +13,7 @@ if (ranking) {
                     <div class="ranking-container-item">
                         <p>${index + 1}</p>
                         <p>${item.name}</p>
+                        <p>${formatTime(item.gametime)}</p>
                     </div>
                 `;
             });
