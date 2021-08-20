@@ -61,7 +61,7 @@ class Usuarios extends CI_Controller {
 			$message = "Email já cadastrado no sistema.";
 		} else {
 			$erro = false;
-			// $usuarioId = $this->usuarios->saveNewUser($arrayInsert);
+			$usuarioId = $this->usuarios->saveNewUser($arrayInsert);
 			$this->data['linkBtn'] = base_url('game/login/?hash='.$hash);
 			
 			$this->email->from('no_reply@desafiomundohibrido.com', 'IBM');
