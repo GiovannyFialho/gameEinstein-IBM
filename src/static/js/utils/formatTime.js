@@ -1,18 +1,13 @@
 const formatTime = (gameTime) => {
-    if (Math.floor(gameTime / 60000) <= 0) {
-        let seconds = Math.floor(gameTime / 1000);
-        let milliseconds = gameTime - seconds * 1000;
+    let x = Math.floor(gameTime / 1000);
 
-        if (seconds == 0) {
-            seconds = `0${0}`;
-        }
+    let min = Math.floor(x / 60);
+    let sec = x % 60;
+    let mili = gameTime % 1000;
 
-        return `00:${seconds}:${milliseconds}`;
-    } else {
-        let minutes = Math.floor(gameTime / 60000);
-        let seconds = gameTime - minutes * 60;
-        let milliseconds = gameTime - seconds * 1000;
+    min = min.toString().padStart(2, 0);
+    sec = sec.toString().padStart(2, 0);
+    mili = mili.toString().padStart(2, 0);
 
-        return `${minutes}:${seconds}:${milliseconds}`;
-    }
+    return `${min}:${sec}:${mili}`;
 };
