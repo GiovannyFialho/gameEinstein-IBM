@@ -21,8 +21,6 @@ if (formGame) {
         initialCondition = false;
     };
 
-    startTimer();
-
     function myTimer() {
         se = se + 1;
         seconds.innerHTML = `0${se}`;
@@ -100,6 +98,7 @@ if (formGame) {
         },
     };
 
+    startTimer();
     timer.start();
 
     let pontos = 0;
