@@ -10,10 +10,7 @@
                         <input type="email" id="email" placeholder="E-mail" require>
                     </div>
                     <div class="input-item">
-                        <input type="text" id="nickname" placeholder="Nickname" require>
-                    </div>
-                    <div class="input-item">
-                        <input type="text" id="cargo" placeholder="Cargo" require>
+                        <input type="password" id="password" placeholder="Senha" minlength="8" require>
                     </div>
                 </div>
 
@@ -31,6 +28,143 @@
                     </div>
                 </div>
             </form>
+        </div>
+    </div>
+</div>
+
+<div class="container-privacidade">
+    <div class="termos-privacidade">
+        <div class="termos-privacidade-head">
+            <h2>Termos de privacidade</h2>
+        </div>
+        <div class="termos-privacidade-body">
+            <h3>Privacidade campanha <a href="desafiomundohibrido.com" class="link-destaque">desafiomundohibrido.com</a></h3>
+            <p>
+                A Política de Privacidade contém informações sobre coleta, uso, armazenamento, tratamento e proteção de dados pessoais dos usuários e visitantes do site meusparceirosemcasa.com.br, com a finalidade de demonstrar transparência e esclarecer a forma como os usuários podem gerenciar ou excluir suas informações pessoais.
+            </p>
+
+            <h3>Voluntariedade da campanha e política de privacidade da MCM</h3>
+            <p>
+                O envio de dados pessoais para a criação de badges virtuais ilustrativos é voluntário e será feito diretamente entre o colaborador e a MCM Brand Experience que será a Controladora de tais informações. Para saber mais sobre como a MCM Brand Experience realiza o tratamento de seus dados, consulte a Política de Privacidade disponível no site da empresa, clique aqui. 
+            </p>
+
+            <h3>Como recolhemos os dados pessoais do usuário e para quais finalidades</h3>
+            <p>
+                Os dados pessoais são recolhidos da seguinte forma: quando o usuário cria uma conta na plataforma <a href="desafiomundohibrido.com" class="link-destaque">desafiomundohibrido.com</a>, as informações são usadas para a finalidade de identificação de acesso (nome completo e e-mail). A partir desses dados, podemos identificá-lo(a), além de garantir maior segurança e bem-estar às suas necessidades. Fica ciente o usuário de que seu perfil na plataforma estará acessível apenas para o titular do cadastro, fica à cargo do mesmo a opção de fornecer ou não o login e senha para terceiros.
+            </p>
+            <p>
+                Além disso, ao fazer upload de imagens para a finalidade de confecção dos badges virtuais, esses arquivos ficarão hospedados na plataforma pelo período vigente da campanha, e serão excluídos mediante a pedido do usuário e ao término da ação.
+            </p>
+
+            <h3>Aviso de cookies para visitantes</h3>
+            <p>
+                O site <a href="desafiomundohibrido.com" class="link-destaque">desafiomundohibrido.com</a> não fará uso da coleta de cookies para monitorar acessos sem cadastro prévio.
+            </p>
+
+            <h3>Por quanto tempo os dados pessoais ficam armazenados?</h3>
+            <p>
+                Os dados pessoais do usuário são armazenados pela plataforma durante o período necessário para a prestação da campanha ou o cumprimento das finalidades previstas no presente documento, conforme o disposto no inciso I do artigo 15 da Lei 13.709/18. A qualquer momento, os dados podem ser removidos a pedido do usuário.
+            </p>
+            <p>
+                É possível solicitar alteração ou remover tais permissões, através do e-mail: <a href="mailto:mcm@mcm.br.com" class="link-destaque">mcm@mcm.br.com</a>. Caso queira revogar também o consentimento para que não façamos o envio de comunicados, o mesmo poderá ser realizado por meio da opção de cancelamento presente no rodapé dos e-mails.
+            </p>
+
+            <h3>Segurança dos dados armazenados</h3>
+            <p>
+                A plataforma se compromete a aplicar as medidas técnicas e organizativas aptas a proteger os dados pessoais de acessos não autorizados e de situações de destruição, perda, alteração, comunicação ou difusão de tais dados. Utilizará técnicas de criptografia, firewalls e outras tecnologias e procedimentos aplicáveis à segurança, de forma a proteger a consistência e a segurança de suas informações e prevenir o acesso não autorizado ou uso impróprio.
+            </p>
+            <p>
+                O sistema desenvolvido pela MCM Brand Experience para o site meusparceirosemcasa.com.br não utiliza APIs. Todas as requisições são feitas através de CSRF token e requisições de sistemas terceiros foram desabilitadas. Para a construção do back-end foi utilizado o framework CodeIgniter v3, utilizando métodos de segurança built-in para evitar qualquer tipo de SQL Injection.
+            </p>
+
+            <h3>Injeção</h3>
+            <p>
+                O framework utilizado para construção (CodeIgniter v3) possui métodos built-in para prevenção de injeção de SQL. Todos os dados transacionados por requisições são tratados e escapados nos controladores do projeto. No momento de execução das queries, os dados transacionados são novamente verificados pelo framework.
+            </p>
+
+            <h3>Quebra de Autenticação</h3>
+            <p>
+                O sistema não utiliza métodos de login persistente, portanto, cada login tem validade de apenas uma sessão.
+            </p>
+
+            <h3>Exposição de dados sensíveis</h3>
+            <p>
+                Os únicos dados armazenados são o nome e email do usuário. A senha é criptografada utilizando a função password_hash nativa do PHP.
+            </p>
+
+            <h3>XML External Entities (XXE)</h3>
+            <p>
+                Sistema não possui transação de nenhum tipo de XML.
+            </p>
+
+            <h3>Controle de Acesso Quebrado</h3>
+            <p>
+                O único arquivo de acesso público do sistema são as badges geradas pelos usuários, uma vez que elas podem ser compartilhadas em redes sociais. Cada imagem gerada é gerada usando um nome único. Todos os outros arquivos do sistema são protegidos com permissões limitadas. O próprio framework utilizado por padrão impede o acesso direto à arquivos e pastas protegidos do sistema.
+            </p>
+
+            <h3>Configuração Incorreta de Segurança</h3>
+            <p>
+                O sistema é de baixa complexidade. Todas as medidas necessárias para proteger o sistema foram aplicados. O deploy da aplicação é feito através do GIT, e os repositórios estão armazenados em uma conta do GitLab.
+            </p>
+
+            <h3>Cross-Site Scripting (XSS)</h3>
+            <p>
+                Os acessos externos ao sistema foram desabilitados. Não há necessidade de receber dados externos.
+            </p>
+
+            <h3>Des-serialização Insegura</h3>
+            <p>
+                O acesso externo ao sistema está desabilitado e a utilização de CSRF token foi implementado para toda e qualquer requisição, não haverá transação de dados que não sejam gerados propriamente dentro do sistema.
+            </p>
+
+            <h3>Utilização de componentes com vulnerabilidades conhecidas</h3>
+            <p>
+                O Framework utilizado (CodeIgniter) possui padrões estritos de segurança, além de ser um dos frameworks open source mais difundidos do mundo.
+            </p>
+
+            <h3>Logging e Monitoramento Insuficientes</h3>
+            <p>
+                Todas as ações de requisição do site geram logging. São elas: cadastro de novo usuário, exclusão de cadastro e criação de novas tags. A qualquer momento esse log pode ser requisitado a desenvolvedora MCM Brand Experience. Se for necessário, será aplicado o uso de recaptcha para login ao sistema.
+            </p>
+
+            <h3>Os dados pessoais armazenados serão transferidos a terceiros?</h3>
+            <p>
+                Os dados pessoais não serão transferidos a terceiros. Todas as informações coletadas são de uso exclusivo da plataforma e da desenvolvedora e controladora MCM Brand Experience.
+            </p>
+
+            <h3>Direitos do titular</h3>
+            <p>
+                Você pode solicitar acesso, atualização ou correção de suas informações pessoais.
+            </p>
+            <p>
+                Se o processamento de suas informações pessoais estiver sujeito à Lei Geral de Proteção de Dados do Brasil (“LGPD”), adicionalmente, você possui o direito de requisitar: (i) confirmação da existência do tratamento; (ii) anonimização, bloqueio ou eliminação de dados; (iii) portabilidade dos dados a outro fornecedor de serviço ou produto; (iv) eliminação dos dados pessoais tratados com o seu consentimento; (v) informação das entidades públicas e privadas com as quais o controlador realizou uso compartilhado de dados; (vi) informação sobre a possibilidade de não fornecer consentimento e sobre as consequências da negativa; (vii) revogação do consentimento.
+            </p>
+
+            <h3>Consentimento uso de imagem e dados de menores de idade</h3>
+            <p>
+                A autorização do uso de imagem e dos dados serão exclusivamente de seu responsável legal.
+            </p>
+            <p>
+                Na qualidade de um dos pais ou responsável do menor, AUTORIZA o site <a href="desafiomundohibrido.com" class="link-destaque">desafiomundohibrido.com</a> a usar suas informações pessoais correspondente a arquivos de imagens e nomes, e CONCORDA que a MCM Brand Experience use essas informações para a ação de criar badges virtuais.
+            </p>
+            <p>
+                O usuário tem direito de retirar o seu consentimento a qualquer tempo, para tanto deve entrar em contato através do e-mail <a href="mailto:mcm@mcm.br.com" class="link-destaque">mcm@mcm.br.com</a> ou através do canal: https://www.mcmbrandexperience.com/contato.
+            </p>
+
+            <h3>Consentimento</h3>
+            <p>
+                Ao utilizar os serviços e fornecer as informações pessoais na plataforma, o usuário está consentindo com a presente Política de Privacidade para fins de cadastro e envio de peças de comunicação da campanha por e-mail.
+            </p>
+            <p>
+                O usuário tem direito de retirar o seu consentimento a qualquer tempo, para tanto deve entrar em contato através do e-mail <a href="mailto:mcm@mcm.br.com" class="link-destaque">mcm@mcm.br.com</a> ou através do canal: https://www.mcmbrandexperience.com/contato.
+            </p>
+            <p>
+                Observação: lembrando que essa política de privacidade será exibida na tela quando o usuário INICIAR seu cadastro na plataforma, ele poderá aceitar confirmando com um clique.
+            </p>
+        </div>
+        <div class="termos-privacidade-footer">
+            <a href="/" class="secondary">Cancelar</a>
+            <button class="primary" onclick="aceitoTermos()">Aceitar</button>
         </div>
     </div>
 </div>

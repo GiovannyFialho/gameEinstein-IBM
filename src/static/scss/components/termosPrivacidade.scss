@@ -1,0 +1,92 @@
+.container-privacidade {
+    @include overlay;
+    &.show {
+        pointer-events: initial;
+        opacity: 1;
+        .termos-privacidade {
+            transform: translateY(0);
+        }
+    }
+    .termos-privacidade {
+        max-width: 36%;
+        width: 100%;
+        max-height: 72%;
+        height: 100%;
+        background-color: $white-dark;
+        transform: translateY(-1rem);
+        transition: transform 0.3s ease-in-out;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto 1fr auto;
+        @media (max-width: $tablet) {
+            max-width: 70%;
+        }
+        @media (max-width: $mobile) {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        &-head {
+            padding: 1rem 3rem 1rem 2rem;
+            margin-bottom: 0.5rem;
+            grid-column: 1/-1;
+            grid-row: 1/1;
+            h2 {
+                font-size: 1.3rem;
+                font-weight: 400;
+                line-height: 1.4;
+                letter-spacing: 0;
+                color: $default-text;
+            }
+        }
+        &-body {
+            position: relative;
+            padding: 0.5rem 1rem 1rem 2rem;
+            margin-bottom: 3rem;
+            grid-column: 1/-1;
+            grid-row: 2/-2;
+            overflow-y: auto;
+            margin-bottom: 0;
+            h3 {
+                font-size: 1.75rem;
+                line-height: 1.29;
+                margin: 0.5rem auto 1rem auto;
+            }
+            p {
+                font-size: 0.875rem;
+                line-height: 1.43;
+                letter-spacing: 0.16px;
+                color: $default-text;
+                font-weight: 400;
+                margin-bottom: 1rem;
+            }
+            .link-destaque {
+                color: $primary;
+            }
+        }
+        &-footer {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .secondary {
+                @include buttonPopUp;
+                width: 50%;
+                background-color: $colorSecondaryButton;
+                color: $white;
+                transition: background-color 0.2s ease-in-out;
+                &:hover {
+                    background-color: $colorSecondaryButton-dark;
+                }
+            }
+            .primary {
+                @include buttonPopUp;
+                width: 50%;
+                background-color: $colorPrimaryButton;
+                color: $white;
+                transition: background-color 0.2s ease-in-out;
+                &:hover {
+                    background-color: $colorPrimaryButton-dark;
+                }
+            }
+        }
+    }
+}

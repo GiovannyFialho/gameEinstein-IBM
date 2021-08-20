@@ -10,9 +10,8 @@ if (formLogin) {
         let popupInfo = document.querySelector(".popup-info");
 
         let formData = new FormData();
-        formData.append("name", document.getElementById("name").value);
         formData.append("email", document.getElementById("email").value);
-        formData.append("nickname", document.getElementById("nickname").value);
+        formData.append("password", document.getElementById("password").value);
 
         fetch(`${location.origin}/usuarios/logar`, {
             method: "POST",
@@ -25,14 +24,26 @@ if (formLogin) {
                 if (response.success == true) {
                     location.href = `/game`;
                 } else {
+                    let buttonOk;
+
+                    if (response.message == "Seu usuário já participou do desafio. Você só pode participar do desafio 1 vez!") {
+                        buttonOk = `
+                            <a href="/">
+                                Ok
+                            </a>
+                        `;
+                    } else {
+                        buttonOk = `
+                            <button onclick="successFalse()">Ok</button>
+                        `;
+                    }
+
                     popupInfo.parentElement.classList.add("show");
                     popupInfo.innerHTML = `
                         <h3 class="error">${response.title}</h3>
                         <p>${response.message}</p>
                         <div class="button-container center">
-                            <a href="${response.message == "Seu usuário já participou do desafio. Você só pode participar do desafio 1 vez!" ? "/" : "/game/login"}">
-                                Ok
-                            </a>
+                            ${buttonOk}
                         </div>
                     `;
 
@@ -40,9 +51,9 @@ if (formLogin) {
                         if (response.message == "Seu usuário já participou do desafio. Você só pode participar do desafio 1 vez!") {
                             location.href = "/";
                         } else {
-                            location.reload();
+                            successFalse();
                         }
-                    }, 7000);
+                    }, 5000);
                 }
             })
             .catch(() => {

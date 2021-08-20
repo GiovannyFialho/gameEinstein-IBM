@@ -1,44 +1,30 @@
 .container-popup {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    transition: opacity 0.3s ease-in-out;
-    opacity: 0;
-    pointer-events: none;
+    @include overlay;
     &.show {
         pointer-events: initial;
         opacity: 1;
         .popup-info {
-            top: 35%;
-            transform: translate(-50%, -35%);
+            transform: translateY(-4rem);
             opacity: 1;
         }
     }
     .popup-info {
-        position: absolute;
-        width: 100%;
-        max-width: 450px;
-        height: 200px;
-        margin: 0 auto;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         display: flex;
         flex-direction: column;
         justify-content: center;
+        max-width: 450px;
+        width: 100%;
+        height: 200px;
+        margin: 0 auto;
+        transform: translateY(-6rem);
         background-color: $primary;
-        box-shadow: 0 4px 7px $primary-dark;
         padding: 15px 35px;
         opacity: 0;
         transition: all 0.4s ease-in-out;
         @media (max-width: $mobile) {
             width: 90%;
             height: auto;
+            min-height: 200px;
             padding: 20px 15px;
         }
         h3 {

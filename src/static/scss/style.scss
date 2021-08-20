@@ -11,6 +11,8 @@
 @import "mixins/containerSecao";
 @import "mixins/hoverMenu";
 @import "mixins/titleColuna";
+@import "mixins/overlay";
+@import "mixins/buttonPopUp";
 
 /* Template */
 @import "template/header";
@@ -29,3 +31,4 @@
 @import "components/cronometro";
 @import "components/highlight";
 @import "components/link";
+@import "components/termosPrivacidade";
