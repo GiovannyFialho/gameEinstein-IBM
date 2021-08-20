@@ -28,6 +28,14 @@
     </div>
 </div>
 
+<div class="container-cadastro-aprovado">
+    <div class="cadastro-aprovado">
+        <h3>Parabéns!</h3>
+        <p>Seu cadastro foi aprovado com sucesso!</p>
+        <button onclick="fecharCadastroAprovado()">Faça o login</button>
+    </div>
+</div>
+
 <div class="container-popup">
     <div class="popup-info"></div>
 </div>
