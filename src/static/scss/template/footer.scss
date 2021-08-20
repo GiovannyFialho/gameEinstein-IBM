@@ -1,4 +1,37 @@
 footer {
-    min-height: 76px;
-    background-image: linear-gradient(90deg, $secondary, $primary);
+    width: 100%;
+    background-color: #161616;
+    padding: 3rem 0;
+    .container {
+        max-width: 80%;
+        width: 100%;
+        margin: 0 auto;
+        .head {
+            display: flex;
+            margin-bottom: 1rem;
+            &-link {
+                font-size: 1rem;
+                color: #c3c3c3;
+                margin-right: 1rem;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .body {
+            margin: 1rem auto;
+            p {
+                color: #5c5c5c;
+                font-size: 0.8rem;
+                line-height: 1.2;
+            }
+        }
+        .footer {
+            margin-top: 1rem;
+            p {
+                font-size: 1rem;
+                color: #b4b4b4;
+            }
+        }
+    }
 }
