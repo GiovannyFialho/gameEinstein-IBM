@@ -8,7 +8,19 @@ class Usuarios extends CI_Controller {
 	{
 		parent::__construct();
 		// $this->hasActiveSession();
+
+		$config = Array(
+			'protocol' => 'smtp',
+			'smtp_host' => 'smtp.kinghost.net',
+			'smtp_port' => 587,
+			'smtp_user' => 'no_reply@desafiomundohibrido.com',
+			'smtp_pass' => 'IBMdesafiomundo2021',
+			'mailtype'  => 'html', 
+			'charset'   => 'iso-8859-1'
+		);
+
 		$this->load->model("UsuariosModel", "usuarios");
+		$this->load->library('email', $config);
 		
 		$this->data['title'] = 'Cadastro';
 		
@@ -26,21 +38,18 @@ class Usuarios extends CI_Controller {
 			array(
 				'name',
 				'email',
-				'nickname',
-				'cargo'
+				'password'
 			)
 		);
 
 		$nome = $this->input->post('name');
 		$email = $this->input->post('email');
-		$nickname = $this->input->post('nickname');
-		$cargo = $this->input->post('cargo');
+		$password = password_hash($this->input->post('password'), PASSWORD_DEFAULT);
 
 		$arrayInsert = [
 			"name" => $nome,
 			"email" => $email,
-			"nickname" => $nickname,
-			"cargo" => $cargo,
+			"password" => $password,
 		];
 		
 		$resultEmail = $this->usuarios->getUserByEmail($email);
@@ -52,6 +61,13 @@ class Usuarios extends CI_Controller {
 			$erro = false;
 			$usuarioId = $this->usuarios->saveNewUser($arrayInsert);
 			
+			$this->email->from('no_reply@desafiomundohibrido.com', 'IBM');
+			$this->email->to($email);
+			
+			$this->email->subject('Vamos iniciar o Desafio de Conhecimento!');
+			$this->email->message('Testing the email class.');
+			
+			$this->email->send();
 		}
 		
 		if (!$erro) {
@@ -82,14 +98,17 @@ class Usuarios extends CI_Controller {
 			$_POST,
 			array(
 				'email',
+				'password'
 			)
 		);
 
 		$email = $this->input->post('email');
+		$password = $this->input->post('password');
 
 		$this->usuarios->email = $email;
+		$this->usuarios->senha = $password;
 
-		$userLogin = $this->usuarios->loginUser(false);
+		$userLogin = $this->usuarios->loginUser();
 		
 		$message = "";
 		
@@ -112,7 +131,7 @@ class Usuarios extends CI_Controller {
 				$message = "Seu usuário já participou do desafio. Você só pode participar do desafio 1 vez!";
 			}
 		} else {
-			$message = "Email ou nickname incorreto. Por favor tente novamente";
+			$message = "Email ou senha incorreto. Por favor tente novamente";
 		}
 
 		$this->sendJSON(
