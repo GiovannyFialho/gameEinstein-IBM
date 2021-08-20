@@ -40,12 +40,13 @@
         <div class="termos-privacidade-body">
             <h3>Privacidade campanha <a href="desafiomundohibrido.com" class="link-destaque">desafiomundohibrido.com</a></h3>
             <p>
-                A Política de Privacidade contém informações sobre coleta, uso, armazenamento, tratamento e proteção de dados pessoais dos usuários e visitantes do site meusparceirosemcasa.com.br, com a finalidade de demonstrar transparência e esclarecer a forma como os usuários podem gerenciar ou excluir suas informações pessoais.
+                A Política de Privacidade contém informações sobre coleta, uso, armazenamento, tratamento e proteção de dados pessoais dos
+                usuários e visitantes do site desafiomundohíbrido.com, com a finalidade de demonstrar transparência e esclarecer a forma como os usuários podem gerenciar ou excluir suas informações pessoais.
             </p>
 
             <h3>Voluntariedade da campanha e política de privacidade da MCM</h3>
             <p>
-                O envio de dados pessoais para a criação de badges virtuais ilustrativos é voluntário e será feito diretamente entre o colaborador e a MCM Brand Experience que será a Controladora de tais informações. Para saber mais sobre como a MCM Brand Experience realiza o tratamento de seus dados, consulte a Política de Privacidade disponível no site da empresa, clique aqui. 
+            O envio de dados pessoais para participação no Desafio Mundo Híbrido é voluntário e será feito diretamente entre o participante e a MCM Brand Experience que será a Controladora de tais informações. Para saber mais sobre como a MCM Brand Experience realiza o tratamento de seus dados, consulte a Política de Privacidade disponível no site da empresa, <a href="https://www.mcmbrandexperience.com/pol%C3%ADtica-de-privacidade" class="link-destaque">clique aqui</a>.
             </p>
 
             <h3>Como recolhemos os dados pessoais do usuário e para quais finalidades</h3>
@@ -53,7 +54,7 @@
                 Os dados pessoais são recolhidos da seguinte forma: quando o usuário cria uma conta na plataforma <a href="desafiomundohibrido.com" class="link-destaque">desafiomundohibrido.com</a>, as informações são usadas para a finalidade de identificação de acesso (nome completo e e-mail). A partir desses dados, podemos identificá-lo(a), além de garantir maior segurança e bem-estar às suas necessidades. Fica ciente o usuário de que seu perfil na plataforma estará acessível apenas para o titular do cadastro, fica à cargo do mesmo a opção de fornecer ou não o login e senha para terceiros.
             </p>
             <p>
-                Além disso, ao fazer upload de imagens para a finalidade de confecção dos badges virtuais, esses arquivos ficarão hospedados na plataforma pelo período vigente da campanha, e serão excluídos mediante a pedido do usuário e ao término da ação.
+            Além disso, ao fazer o login para realização do desafio, esses dados ficarão hospedados na plataforma pelo período vigente da campanha, e serão excluídos mediante a pedido do usuário e ao término da ação.
             </p>
 
             <h3>Aviso de cookies para visitantes</h3>
@@ -145,7 +146,7 @@
                 A autorização do uso de imagem e dos dados serão exclusivamente de seu responsável legal.
             </p>
             <p>
-                Na qualidade de um dos pais ou responsável do menor, AUTORIZA o site <a href="desafiomundohibrido.com" class="link-destaque">desafiomundohibrido.com</a> a usar suas informações pessoais correspondente a arquivos de imagens e nomes, e CONCORDA que a MCM Brand Experience use essas informações para a ação de criar badges virtuais.
+                Na qualidade de um dos pais ou responsável do menor, AUTORIZA o site <a href="desafiomundohibrido.com" class="link-destaque">desafiomundohibrido.com</a> a usar suas informações pessoais correspondente a arquivos de imagens e nomes, e CONCORDA que a MCM Brand Experience use essas informações para a divulgação do resultado do concurso.
             </p>
             <p>
                 O usuário tem direito de retirar o seu consentimento a qualquer tempo, para tanto deve entrar em contato através do e-mail <a href="mailto:mcm@mcm.br.com" class="link-destaque">mcm@mcm.br.com</a> ou através do canal: https://www.mcmbrandexperience.com/contato.

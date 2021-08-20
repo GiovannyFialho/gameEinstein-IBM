@@ -44,6 +44,17 @@
                     <img src="<?=base_url('assets/email/footer.jpg')?>" alt="IBM" title="IBM" />
                 </td>
             </tr>
+            <tr>
+                <td align="center">
+                    © IBM Corporation 2020. IBM, o logotipo da IBM, IBM Cloud™ e ibm.com são marcas da International Business Machines Corp. registadas em muitas jurisdições no mundo. Este documento
+                    está atualizado na data da sua publicação e pode ser alterado pela IBM a qualquer momento. Se não deseja mais receber e-mails desta campanha,
+                    <a href="https://emailsuppression.mrs-prod-7d4bdc08e7ddc90fa89b373d95c240eb-0000.us-south.containers.appdomain.cloud/emailsuppression?source=MATemailsuppression">clique aqui</a>.
+                    Saiba mais sobre como a IBM trata os seus dados pessoais consultando a nossa <a href="https://www.ibm.com/br-pt/privacy?lnk=flg-priv-usen">política de privacidade</a>. Em relação
+                    as informações deste e-mail e campanha, elas são fornecidas pela MCM Brand Experience, e para saber como trata os seus dados pessoais, consulte a
+                    <a href="https://www.mcmbrandexperience.com/pol%C3%ADtica-de-privacidade">política de privacidade</a> ou entre em contato pelo e-mail contato@mcm.br.com para quaisquer solicitações
+                    referente a seus dados.
+                </td>
+            </tr>
         </table>
     </body>
 </html>
