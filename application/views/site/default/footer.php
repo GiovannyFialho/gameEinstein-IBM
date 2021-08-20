@@ -2,16 +2,16 @@
         <footer>
             <div class="container">
                 <div class="head">
-                    <a href="#" class="head-link">
+                    <a href="https://www.ibm.com/contact/br/pt/?lnk=flg-cont-brpt" target="_blank" class="head-link">
                         Contato
                     </a>
-                    <a href="#" class="head-link">
+                    <a href="https://www.ibm.com/br-pt/privacy?lnk=flg-priv-brpt" target="_blank" class="head-link">
                         Privacidade
                     </a>
-                    <a href="#" class="head-link">
+                    <a href="https://www.ibm.com/br-pt/legal?lnk=flg-tous-brpt" target="_blank" class="head-link">
                         Termos de Uso
                     </a>
-                    <a href="#" class="head-link">
+                    <a href="https://www.ibm.com/able/?lnk=flg-able-brpt" target="_blank" class="head-link">
                         Acessibilidade
                     </a>
                 </div>
