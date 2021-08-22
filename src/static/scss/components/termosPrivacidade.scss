@@ -8,9 +8,9 @@
         }
     }
     .termos-privacidade {
-        max-width: 36%;
+        max-width: 40%;
         width: 100%;
-        max-height: 72%;
+        max-height: 80%;
         height: 100%;
         background-color: $white-dark;
         transform: translateY(-1rem);
@@ -47,12 +47,12 @@
             overflow-y: auto;
             margin-bottom: 0;
             h3 {
-                font-size: 1.75rem;
+                font-size: 1.5rem;
                 line-height: 1.29;
                 margin: 0.5rem auto 1rem auto;
             }
             p {
-                font-size: 0.875rem;
+                font-size: 1rem;
                 line-height: 1.43;
                 letter-spacing: 0.16px;
                 color: $default-text;
@@ -66,26 +66,11 @@
         &-footer {
             width: 100%;
             display: flex;
-            justify-content: space-between;
-            .secondary {
-                @include buttonPopUp;
-                width: 50%;
-                background-color: $colorSecondaryButton;
-                color: $white;
-                transition: background-color 0.2s ease-in-out;
-                &:hover {
-                    background-color: $colorSecondaryButton-dark;
-                }
-            }
+            flex-direction: column;
+            padding: 1rem 2rem;
+            .secondary,
             .primary {
                 @include buttonPopUp;
-                width: 50%;
-                background-color: $colorPrimaryButton;
-                color: $white;
-                transition: background-color 0.2s ease-in-out;
-                &:hover {
-                    background-color: $colorPrimaryButton-dark;
-                }
             }
         }
     }

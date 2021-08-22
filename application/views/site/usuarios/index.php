@@ -164,8 +164,8 @@
             </p>
         </div>
         <div class="termos-privacidade-footer">
-            <a href="/" class="secondary">Cancelar</a>
             <button class="primary" onclick="aceitoTermos()">Aceitar</button>
+            <a href="/" class="secondary">Cancelar</a>
         </div>
     </div>
 </div>
