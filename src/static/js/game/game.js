@@ -10,20 +10,19 @@ if (formGame) {
 
     let min = 1;
     let se = 0;
-    let mili = 0;
     let initialCondition = true;
     let myVar;
 
-    let startTimer = function () {
+    function startTimer() {
         if (initialCondition === true) {
             myVar = setInterval(myTimer, 1000);
         }
 
         initialCondition = false;
-    };
+    }
 
     function myTimer() {
-        se = se + 1;
+        se += 1;
         seconds.innerHTML = `0${se}`;
 
         if (se > 9) {
@@ -262,7 +261,6 @@ if (formGame) {
     let coluna4 = {};
     document.getElementById("quem4").addEventListener("change", (event) => {
         coluna4.quem = event.target.value;
-        console.log(event.target.value);
 
         if (event.target.value == "Baiana" && document.getElementById("quem5").value == "Goiana") {
             document.getElementById("isBaiana").checked = true;
