@@ -17,6 +17,7 @@
         }
         &-item {
             width: 200px;
+            height: 100%;
             @media (max-width: $tablet) {
                 width: 100%;
                 &:not(:last-child) {

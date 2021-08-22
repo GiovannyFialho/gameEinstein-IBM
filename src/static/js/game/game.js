@@ -1,17 +1,17 @@
 const formGame = document.getElementById("form-game");
 
+let minutes = document.getElementById("minutes");
+let seconds = document.getElementById("seconds");
+
+let min = 1;
+let se = 0;
+let initialCondition = true;
+let myVar = "";
+
 if (formGame) {
     /**
      * Cronometro jogo
      */
-
-    let minutes = document.getElementById("minutes");
-    let seconds = document.getElementById("seconds");
-
-    let min = 1;
-    let se = 0;
-    let initialCondition = true;
-    let myVar;
 
     function startTimer() {
         if (initialCondition === true) {
