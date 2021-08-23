@@ -99,6 +99,24 @@ if (formGame) {
         },
     };
 
+    let instrucoes = document.querySelector(".container-instrucoes");
+
+    if (instrucoes) {
+        document.onreadystatechange = () => {
+            if (document.readyState == "complete") {
+                instrucoes.classList.add("show");
+                document.body.classList.add("noScroll");
+            }
+        };
+    }
+
+    function aceitoInstrucoes() {
+        instrucoes.classList.remove("show");
+
+        startTimer();
+        timer.start();
+    }
+
     let pontos = 0;
     let respostas = [];
     let popupInfo = document.querySelector(".popup-info");
