@@ -2,6 +2,7 @@ const formGame = document.getElementById("form-game");
 
 let minutes = document.getElementById("minutes");
 let seconds = document.getElementById("seconds");
+let instrucoes = document.querySelector(".container-instrucoes");
 
 let min = 1;
 let se = 0;
@@ -98,8 +99,6 @@ if (formGame) {
             return timer.initialValue;
         },
     };
-
-    let instrucoes = document.querySelector(".container-instrucoes");
 
     if (instrucoes) {
         document.onreadystatechange = () => {
