@@ -2,12 +2,28 @@ const formGame = document.getElementById("form-game");
 
 let minutes = document.getElementById("minutes");
 let seconds = document.getElementById("seconds");
-let instrucoes = document.querySelector(".container-instrucoes");
 
 let min = 1;
 let se = 0;
 let initialCondition = true;
 let myVar = "";
+
+/**
+ * Timer
+ */
+
+let timer = {
+    initialValue: 0,
+    startTime: Date.now(),
+    start: () => {
+        setInterval(function () {
+            timer.initialValue = Date.now() - timer.startTime;
+        }, 1);
+    },
+    stop: () => {
+        return timer.initialValue;
+    },
+};
 
 if (formGame) {
     /**
@@ -83,37 +99,23 @@ if (formGame) {
         }, 5000);
     }
 
-    /**
-     * Timer
-     */
+    if (document.querySelector(".container-instrucoes")) {
+        function aceitoInstrucoes() {
+            if (document.querySelector(".container-instrucoes").classList.contains("show")) {
+                document.querySelector(".container-instrucoes").classList.remove("show");
 
-    let timer = {
-        initialValue: 0,
-        startTime: Date.now(),
-        start: () => {
-            setInterval(function () {
-                timer.initialValue = Date.now() - timer.startTime;
-            }, 1);
-        },
-        stop: () => {
-            return timer.initialValue;
-        },
-    };
+                startTimer();
 
-    if (instrucoes) {
+                timer.start();
+            }
+        }
+
         document.onreadystatechange = () => {
             if (document.readyState == "complete") {
-                instrucoes.classList.add("show");
+                document.querySelector(".container-instrucoes").classList.add("show");
                 document.body.classList.add("noScroll");
             }
         };
-    }
-
-    function aceitoInstrucoes() {
-        instrucoes.classList.remove("show");
-
-        startTimer();
-        timer.start();
     }
 
     let pontos = 0;
