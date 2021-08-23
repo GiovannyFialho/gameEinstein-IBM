@@ -5,4 +5,8 @@
     top: -35px;
     left: 50%;
     transform: translateX(-50%);
+    @media (max-width: $tablet) {
+        top: -25px;
+        font-size: 1.2rem;
+    }
 }

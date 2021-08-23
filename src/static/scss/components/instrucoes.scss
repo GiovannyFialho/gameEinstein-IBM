@@ -20,6 +20,7 @@
         grid-template-rows: auto 1fr auto;
         @media (max-width: $tablet) {
             max-width: 70%;
+            max-height: 80%;
         }
         @media (max-width: $mobile) {
             max-width: 100%;

@@ -14,6 +14,7 @@
                             </ul>
                             <ul id="coluna1" class="coluna">
                                 <li>
+                                    <p class="mobileIndex">Quem?</p>
                                     <select id="quem1" name="quem1">
                                         <option value=""></option>
                                         <option value="Baiana">Baiana</option>
@@ -24,6 +25,7 @@
                                     </select>
                                 </li>
                                 <li>
+                                    <p class="mobileIndex">Veio Aprender</p>
                                     <select id="veioAprender1" name="veioAprender1">
                                         <option value=""></option>
                                         <option value="GRC">GRC</option>
@@ -34,6 +36,7 @@
                                     </select>
                                 </li>
                                 <li>
+                                    <p class="mobileIndex">Perfil</p>
                                     <select id="perfil1" name="perfil1">
                                         <option value=""></option>
                                         <option value="Analista">Analista</option>
@@ -44,6 +47,7 @@
                                     </select>
                                 </li>
                                 <li>
+                                    <p class="mobileIndex">Trabalha com</p>
                                     <select id="trabalhaCom1" name="trabalhaCom1">
                                         <option value=""></option>
                                         <option value="Automação">Automação</option>
@@ -54,6 +58,7 @@
                                     </select>
                                 </li>
                                 <li>
+                                    <p class="mobileIndex">Empresa</p>
                                     <select id="empresa1" name="empresa1">
                                         <option value=""></option>
                                         <option value="Empresa A">Empresa A</option>
@@ -68,6 +73,7 @@
                         <li class="content-game-items-item">
                             <ul id="coluna2" class="coluna">
                                 <li>
+                                    <p class="mobileIndex">Quem?</p>
                                     <select id="quem2" name="quem2">
                                         <option value=""></option>
                                         <option value="Baiana">Baiana</option>
@@ -78,6 +84,7 @@
                                     </select>
                                 </li>
                                 <li>
+                                    <p class="mobileIndex">Veio Aprender</p>
                                     <select id="veioAprender2" name="veioAprender2">
                                         <option value=""></option>
                                         <option value="GRC">GRC</option>
@@ -88,6 +95,7 @@
                                     </select>
                                 </li>
                                 <li>
+                                    <p class="mobileIndex">Perfil</p>
                                     <select id="perfil2" name="perfil2">
                                         <option value=""></option>
                                         <option value="Analista">Analista</option>
@@ -98,6 +106,7 @@
                                     </select>
                                 </li>
                                 <li>
+                                    <p class="mobileIndex">Trabalha com</p>
                                     <select id="trabalhaCom2" name="trabalhaCom2">
                                         <option value=""></option>
                                         <option value="Automação">Automação</option>
@@ -108,6 +117,7 @@
                                     </select>
                                 </li>
                                 <li>
+                                    <p class="mobileIndex">Empresa</p>
                                     <select id="empresa2" name="empresa2">
                                         <option value=""></option>
                                         <option value="Empresa A">Empresa A</option>
@@ -122,6 +132,7 @@
                         <li class="content-game-items-item">
                             <ul id="coluna3" class="coluna">
                                 <li>
+                                    <p class="mobileIndex">Quem?</p>
                                     <select id="quem3" name="quem3">
                                         <option value=""></option>
                                         <option value="Baiana">Baiana</option>
@@ -132,6 +143,7 @@
                                     </select>
                                 </li>
                                 <li>
+                                    <p class="mobileIndex">Veio Aprender</p>
                                     <select id="veioAprender3" name="veioAprender3">
                                         <option value=""></option>
                                         <option value="GRC">GRC</option>
@@ -142,6 +154,7 @@
                                     </select>
                                 </li>
                                 <li>
+                                    <p class="mobileIndex">Perfil</p>
                                     <select id="perfil3" name="perfil3">
                                         <option value=""></option>
                                         <option value="Analista">Analista</option>
@@ -152,6 +165,7 @@
                                     </select>
                                 </li>
                                 <li>
+                                    <p class="mobileIndex">Trabalha com</p>
                                     <select id="trabalhaCom3" name="trabalhaCom3">
                                         <option value=""></option>
                                         <option value="Automação">Automação</option>
@@ -162,6 +176,7 @@
                                     </select>
                                 </li>
                                 <li>
+                                    <p class="mobileIndex">Empresa</p>
                                     <select id="empresa3" name="empresa3">
                                         <option value=""></option>
                                         <option value="Empresa A">Empresa A</option>
@@ -176,6 +191,7 @@
                         <li class="content-game-items-item">
                             <ul id="coluna4" class="coluna">
                                 <li>
+                                    <p class="mobileIndex">Quem?</p>
                                     <select id="quem4" name="quem4">
                                         <option value=""></option>
                                         <option value="Baiana">Baiana</option>
@@ -186,6 +202,7 @@
                                     </select>
                                 </li>
                                 <li>
+                                    <p class="mobileIndex">Veio Aprender</p>
                                     <select id="veioAprender4" name="veioAprender4">
                                         <option value=""></option>
                                         <option value="GRC">GRC</option>
@@ -196,6 +213,7 @@
                                     </select>
                                 </li>
                                 <li>
+                                    <p class="mobileIndex">Perfil</p>
                                     <select id="perfil4" name="perfil4">
                                         <option value=""></option>
                                         <option value="Analista">Analista</option>
@@ -206,6 +224,7 @@
                                     </select>
                                 </li>
                                 <li>
+                                    <p class="mobileIndex">Trabalha com</p>
                                     <select id="trabalhaCom4" name="trabalhaCom4">
                                         <option value=""></option>
                                         <option value="Automação">Automação</option>
@@ -216,6 +235,7 @@
                                     </select>
                                 </li>
                                 <li>
+                                    <p class="mobileIndex">Empresa</p>
                                     <select id="empresa4" name="empresa4">
                                         <option value=""></option>
                                         <option value="Empresa A">Empresa A</option>
@@ -230,6 +250,7 @@
                         <li class="content-game-items-item">
                             <ul id="coluna5" class="coluna">
                                 <li>
+                                    <p class="mobileIndex">Quem?</p>
                                     <select id="quem5" name="quem5">
                                         <option value=""></option>
                                         <option value="Baiana">Baiana</option>
@@ -240,6 +261,7 @@
                                     </select>
                                 </li>
                                 <li>
+                                    <p class="mobileIndex">Veio Aprender</p>
                                     <select id="veioAprender5" name="veioAprender5">
                                         <option value=""></option>
                                         <option value="GRC">GRC</option>
@@ -250,6 +272,7 @@
                                     </select>
                                 </li>
                                 <li>
+                                    <p class="mobileIndex">Perfil</p>
                                     <select id="perfil5" name="perfil5">
                                         <option value=""></option>
                                         <option value="Analista">Analista</option>
@@ -260,6 +283,7 @@
                                     </select>
                                 </li>
                                 <li>
+                                    <p class="mobileIndex">Trabalha com</p>
                                     <select id="trabalhaCom5" name="trabalhaCom5">
                                         <option value=""></option>
                                         <option value="Automação">Automação</option>
@@ -270,6 +294,7 @@
                                     </select>
                                 </li>
                                 <li>
+                                    <p class="mobileIndex">Empresa</p>
                                     <select id="empresa5" name="empresa5">
                                         <option value=""></option>
                                         <option value="Empresa A">Empresa A</option>
