@@ -395,19 +395,22 @@ if (formGame) {
                 return response.json();
             })
             .then(async () => {
-                const data = await fetch(`${location.origin}/usuarios/registrarParticipacao`);
-                await data.json();
+                // const data = await fetch(`${location.origin}/usuarios/registrarParticipacao`);
+                // await data.json();
 
                 popupInfo.parentElement.classList.add("show");
                 popupInfo.innerHTML = `
-                    <h3>Parabéns! Você conseguiu.</h3>
+                    <h3>Desafio concluído, parabéns!</h3>
+                    <p>Agora é só aguardar a divulgação do resultado do Desafio:<br>
+                    Encerramento desafio: 26/08 - 17h<br>
+                    Anúncio dos vencedores: dais 26/08 às 18h (após término da nossa última palestra).</p>
                     <a href="/usuarios/logout" class="link-padrao mb">Confira o ranking</a>
                     <a href="/" class="link-padrao mb">Volte para o evento</a>
                 `;
 
-                setTimeout(() => {
-                    location.href = `/usuarios/logout`;
-                }, 5000);
+                // setTimeout(() => {
+                //     location.href = `/usuarios/logout`;
+                // }, 5000);
             })
             .catch(() => {
                 popupInfo.parentElement.classList.add("show");

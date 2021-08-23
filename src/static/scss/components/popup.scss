@@ -4,7 +4,7 @@
         pointer-events: initial;
         opacity: 1;
         .popup-info {
-            transform: translateY(-4rem);
+            transform: translateY(0rem);
             opacity: 1;
         }
     }
@@ -12,9 +12,9 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        max-width: 450px;
+        max-width: 615px;
         width: 100%;
-        height: 200px;
+        height: 300px;
         margin: 0 auto;
         transform: translateY(-6rem);
         background-color: $primary;
@@ -36,6 +36,7 @@
         p {
             font-size: 1.3rem;
             line-height: 1.2;
+            margin: 0 0 1.2rem 0;
             color: $white;
         }
         button,
