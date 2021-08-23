@@ -99,9 +99,6 @@ if (formGame) {
         },
     };
 
-    startTimer();
-    timer.start();
-
     let pontos = 0;
     let respostas = [];
     let popupInfo = document.querySelector(".popup-info");

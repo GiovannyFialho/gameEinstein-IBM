@@ -1,16 +1,16 @@
-.container-privacidade {
+.container-instrucoes {
     @include overlay;
     &.show {
         pointer-events: initial;
         opacity: 1;
-        .termos-privacidade {
+        .instrucoes {
             transform: translateY(0);
         }
     }
-    .termos-privacidade {
+    .instrucoes {
         max-width: 40%;
         width: 100%;
-        max-height: 80%;
+        max-height: 50%;
         height: 100%;
         background-color: $white-dark;
         transform: translateY(-1rem);

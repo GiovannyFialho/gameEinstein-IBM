@@ -384,6 +384,22 @@
     </div>
 </div>
 
+<div class="container-instrucoes">
+    <div class="instrucoes">
+        <div class="instrucoes-head">
+            <h2><strong>Instruções</strong></h2>
+        </div>
+        <div class="instrucoes-body">
+            <p>Ao entrar no desafio, o cronômetro será disparado contabilizando sua performance, e você não poderá voltar e zerar o tempo após iniciar sua jornada. Há apenas a opção de desistir.</p>
+
+            <p>Você encontrará algumas dicas que vão ajudar a completar sua experiência e desvendar o desafio.</p>
+        </div>
+        <div class="instrucoes-footer">
+            <button class="primary" onclick="aceitoInstrucoes()">Ok</button>
+        </div>
+    </div>
+</div>
+
 <div class="container-popup">
     <div class="popup-info"></div>
 </div>
