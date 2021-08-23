@@ -61,7 +61,7 @@ class Usuarios extends CI_Controller {
 			$this->email->to($email);
 			
 			$this->email->subject('Esqueci minha senha.');
-			$this->email->message($this->data['linkBtn']);
+			$this->email->message($this->load->view('site/email/recuperarSenha', $this->data, true));
 			
 			$this->email->send();
 		}
