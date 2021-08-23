@@ -94,6 +94,45 @@ class Usuarios extends CI_Controller {
 		$this->rendererSite('site/usuarios/formEsqueciMinhaSenha');
 	}
 
+	public function trocarSenha()
+	{
+		$this->validateRequiredParameters(
+			$_POST,
+			array(
+				'email',
+				'password'
+			)
+		);
+
+		$email = $this->input->post('email');
+		$password = $this->input->post('password');
+		
+		$resultEmail = $this->usuarios->getUserByEmail($email);
+		$this->usuarios->idUsuario 	= $resultEmail[0]->idUsuario;
+		$this->usuarios->senha 		= $password;
+
+		if($this->usuarios->changePassword())
+		{
+			$this->sendJSON(
+				array(
+					'success' => true,
+					'title' => 'Tudo certo!',
+					'message' => 'Senha trocada com sucesso'
+				),
+				200
+			);
+		}else{
+			$this->sendJSON(
+				array(
+					'success' => false,
+					'title' => 'Ops',
+					'message' => 'Não foi possível trocar a senha do usuário.'
+				),
+				400
+			);
+		}
+	}
+
 	public function cadastrar() 
 	{
 		$this->validateRequiredParameters(
