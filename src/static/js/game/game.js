@@ -393,8 +393,8 @@ if (formGame) {
                 return response.json();
             })
             .then(async () => {
-                // const data = await fetch(`${location.origin}/usuarios/registrarParticipacao`);
-                // await data.json();
+                const data = await fetch(`${location.origin}/usuarios/registrarParticipacao`);
+                await data.json();
 
                 popupInfo.parentElement.classList.add("show");
                 popupInfo.innerHTML = `
@@ -406,9 +406,9 @@ if (formGame) {
                     <a href="/" class="link-padrao mb">Volte para o evento</a>
                 `;
 
-                // setTimeout(() => {
-                //     location.href = `/usuarios/logout`;
-                // }, 5000);
+                setTimeout(() => {
+                    location.href = `/usuarios/logout`;
+                }, 10000);
             })
             .catch(() => {
                 popupInfo.parentElement.classList.add("show");
