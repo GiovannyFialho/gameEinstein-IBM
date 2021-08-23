@@ -41,7 +41,7 @@
             </tr>
             <tr>
                 <td align="center">
-                    <img src="<?=base_url('assets/email/footer.jpg')?>" alt="IBM" title="IBM" />
+                    <img src="<?=base_url('assets/email/footer.jpeg')?>" alt="IBM" title="IBM" />
                 </td>
             </tr>
             <tr>

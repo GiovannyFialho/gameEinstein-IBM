@@ -16,7 +16,7 @@ class Usuarios extends CI_Controller {
 			'smtp_user' => 'no_reply@desafiomundohibrido.com',
 			'smtp_pass' => 'IBMdesafiomundo2021',
 			'mailtype'  => 'html', 
-			'charset'   => 'iso-8859-1'
+			'charset'   => 'utf-8'
 		);
 
 		$this->load->model("UsuariosModel", "usuarios");
@@ -29,6 +29,69 @@ class Usuarios extends CI_Controller {
 	public function index()
 	{
 		$this->rendererSite('site/usuarios/index');
+	}
+
+	public function esqueciMinhaSenha()
+	{
+		$this->data['title'] = 'Esqueci Minha Senha.';
+		$this->rendererSite('site/usuarios/esqueciMinhaSenha');
+	}
+
+	public function emailEsqueciMinhaSenha() 
+	{
+		$this->validateRequiredParameters(
+			$_POST,
+			array(
+				'email'
+			)
+		);
+
+		$email = $this->input->post('email');
+		
+		$resultEmail = $this->usuarios->getUserByEmail($email);
+		
+		$erro = true;
+		if (count($resultEmail) == 0) {
+			$message = "E-mail não foi cadastrado no sistema.";
+		} else {
+			$erro = false;
+			$this->data['linkBtn'] = base_url('usuarios/formEsqueciMinhaSenha/?email='.$email);
+			
+			$this->email->from('no_reply@desafiomundohibrido.com', 'IBM');
+			$this->email->to($email);
+			
+			$this->email->subject('Esqueci minha senha.');
+			$this->email->message($this->data['linkBtn']);
+			
+			$this->email->send();
+		}
+		
+		if (!$erro) {
+			$this->sendJSON(
+				array(
+					'success' => true,
+					'title' => 'E-mail enviado!',
+					'message' => 'Verifique sua caixa de e-mail para fazer a troca da sua senha.'
+				),
+				200
+			);
+		} else {
+			$this->sendJSON(
+				array(
+					'success' => false,
+					'title' => 'Ops',
+					'message' => $message
+				),
+				400
+			);
+		}
+
+	}
+
+	public function formEsqueciMinhaSenha()
+	{
+		$this->data['title'] = 'Esqueci Minha Senha.';
+		$this->rendererSite('site/usuarios/formEsqueciMinhaSenha');
 	}
 
 	public function cadastrar() 
