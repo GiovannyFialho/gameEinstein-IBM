@@ -8,6 +8,26 @@ let se = 0;
 let initialCondition = true;
 let myVar = "";
 
+/**
+ * Timer
+ */
+
+let timer = {
+    initialValue: 0,
+    start: () => {
+        let startTime = Date.now();
+
+        setInterval(function () {
+            timer.initialValue = Date.now() - startTime;
+
+            console.log(timer.initialValue);
+        }, 1);
+    },
+    stop: () => {
+        return timer.initialValue;
+    },
+};
+
 if (formGame) {
     /**
      * Cronometro jogo
@@ -88,23 +108,6 @@ if (formGame) {
                 document.querySelector(".container-instrucoes").classList.remove("show");
 
                 startTimer();
-
-                /**
-                 * Timer
-                 */
-
-                let timer = {
-                    initialValue: 0,
-                    startTime: Date.now(),
-                    start: () => {
-                        setInterval(function () {
-                            timer.initialValue = Date.now() - timer.startTime;
-                        }, 1);
-                    },
-                    stop: () => {
-                        return timer.initialValue;
-                    },
-                };
 
                 timer.start();
             }
