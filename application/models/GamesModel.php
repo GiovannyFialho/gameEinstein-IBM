@@ -23,7 +23,7 @@ Class GamesModel extends CI_Model {
             $offset = 10 * ($pag - 1);
             $query = " LIMIT $offset, $limit ";
         } else {
-            $query = "";
+            $query = "LIMIT 10";
         }
 
         $sql = "SELECT SQL_CALC_FOUND_ROWS
