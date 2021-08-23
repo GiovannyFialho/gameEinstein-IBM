@@ -1,3 +1,10 @@
+<div class="orientation">
+    <div class="main">
+        <img src="<?= base_url("assets") ?>/img/site/orientation-icon.png">
+        <p>Para uma experiência melhor vire sua tela na horizontal!</p>
+    </div>
+</div>
+
 <div class="container-gamePage">
     <div class="container-game">
         <div class="container center">
