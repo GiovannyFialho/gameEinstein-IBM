@@ -1,19 +1,15 @@
-let formLogin = document.getElementById("form-login");
+let esqueciMinhaSenha = document.getElementById("form-esqueciMinhaSenha");
 
-if (formLogin) {
-    formLogin.addEventListener("submit", (event) => {
+if (esqueciMinhaSenha) {
+    let popupInfo = document.querySelector(".popup-info");
+
+    esqueciMinhaSenha.addEventListener("submit", (event) => {
         event.preventDefault();
-
-        window.scrollTo(0, 0);
-        window.document.body.classList.add("noScroll");
-
-        let popupInfo = document.querySelector(".popup-info");
 
         let formData = new FormData();
         formData.append("email", document.getElementById("email").value);
-        formData.append("password", document.getElementById("password").value);
 
-        fetch(`${location.origin}/usuarios/logar`, {
+        fetch(`${location.origin}/usuarios/emailEsqueciMinhaSenha`, {
             method: "POST",
             body: formData,
         })
@@ -22,37 +18,30 @@ if (formLogin) {
             })
             .then((response) => {
                 if (response.success == true) {
-                    location.href = `/game`;
-                } else {
-                    let buttonOk;
-
-                    if (response.message == "Seu usuário já participou do desafio. Você só pode participar do desafio 1 vez!") {
-                        buttonOk = `
-                            <a href="/">
-                                Ok
-                            </a>
-                        `;
-                    } else {
-                        buttonOk = `
-                            <button onclick="successFalse()">Ok</button>
-                        `;
-                    }
-
                     popupInfo.parentElement.classList.add("show");
                     popupInfo.innerHTML = `
                         <h3 class="error">${response.title}</h3>
                         <p>${response.message}</p>
                         <div class="button-container center">
-                            ${buttonOk}
+                            <a href="/">Ok</a>
                         </div>
                     `;
 
                     setTimeout(() => {
-                        if (response.message == "Seu usuário já participou do desafio. Você só pode participar do desafio 1 vez!") {
-                            location.href = "/";
-                        } else {
-                            successFalse();
-                        }
+                        location.href = "/";
+                    }, 5000);
+                } else {
+                    popupInfo.parentElement.classList.add("show");
+                    popupInfo.innerHTML = `
+                        <h3 class="error">${response.title}</h3>
+                        <p>${response.message}</p>
+                        <div class="button-container center">
+                            <a href="/">Ok</a>
+                        </div>
+                    `;
+
+                    setTimeout(() => {
+                        location.href = "/";
                     }, 5000);
                 }
             })

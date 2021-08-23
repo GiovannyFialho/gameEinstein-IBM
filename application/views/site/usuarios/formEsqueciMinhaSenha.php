@@ -1,13 +1,13 @@
 <div class="container-padrao fullpage">
     <div class="container center">
         <div class="form-container">
-            <form class="form" id="form-login">
+            <form class="form" id="form-novaSenha">
                 <div class="form-main">
                     <div class="input-item">
-                        <input type="text" id="senha" placeholder="Senha" require>
+                        <input type="password" id="novaSenha" minlength="8" placeholder="Nova senha" require>
                     </div>
                     <div class="input-item">
-                        <input type="text" id="confirmSenha" placeholder="Confirmar Senha" require>
+                        <input type="password" id="confirmNovaSenha" minlength="8" placeholder="Confirmar nova senha" require>
                     </div>
                 </div>
 
@@ -25,14 +25,6 @@
                 </div>
             </form>
         </div>
-    </div>
-</div>
-
-<div class="container-cadastro-aprovado <?=isset($usuarioAprovado) ? 'show' : ''?>">
-    <div class="cadastro-aprovado">
-        <h3>Parabéns!</h3>
-        <p>Seu cadastro foi aprovado com sucesso!</p>
-        <button onclick="fecharCadastroAprovado()">Faça o login</button>
     </div>
 </div>
 

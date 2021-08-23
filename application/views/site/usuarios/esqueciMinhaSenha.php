@@ -1,7 +1,7 @@
 <div class="container-padrao fullpage">
     <div class="container center">
         <div class="form-container">
-            <form class="form" id="form-login">
+            <form class="form" id="form-esqueciMinhaSenha">
                 <div class="form-main">
                     <div class="input-item">
                         <input type="email" id="email" placeholder="E-mail" require>
@@ -22,14 +22,6 @@
                 </div>
             </form>
         </div>
-    </div>
-</div>
-
-<div class="container-cadastro-aprovado <?=isset($usuarioAprovado) ? 'show' : ''?>">
-    <div class="cadastro-aprovado">
-        <h3>Parabéns!</h3>
-        <p>Seu cadastro foi aprovado com sucesso!</p>
-        <button onclick="fecharCadastroAprovado()">Faça o login</button>
     </div>
 </div>
 
