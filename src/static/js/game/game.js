@@ -377,11 +377,11 @@ if (formGame) {
             }
         });
 
-        stopTimer();
-
         const formData = new FormData();
         formData.append("score", pontos);
         formData.append("gametime", timer.stop());
+
+        stopTimer();
 
         fetch(`${location.origin}/game/salvar`, {
             method: "POST",
@@ -421,12 +421,5 @@ if (formGame) {
                     location.href = "/";
                 }, 5000);
             });
-
-        respostas = [];
-        coluna1 = {};
-        coluna2 = {};
-        coluna3 = {};
-        coluna4 = {};
-        coluna5 = {};
     });
 }
