@@ -155,7 +155,7 @@ Class UsuariosModel extends CI_Model {
         $passHash = $this->hashPassword();
         
         $this->db->where('IdUsuario', $this->idUsuario);
-        if ($this->db->update('Usuarios', array('Senha' => $passHash))) {
+        if ($this->db->update('users', array('password' => $passHash))) {
             return true;
         }
 
