@@ -19,8 +19,6 @@ let timer = {
 
         setInterval(function () {
             timer.initialValue = Date.now() - startTime;
-
-            console.log(timer.initialValue);
         }, 1);
     },
     stop: () => {

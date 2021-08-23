@@ -34,8 +34,6 @@ if (novaSenha) {
                 return response.json();
             })
             .then((response) => {
-                console.log(response);
-
                 if (response.success == true) {
                     popupInfo.parentElement.classList.add("show");
                     popupInfo.innerHTML = `

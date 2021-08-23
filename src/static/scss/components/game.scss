@@ -1,30 +1,19 @@
 .content-game {
     margin: 6rem auto 2rem auto;
-    @media (max-width: $mobile) {
-        width: 100%;
-        margin: 5rem 0;
-    }
     @media (max-width: $tablet) {
-        margin: 3rem auto 2rem auto;
+        margin: 3rem auto 1rem auto;
     }
     &-items {
         display: grid;
         grid-gap: 15px;
         grid-template-columns: repeat(5, auto);
-        @media (max-width: $tablet) {
-            grid-template-columns: repeat(3, auto);
-            grid-gap: 30px;
-        }
-        @media (max-width: $mobile) {
-            grid-template-columns: repeat(1, auto);
-        }
         &-item {
             width: 200px;
             height: 100%;
             @media (max-width: $tablet) {
                 width: 100%;
                 &:not(:last-child) {
-                    margin-bottom: 3rem;
+                    margin-bottom: 0;
                 }
             }
             &.hasIndex {
@@ -108,12 +97,13 @@
                         }
                     }
                     @media (max-width: $mobile) {
-                        padding: 20px;
+                        padding: 8px;
                     }
                     li {
                         .mobileIndex {
+                            font-size: 0.8rem;
                             text-align: center;
-                            color: #fff;
+                            color: $white;
                             margin-bottom: 7px;
                             display: none;
                             font-weight: bold;
@@ -124,7 +114,7 @@
                         &:not(:last-child) {
                             margin-bottom: 1rem;
                             @media (max-width: $tablet) {
-                                margin-bottom: 0.4rem;
+                                margin-bottom: 0.3rem;
                             }
                         }
                         select {
@@ -136,7 +126,8 @@
                             padding: 2px;
                             font-family: inherit;
                             @media (max-width: $mobile) {
-                                padding: 10px 15px;
+                                padding: 5px 2px;
+                                font-size: 0.5rem;
                             }
                         }
                     }
