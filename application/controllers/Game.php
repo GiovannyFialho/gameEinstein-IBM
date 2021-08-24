@@ -92,12 +92,14 @@ class Game extends CI_Controller {
 
 	}
 
-	public function getRanking()
+	public function getRanking($isClear = false)
 	{
 		$score = $this->games->getGames();
 
-		foreach ($score['data'] as $key => $value) {
-			$value->name = substr_replace($value->name, '***', 3);
+		if(!$isClear){
+			foreach ($score['data'] as $key => $value) {
+				$value->name = substr_replace($value->name, '***', 3);
+			}
 		}
 
 		$this->data['ranking'] = $score['data'];
@@ -120,6 +122,15 @@ class Game extends CI_Controller {
 				400
 			);
 		}
+	}
+
+	public function rankingClear()
+	{
+		$this->data['title'] = 'Resultado';
+
+		$score = $this->games->getGames();
+
+		$this->rendererSite('site/game/rankingClear');
 	}
 
 }
