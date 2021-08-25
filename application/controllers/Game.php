@@ -128,7 +128,9 @@ class Game extends CI_Controller {
 	{
 		$this->data['title'] = 'Resultado';
 
-		$score = $this->games->getGames();
+		$users = $this->usuarios->getUsers();
+		$totalUsers = $users['totalRows'];
+		$this->data['totalUsers'] = $totalUsers;
 
 		$this->rendererSite('site/game/rankingClear');
 	}

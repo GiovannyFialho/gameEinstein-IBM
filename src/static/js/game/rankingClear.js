@@ -14,6 +14,7 @@ if (rankingClear) {
                         <p>${index + 1}</p>
                         <p>${item.name}</p>
                         <p>${item.email}</p>
+                        <p>${item.score}</p>
                         <p>${formatTime(item.gametime)}</p>
                     </div>
                 `;

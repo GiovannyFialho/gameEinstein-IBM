@@ -31,7 +31,7 @@ Class UsuariosModel extends CI_Model {
 
         $sql = "SELECT SQL_CALC_FOUND_ROWS
                     *
-                FROM Usuarios
+                FROM users
                 $query";
 
         $result = $this->db->query($sql);
