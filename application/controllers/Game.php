@@ -17,6 +17,7 @@ class Game extends CI_Controller {
 
 	public function index()
 	{
+		redirect('/');
 		$this->hasActiveSession();
 		$this->rendererSite('site/game/index');
 	}
